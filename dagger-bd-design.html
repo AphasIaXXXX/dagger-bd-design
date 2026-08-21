@@ -435,36 +435,37 @@ footer p{margin-bottom:4px}
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加当前杀阶对应的【剧毒侵蚀】。【剧毒侵蚀】按周期造成物理伤害，初始持续时间由施放时的杀阶决定；自然结束或目标死亡时触发范围伤害【毒爆】。同一施法者在同一目标上最多保留1个实例，再次施加时覆盖旧实例。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【侵蚀续接】重新施加自身的【剧毒侵蚀】时，新实例继承旧实例50%的剩余时间，最多额外增加4秒。</div>
+          <div class="sc-ml">【侵蚀续接】重新施加自身的【剧毒侵蚀】时，新实例在当前杀阶基础持续时间上继承旧实例50%的剩余时间，继承部分最多4秒。</div>
           <div class="sc-ml">【凝毒穿刺】使技能消费目标标记【穿刺毒核】时追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
+          <div class="sc-ml">【毒效续接】使技能命中带有自身施加的【中毒】的目标时，将该状态剩余时间延长2秒。</div>
         </div>
         <div class="sc-role">剧毒建立与维护</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD5s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。主目标同时带有自身施加的【中毒】和【剧毒侵蚀】，且【十字斩】与【病毒散播】此前8秒内均未通过该条件造成追加伤害时，追加X单%攻击力物理伤害；白～黄阶使杀阶提升1阶，红阶刷新红阶12秒。
+          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。目标同时带有自身施加的【中毒】和【剧毒侵蚀】，且【十字斩】与【病毒散播】此前8秒内均未通过该条件造成追加伤害时，对主目标追加X单%攻击力物理伤害；白～黄阶使杀阶提升1阶，红阶刷新红阶12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【凝毒追刺】使本技能成功追加X单%攻击力物理伤害后，为自身施加持续6秒的【凝毒追刺】；下一次暗影刺击消费该状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害。</div>
-          <div class="sc-ml">【凝毒穿刺】使本技能成功追加X单%攻击力物理伤害时，为主目标施加持续6秒的目标标记【穿刺毒核】；下一次毒性感染消费标记，追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
-          <div class="sc-ml">【见血封喉】使红阶下本技能成功追加X单%攻击力物理伤害后，将按钮替换为【见血封喉】。</div>
+          <div class="sc-ml">【凝毒追刺】使本技能成功追加X单%攻击力物理伤害后，为自身施加持续6秒的强化状态【凝毒追刺】；下一次【暗影刺击】消费该状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害。</div>
+          <div class="sc-ml">【凝毒穿刺】同时为主目标施加持续6秒的标记【穿刺毒核】。</div>
+          <div class="sc-ml">【见血封喉】使本技能在红阶成功追加X单%攻击力物理伤害后，按钮在6秒内替换为【见血封喉】；释放后造成红阶十字斩120%档基础伤害和X终%攻击力物理伤害，并使红阶降为黄阶。</div>
         </div>
-        <div class="sc-role">单体爆发／红阶解放入口</div>
+        <div class="sc-role">单体爆发／红阶终结入口</div>
       </div>
     </div>
 
-    <div class="callout neutral">五卡保持不变；【见血封喉】是十字斩的条件形态，不是第六张技能卡。</div>
+    <div class="callout neutral">五卡保持不变；点出终极节点后，【见血封喉】是十字斩的条件替换形态，不是第六张技能卡。</div>
 
-    <h3 class="bd-title poison">追加伤害触发规则</h3>
+    <h3 class="bd-title poison">十字斩／病毒散播追加伤害与8秒限制</h3>
     <div class="spec-box">
       <div class="sb-title poison">触发系统</div>
       <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">主目标同时带有自身施加的【中毒】和【剧毒侵蚀】时，可以根据战斗目标选择以下技能造成追加伤害。</p>
       <div class="table-wrap" style="max-height:none;margin:0;box-shadow:none;border:none">
         <table>
-          <thead><tr><th class="poison-th">战斗意图</th><th class="poison-th">主动技能</th><th class="poison-th">追加伤害作用目标</th><th class="poison-th">额外职责</th></tr></thead>
+          <thead><tr><th class="poison-th">战斗意图</th><th class="poison-th">主动技能</th><th class="poison-th">条件满足后的追加伤害</th><th class="poison-th">额外职责</th></tr></thead>
           <tbody>
-            <tr><td class="narrow"><strong>单体</strong></td><td>十字斩</td><td>只命中十字斩的主目标</td><td>集中攻击主目标，不传播中毒</td></tr>
-            <tr><td class="narrow"><strong>群体</strong></td><td>病毒散播</td><td>命中本次病毒散播的全部目标，最多5名</td><td>传播中毒并处理范围目标</td></tr>
+            <tr><td class="narrow"><strong>单体</strong></td><td>十字斩</td><td>对主目标追加X单%攻击力物理伤害</td><td>集中攻击主目标，不传播中毒</td></tr>
+            <tr><td class="narrow"><strong>群体</strong></td><td>病毒散播</td><td>对本次命中的最多5名目标各追加X群%攻击力物理伤害</td><td>传播中毒并处理范围目标</td></tr>
           </tbody>
         </table>
       </div>
@@ -1161,26 +1162,26 @@ footer p{margin-bottom:4px}
           <th class="shared-th">点位</th><th class="shared-th">节点ID</th><th class="shared-th">节点</th><th class="shared-th">节点类型</th><th class="shared-th">效果</th>
         </tr></thead>
         <tbody>
-          <tr><td class="center narrow">1</td><td class="narrow">C01</td><td><strong>【短刃训练I】</strong></td><td><span class="nt nt-root">根节点</span></td><td>匕首技能直接与周期物理伤害+3%</td></tr>
-          <tr><td class="center narrow">2</td><td class="narrow">C02</td><td><strong>【杀意储备I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意上限+5（100→105）</td></tr>
-          <tr><td class="center narrow">3</td><td class="narrow">C03</td><td><strong>【短刃训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首技能直接与周期物理伤害再+3%</td></tr>
-          <tr><td class="center narrow">4</td><td class="narrow">C04</td><td><strong>【杀意储备II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意上限再+5（105→110）</td></tr>
-          <tr><td class="center narrow">5</td><td class="narrow">C05</td><td><strong>【二刀追击】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>主动攻击首次直接命中主目标时20%概率追加X追击%攻击力物理伤害；每次释放最多1次</td></tr>
-          <tr><td class="center narrow">6</td><td class="narrow">C06</td><td><strong>【影刃专注I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首主动攻击暴击率+1.5%</td></tr>
-          <tr><td class="center narrow">7</td><td class="narrow">C07</td><td><strong>【迅击调息I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>三套BD五张技能卡基础杀意消耗-1</td></tr>
-          <tr><td class="center narrow">8</td><td class="narrow">C08</td><td><strong>【影刃专注II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首主动攻击暴击率再+1.5%（累计3%）</td></tr>
-          <tr><td class="center narrow">9</td><td class="narrow">C09</td><td><strong>【迅击调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>三套BD五张技能卡基础杀意消耗再-1（累计-2）</td></tr>
-          <tr><td class="center narrow">10</td><td class="narrow">C10</td><td><strong>【杀招回流】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>成功使用核心杀招后恢复5杀意；先支付再恢复</td></tr>
-          <tr><td class="center narrow">11</td><td class="narrow">C11</td><td><strong>【杀招训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>十字斩、永恒之斩、致命影啸直接伤害+2.5%</td></tr>
-          <tr><td class="center narrow">12</td><td class="narrow">C12</td><td><strong>【杀意调息I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意自然恢复速度+3%</td></tr>
-          <tr><td class="center narrow">13</td><td class="narrow">C13</td><td><strong>【杀招训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>对应直接伤害再+2.5%（累计5%）</td></tr>
-          <tr><td class="center narrow">14</td><td class="narrow">C14</td><td><strong>【杀意调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意自然恢复速度再+3%</td></tr>
-          <tr><td class="center narrow">15</td><td class="narrow">C15</td><td><strong>【短刃节律】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>使用核心杀招后获得6秒短刃节律；下一次暗影刺击/黑色幻影延迟缩短10%</td></tr>
-          <tr><td class="center narrow">16</td><td class="narrow">C16</td><td><strong>【致命训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首技能暴击伤害+3%</td></tr>
-          <tr><td class="center narrow">17</td><td class="narrow">C17</td><td><strong>【连段训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【二刀追击】、额外攻击段及精通节点生成的追加攻击伤害+4%</td></tr>
-          <tr><td class="center narrow">18</td><td class="narrow">C18</td><td><strong>【致命训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首技能暴击伤害再+3%（累计6%）</td></tr>
-          <tr><td class="center narrow">19</td><td class="narrow">C19</td><td><strong>【连段训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【二刀追击】、额外攻击段及精通节点生成的追加攻击伤害再+4%（累计8%）</td></tr>
-          <tr><td class="center narrow">20</td><td class="narrow">C20</td><td><strong>【轻巧身法】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>使用核心杀招后获得2秒轻巧身法，移动速度+15%</td></tr>
+          <tr><td class="center narrow">1</td><td class="narrow">C01</td><td><strong>【短刃训练I】</strong></td><td><span class="nt nt-root">根节点</span></td><td>自身匕首技能及其追加攻击造成的物理伤害提高3%</td></tr>
+          <tr><td class="center narrow">2</td><td class="narrow">C02</td><td><strong>【杀意储备I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身杀意上限提高5点，基础上限100→105</td></tr>
+          <tr><td class="center narrow">3</td><td class="narrow">C03</td><td><strong>【短刃训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身匕首技能及其追加攻击造成的物理伤害再提高3%，与【短刃训练I】叠加</td></tr>
+          <tr><td class="center narrow">4</td><td class="narrow">C04</td><td><strong>【杀意储备II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身杀意上限再提高5点，累计上限105→110</td></tr>
+          <tr><td class="center narrow">5</td><td class="narrow">C05</td><td><strong>【二刀追击】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>主动攻击技能每次释放首次直接命中主目标时，有20%概率对主目标追加1次X追击%攻击力物理伤害；每次技能释放最多判定1次</td></tr>
+          <tr><td class="center narrow">6</td><td class="narrow">C06</td><td><strong>【影刃专注I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身匕首主动攻击技能的暴击率提高1.5%</td></tr>
+          <tr><td class="center narrow">7</td><td class="narrow">C07</td><td><strong>【迅击调息I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>三套BD五张技能卡的基础杀意消耗降低1点</td></tr>
+          <tr><td class="center narrow">8</td><td class="narrow">C08</td><td><strong>【影刃专注II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身匕首主动攻击技能的暴击率再提高1.5%，累计提高3%</td></tr>
+          <tr><td class="center narrow">9</td><td class="narrow">C09</td><td><strong>【迅击调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>三套BD五张技能卡的基础杀意消耗再降低1点，累计降低2点</td></tr>
+          <tr><td class="center narrow">10</td><td class="narrow">C10</td><td><strong>【杀招回流】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>成功使用本BD核心杀招并满足成功判定时，在技能杀意消耗结算后恢复5点杀意；每次技能释放最多恢复1次</td></tr>
+          <tr><td class="center narrow">11</td><td class="narrow">C11</td><td><strong>【杀招训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【十字斩】【永恒之斩】【致命影啸】造成的直接物理伤害提高2.5%</td></tr>
+          <tr><td class="center narrow">12</td><td class="narrow">C12</td><td><strong>【杀意调息I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身杀意自然恢复速度提高3%</td></tr>
+          <tr><td class="center narrow">13</td><td class="narrow">C13</td><td><strong>【杀招训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【十字斩】【永恒之斩】【致命影啸】造成的直接物理伤害再提高2.5%，累计提高5%</td></tr>
+          <tr><td class="center narrow">14</td><td class="narrow">C14</td><td><strong>【杀意调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身杀意自然恢复速度再提高3%，与【杀意调息I】叠加</td></tr>
+          <tr><td class="center narrow">15</td><td class="narrow">C15</td><td><strong>【短刃节律】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>成功使用本BD核心杀招后，为自身施加持续6秒的【短刃节律】；下一次【暗影刺击】或【黑色幻影】开始攻击动作时消费状态，使该次技能攻击动作后的延迟缩短10%</td></tr>
+          <tr><td class="center narrow">16</td><td class="narrow">C16</td><td><strong>【致命训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身匕首技能造成暴击时，暴击伤害提高3%</td></tr>
+          <tr><td class="center narrow">17</td><td class="narrow">C17</td><td><strong>【连段训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【二刀追击】、额外攻击段及精通节点生成的追加攻击伤害提高4%</td></tr>
+          <tr><td class="center narrow">18</td><td class="narrow">C18</td><td><strong>【致命训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>自身匕首技能造成暴击时，暴击伤害再提高3%，累计提高6%</td></tr>
+          <tr><td class="center narrow">19</td><td class="narrow">C19</td><td><strong>【连段训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【二刀追击】、额外攻击段及精通节点生成的追加攻击伤害再提高4%，累计提高8%</td></tr>
+          <tr><td class="center narrow">20</td><td class="narrow">C20</td><td><strong>【轻巧身法】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>成功使用本BD核心杀招后，为自身施加持续2秒的【轻巧身法】，移动速度提高15%；每次核心杀招重新施加时刷新持续时间</td></tr>
         </tbody>
       </table>
     </div>
@@ -1267,12 +1268,12 @@ footer p{margin-bottom:4px}
         <div class="hud-tier-label tier-red">红阶 · 维持中</div>
       </div>
       <div class="hud-card">
-        <div class="hc-label">黄阶 · 解放后</div>
+        <div class="hc-label">黄阶 · 红阶降黄后</div>
         <div class="hud-frame tier-yellow">
           <div class="hud-bar"><div class="hud-bar-fill" style="width:45%"></div></div>
           <div class="hud-bar-text">杀意 45 / 100</div>
         </div>
-        <div class="hud-tier-label tier-yellow">黄阶 · 已解放</div>
+        <div class="hud-tier-label tier-yellow">黄阶 · 已降黄</div>
       </div>
     </div>
 
@@ -1280,7 +1281,7 @@ footer p{margin-bottom:4px}
       <li>红阶外框是主要战斗提示</li>
       <li>剩余约4秒时，外框呼吸和明暗脉冲加快</li>
       <li>完成保红动作时，外框重新完全点亮</li>
-      <li>解放或维持失败时，外框切换为黄阶</li>
+      <li>主动使红阶降为黄阶，或红阶维持失败时，外框切换为黄阶</li>
       <li>Buff栏保留红阶图标和精确剩余秒数</li>
       <li>设置中允许玩家关闭Buff栏数字，但系统不强制隐藏</li>
     </ul>
@@ -1335,7 +1336,8 @@ var tips={
   '凝毒追刺':'十字斩成功追加X单%攻击力物理伤害后获得6秒状态；下一次暗影刺击杀意30→15并追加X追刺%攻击力物理伤害。',
   '毒效续接':'施毒命中带有自身施加的剧毒侵蚀的目标延长侵蚀2秒；毒性感染命中带有自身施加的中毒的目标延长中毒2秒。各6秒ICD。',
   '毒爆回流':'毒爆命中≥1名敌人时重置病毒散播CD并使下一次6秒内免费。8秒ICD。',
-  '致命爪痕':'由技能致命爪痕施加。暗影超越期间不施加基础爪痕。被十字斩/致命影啸消费完成处决。',
+  '致命爪痕':'爆刺技能卡。对主目标造成物理伤害并施加目标标记【基础致命爪痕】。20杀意，CD10秒。白阶8秒/绿以上10秒。暗影超越期间只造成直接伤害不施加标记。',
+  '基础致命爪痕':'致命爪痕施加的目标标记。白阶持续8秒，绿阶及以上持续10秒。被十字斩或致命影啸消费完成升阶。同一目标最多1个。',
   '超越爪痕':'暗影连袭施加的6秒特殊爪痕。与基础爪痕硬互斥。消费视为完整处决但不生成筹谋。',
   '影袭筹谋':'爆刺完整处决获得的筹备资源。最多2层，共享30秒。2层时额外升1阶。',
   '超越连袭次数':'暗影超越期间由影袭筹谋转化的暗影连袭次数。每层筹谋转化为1次。',
@@ -1344,7 +1346,6 @@ var tips={
   '旋刃环绕':'利刃旋舞获得的持续伤害状态。精通后改为3层8秒。',
   '旋刃追击':'旋刃环绕期间直接攻击触发的追加范围伤害。',
   '回锋':'十字斩命中后获得的6秒状态。下一次黑色幻影消费改为2段攻击。',
-  '双刃机会':'二刀追击触发后获得的6秒增益。下一次黑色幻影杀意-15。',
   '无尽余势':'双刀刺完成永恒之斩全部追斩后获得的10秒增益。下一次填充杀意-10，共享杀招CD-2秒。',
   '幻影裂击':'黑色幻影命中带基础或超越爪痕目标时0.4秒后追加X裂击%攻击力物理伤害。',
   '影刃解放':'匕首固定终极武器技能。持续10秒提高杀意恢复速度，CD45秒。BD爆发节点替换此槽位。',
@@ -1406,9 +1407,6 @@ var tips={
   '杀招训练II':'共通精通。对应直接伤害再+2.5%（累计5%）。',
   '杀意调息I':'共通精通。杀意自然恢复速度+3%。',
   '杀意调息II':'共通精通。杀意自然恢复速度再+3%。',
-  '杀招回流':'共通精通。成功使用核心杀招后恢复5杀意。',
-  '短刃节律':'共通精通。使用核心杀招后下一次暗影刺击/黑色幻影延迟缩短10%。',
-  '轻巧身法':'共通精通。使用核心杀招后移动速度+15%，持续2秒。',
   '伪装':'随机战术武器技能。短时隐蔽移动。',
   '后退回避':'随机战术武器技能。向后快速滑退。',
   '喷沙':'随机战术武器技能。近距离低伤害+命中干扰。',
@@ -1417,17 +1415,16 @@ var tips={
   '幻影步':'随机战术武器技能。短时间提高回避+魔法伤害规避。',
   '幻影回流':'双刀刺精通。二刀追击触发时重置黑色幻影CD并使下一次黑色幻影6秒内杀意-15。ICD8秒。',
   '无尽余势':'双刀刺终局节点。完成永恒之斩全部追斩后获得10秒无尽余势；下一次填充杀意-10，共享杀招CD-2秒。',
-  '影袭准备':'爆刺精通。暗影超越外完整处决获得1层影袭筹谋，最多2层/30秒。筹谋1→2时额外升1阶。',
-  '见血封喉机会':'红阶成功追加对应物理伤害后生成的6秒解放机会。使十字斩按钮变为见血封喉。'
+  '影袭准备':'爆刺精通。暗影超越外完整处决获得1层影袭筹谋，最多2层/30秒。筹谋1→2时额外升1阶。'
 };
 var tipCats={
   '杀意':'mech','杀阶':'mech','保红':'mech','解放':'mech','催化':'mech','触发等待':'mech',
   '追加X单%攻击力物理伤害':'mech','追加X群%攻击力物理伤害':'mech','毒爆':'mech',
   '中毒':'mech','剧毒侵蚀':'mech','侵蚀续接':'mech','疫病回响':'mech','蔓延毒核':'mech','穿刺毒核':'mech',
   '凝毒追刺':'mech','毒效续接':'mech','毒爆回流':'mech',
-  '致命爪痕':'mech','超越爪痕':'mech','影袭筹谋':'mech','超越连袭次数':'mech',
+  '致命爪痕':'skill','基础致命爪痕':'mech','超越爪痕':'mech','影袭筹谋':'mech','超越连袭次数':'mech',
   '疾影':'mech','残影返身':'mech','旋刃环绕':'mech','旋刃追击':'mech','回锋':'mech',
-  '双刃机会':'mech','无尽余势':'mech','幻影裂击':'mech','幻影终结':'mech','幻影回流':'mech',
+  '无尽余势':'mech','幻影裂击':'mech','幻影终结':'mech','幻影回流':'mech',
   '影刃解放':'weapon','见血封喉':'skill','绝刃终结':'skill',
   '暗影刺击':'skill','施毒':'skill','病毒散播':'skill','毒性感染':'skill',
   '十字斩':'skill','黑色幻影':'skill','利刃旋舞':'skill','永恒之斩':'skill','追斩':'skill',
@@ -1446,7 +1443,7 @@ var tipCats={
   '影刃专注I':'mastery','影刃专注II':'mastery','迅击调息I':'mastery','迅击调息II':'mastery',
   '杀招训练I':'mastery','杀招训练II':'mastery','杀意调息I':'mastery','杀意调息II':'mastery',
   '伪装':'weapon','后退回避':'weapon','喷沙':'weapon','解毒':'weapon','武器抵御':'weapon','幻影步':'weapon',
-  '幻影回流':'mastery','无尽余势':'mastery','影袭准备':'mastery','见血封喉机会':'mech'
+  '影袭准备':'mastery'
 };
 var catLabels={'mastery':'精通盘','mech':'机制','skill':'技能卡','weapon':'武器技能'};
 function shouldExclude(node){var p=node.parentNode;while(p&&p!==document.body){if(!p.classList){p=p.parentNode;continue}if(p.tagName==='STRONG'&&p.parentNode&&p.parentNode.tagName==='TD')return true;p=p.parentNode}return false}
