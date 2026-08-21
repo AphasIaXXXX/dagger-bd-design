@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -301,8 +301,8 @@ footer p{margin-bottom:4px}
       <table>
         <thead><tr><th class="shared-th">BD</th><th class="shared-th">核心玩法</th><th class="shared-th">红阶决策层级</th></tr></thead>
         <tbody>
-          <tr><td class="narrow"><strong style="color:var(--poison)">毒刃刺</strong></td><td>维持【中毒】与【剧毒侵蚀】；目标同时带有两种由自己施加的状态时，单体使用【十字斩】追加单体物理伤害，群体使用【病毒散播】追加范围物理伤害</td><td>红阶完成上述追加伤害后，决定继续维持红阶或使用【见血封喉】</td></tr>
-          <tr><td class="narrow"><strong style="color:var(--dual)">双刀刺</strong></td><td>在【永恒之斩】追斩窗口内安排不会中断窗口的插入技能</td><td>每轮在共享CD内选择用【十字斩】维持红阶，或用【永恒之斩】将红阶转为黄阶并造成终结伤害</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--poison)">毒刃刺</strong></td><td>维持【中毒】与【剧毒侵蚀】；主目标同时带有两种状态时，单体使用【十字斩】升阶，群体使用【病毒散播】传播中毒并升阶</td><td>红阶下主目标同时带有【中毒】和【剧毒侵蚀】时，决定继续刷新红阶或使用【见血封喉】</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--dual)">双刀刺</strong></td><td>在【永恒之斩】追斩窗口内安排不会中断窗口的插入技能</td><td>每轮在共享CD内选择用【十字斩】刷新红阶，或用【永恒之斩】将红阶转为黄阶并造成终结伤害</td></tr>
           <tr><td class="narrow"><strong style="color:var(--burst)">爆刺</strong></td><td>常态施加并消费【基础致命爪痕】，大招内连续施加并消费【超越爪痕】</td><td>主要在开启【暗影超越】前决定是否投入【影袭筹谋】和当前杀阶</td></tr>
         </tbody>
       </table>
@@ -392,128 +392,79 @@ footer p{margin-bottom:4px}
     <h2 class="sec-title"><span class="num">四</span>毒刃刺｜状态维护型</h2>
 
     <div class="callout poison">
-      <span class="ct">一句话玩法</span>
-      维持目标身上的【中毒】和【剧毒侵蚀】；目标同时带有两种由自己施加的状态时，单体使用【十字斩】追加X单%攻击力物理伤害，群体使用【病毒散播】对命中目标追加X群%攻击力物理伤害；进入红阶后再次完成其中一次追加伤害可以刷新红阶，并决定是否使用【见血封喉】将红阶转为黄阶并造成终结伤害。
+      <span class="ct">4.1 一句话玩法</span>
+      维持目标身上的【中毒】和【剧毒侵蚀】。主目标同时带有两种状态时，单体使用【十字斩】提升杀阶，群体使用【病毒散播】传播中毒并提升杀阶；红阶时可以继续刷新红阶，或使用【见血封喉】造成终结伤害并降为黄阶。
     </div>
 
-    <h3 class="bd-title poison">五张技能卡<span class="badge">5张</span></h3>
+    <h3 class="bd-title poison">4.2 五张技能卡<span class="badge">5张</span></h3>
     <div class="skill-grid p">
       <div class="sc">
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【感染精研】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标时，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短1秒，并使【病毒散播】剩余CD缩短1秒；1秒内置冷却。</div>
-          <div class="sc-ml">【凝毒追刺】使【十字斩】成功追加X单%攻击力物理伤害后的下一次暗影刺击杀意消耗降至15，并追加X追刺%攻击力物理伤害。</div>
+          <div class="sc-ml">【感染精研】使本技能命中同时带有【中毒】和【剧毒侵蚀】的主目标时缩短【病毒散播】CD。</div>
+          <div class="sc-ml">【凝毒追刺】使本技能降低杀意消耗并追加物理伤害。</div>
         </div>
         <div class="sc-role">高频填充</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">施毒</div><div class="sc-cost"><span class="cp-con">25杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加持续12秒的【中毒】；【中毒】按周期造成物理伤害。
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加持续12秒的【中毒】。【中毒】按周期造成物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【毒发】触发后，技能在6秒内替换为免费【毒发刺击】；命中追加X毒发%攻击力物理伤害，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短4秒，并使【病毒散播】剩余CD缩短4秒。</div>
-          <div class="sc-ml">【毒效续接】使施毒命中带有自身施加的【剧毒侵蚀】的目标时，将该状态剩余时间延长2秒。</div>
+          <div class="sc-ml">【毒发】触发后，本技能在6秒内替换为免费【毒发刺击】。</div>
+          <div class="sc-ml">【毒效续接】使本技能延长目标身上的【剧毒侵蚀】。</div>
         </div>
         <div class="sc-role">中毒建立与维护</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">病毒散播</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD8s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对主目标及其5米范围内最多5名敌人造成物理伤害，并将主目标的【中毒】传播给次要目标。主目标同时带有自身施加的【中毒】和【剧毒侵蚀】，且【十字斩】与【病毒散播】此前8秒内均未通过该条件造成追加伤害时，对本次命中的所有目标各追加X群%攻击力物理伤害；白～黄阶使杀阶提升1阶，红阶刷新红阶12秒。
+          <span class="sc-label">基础效果</span>对主目标及其5米范围内最多5名敌人造成物理伤害，并将主目标的【中毒】传播给本次命中的次要目标。若主目标同时带有【中毒】和【剧毒侵蚀】，杀阶提升1阶；当前为红阶时刷新红阶持续时间。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【疫病回响】使技能命中至少3名敌人时，于1秒后对本次命中列表中仍存活的目标追加X回响%攻击力物理伤害，最多5名。</div>
-          <div class="sc-ml">【毒雾蔓延】使本技能成功追加X群%攻击力物理伤害时传播完整12秒的【中毒】，并为次要目标施加延迟伤害标记【蔓延毒核】；标记持续3秒，结束时对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害。</div>
-          <div class="sc-ml">【毒爆回流】可重置本技能并使下一次释放免费。</div>
-          <div class="sc-ml">【见血封喉】使本技能在红阶成功追加X群%攻击力物理伤害后，将【十字斩】按钮替换为【见血封喉】。</div>
+          <div class="sc-ml">【疫病回响】造成额外范围物理伤害。</div>
+          <div class="sc-ml">【毒雾蔓延】强化【中毒】传播并施加【蔓延毒核】。</div>
+          <div class="sc-ml">【毒爆回流】重置本技能并使下一次释放免费。</div>
+          <div class="sc-ml">【见血封喉】使本技能在红阶命中同时带有【中毒】和【剧毒侵蚀】的主目标时生成【见血封喉】。</div>
         </div>
-        <div class="sc-role">群体扩散／范围爆发</div>
+        <div class="sc-role">群体扩散／升阶</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">毒性感染</div><div class="sc-cost"><span class="cp-con">30/25杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加当前杀阶对应的【剧毒侵蚀】。【剧毒侵蚀】按周期造成物理伤害，初始持续时间由施放时的杀阶决定；自然结束或目标死亡时触发范围伤害【毒爆】。同一施法者在同一目标上最多保留1个实例，再次施加时覆盖旧实例。
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加当前杀阶对应的【剧毒侵蚀】。【剧毒侵蚀】按周期造成物理伤害，初始持续时间由施放时的杀阶决定；自然结束或目标死亡时触发范围伤害【毒爆】。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【侵蚀续接】重新施加自身的【剧毒侵蚀】时，新实例在当前杀阶基础持续时间上继承旧实例50%的剩余时间，继承部分最多4秒。</div>
-          <div class="sc-ml">【凝毒穿刺】使技能消费目标标记【穿刺毒核】时追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
-          <div class="sc-ml">【毒效续接】使技能命中带有自身施加的【中毒】的目标时，将该状态剩余时间延长2秒。</div>
+          <div class="sc-ml">【侵蚀续接】使新施加的【剧毒侵蚀】继承部分剩余时间。</div>
+          <div class="sc-ml">【凝毒穿刺】消费【穿刺毒核】，追加物理伤害并延长新的【剧毒侵蚀】。</div>
+          <div class="sc-ml">【毒效续接】使本技能延长目标身上的【中毒】。</div>
         </div>
         <div class="sc-role">剧毒建立与维护</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD5s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。目标同时带有自身施加的【中毒】和【剧毒侵蚀】，且【十字斩】与【病毒散播】此前8秒内均未通过该条件造成追加伤害时，对主目标追加X单%攻击力物理伤害；白～黄阶使杀阶提升1阶，红阶刷新红阶12秒。
+          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。若主目标同时带有【中毒】和【剧毒侵蚀】，杀阶提升1阶；当前为红阶时刷新红阶持续时间。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【凝毒追刺】使本技能成功追加X单%攻击力物理伤害后，为自身施加持续6秒的强化状态【凝毒追刺】；下一次【暗影刺击】消费该状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害。</div>
-          <div class="sc-ml">【凝毒穿刺】同时为主目标施加持续6秒的标记【穿刺毒核】。</div>
-          <div class="sc-ml">【见血封喉】使本技能在红阶成功追加X单%攻击力物理伤害后，按钮在6秒内替换为【见血封喉】；释放后造成红阶十字斩120%档基础伤害和X终%攻击力物理伤害，并使红阶降为黄阶。</div>
+          <div class="sc-ml">【凝毒追刺】使本技能命中同时带有【中毒】和【剧毒侵蚀】的主目标时获得【凝毒追刺】。</div>
+          <div class="sc-ml">【凝毒穿刺】同时为主目标施加【穿刺毒核】。</div>
+          <div class="sc-ml">【见血封喉】使本技能在红阶满足上述条件时替换为【见血封喉】。</div>
         </div>
-        <div class="sc-role">单体爆发／红阶终结入口</div>
+        <div class="sc-role">单体升阶／红阶终结入口</div>
       </div>
     </div>
 
     <div class="callout neutral">五卡保持不变；点出终极节点后，【见血封喉】是十字斩的条件替换形态，不是第六张技能卡。</div>
 
-    <h3 class="bd-title poison">十字斩／病毒散播追加伤害与8秒限制</h3>
-    <div class="spec-box">
-      <div class="sb-title poison">触发系统</div>
-      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">主目标同时带有自身施加的【中毒】和【剧毒侵蚀】时，可以根据战斗目标选择以下技能造成追加伤害。</p>
-      <div class="table-wrap" style="max-height:none;margin:0;box-shadow:none;border:none">
-        <table>
-          <thead><tr><th class="poison-th">战斗意图</th><th class="poison-th">主动技能</th><th class="poison-th">条件满足后的追加伤害</th><th class="poison-th">额外职责</th></tr></thead>
-          <tbody>
-            <tr><td class="narrow"><strong>单体</strong></td><td>十字斩</td><td>对主目标追加X单%攻击力物理伤害</td><td>集中攻击主目标，不传播中毒</td></tr>
-            <tr><td class="narrow"><strong>群体</strong></td><td>病毒散播</td><td>对本次命中的最多5名目标各追加X群%攻击力物理伤害</td><td>传播中毒并处理范围目标</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <ul style="margin-top:12px">
-        <li>两个技能的主目标都必须同时带有自身施加的【中毒】和【剧毒侵蚀】</li>
-        <li>任一技能成功追加对应物理伤害后8秒内，【十字斩】不能再次追加X单%攻击力物理伤害，【病毒散播】不能再次追加X群%攻击力物理伤害；两者也不能通过这次状态检查提升杀阶或刷新红阶<em class="sim">【模拟值】</em></li>
-        <li>【十字斩】只对主目标追加伤害</li>
-        <li>【病毒散播】对本次已经命中的目标追加伤害，最多5名；只有主目标需要同时带有两种状态，次要目标不需要带有【剧毒侵蚀】</li>
-        <li>白～黄阶成功追加伤害时使杀阶+1，每次释放最多提升1阶</li>
-        <li>红阶成功追加伤害时刷新红阶12秒</li>
-        <li>8秒等待期间，【十字斩】和【病毒散播】仍可正常造成基础伤害，【病毒散播】仍可传播【中毒】</li>
-        <li>8秒等待时间不是新资源，不增加第三资源条</li>
-        <li>8秒等待结束且当前目标满足两种状态条件时，【十字斩】和【病毒散播】显示可造成追加伤害的技能高亮</li>
-        <li>两个技能在同一逻辑时刻命中时，由服务端按实际Action结算顺序处理；只有最先结算的技能造成追加伤害，另一个技能进入8秒等待</li>
-      </ul>
-      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin:16px 0 8px"><strong>上述两段追加物理伤害的共同结算边界：</strong></p>
-      <ul>
-        <li>伤害由当前命中的【十字斩】或【病毒散播】直接产生，不是目标获得的新状态</li>
-        <li>不读取【中毒】或【剧毒侵蚀】的单次周期伤害</li>
-        <li>不提前触发、不延后也不重置DoT下一次周期时间</li>
-        <li>不消耗、不刷新、不延长【中毒】和【剧毒侵蚀】</li>
-        <li>不能触发毒发、二刀追击、其他命中追加效果或自身递归</li>
-        <li>归类为追加物理伤害，受【短刃训练】与【连段训练】强化；不读取只强化十字斩或病毒散播基础伤害的效果</li>
-        <li>是否可以暴击，跟随项目追加伤害统一规则；当前标记为【待确认】</li>
-        <li>【毒爆】仍专指【剧毒侵蚀】自然结束或目标死亡时产生的范围伤害，不是【十字斩】的X单%或【病毒散播】的X群%追加物理伤害</li>
-      </ul>
+    <h3 class="bd-title poison">4.3 核心循环</h3>
+    <div class="cycle-text">
+      <p>保证循环只使用本BD五张技能卡：</p>
+      <p><strong>单体：</strong>施毒 → 毒性感染 → 十字斩提升杀阶 → 暗影刺击填充 → 补充【中毒】与【剧毒侵蚀】 → 再次使用十字斩提升杀阶</p>
+      <p><strong>群体：</strong>主目标施毒 → 毒性感染 → 病毒散播传播【中毒】并提升杀阶 → 【毒爆】处理 → 填充 → 再次使用病毒散播提升杀阶</p>
     </div>
-
-    <div class="callout neutral">
-      <span class="ct">玩家记忆三条</span>
-      目标必须同时带有自身施加的【中毒】和【剧毒侵蚀】；单体使用【十字斩】追加X单%攻击力物理伤害，群体使用【病毒散播】追加X群%攻击力物理伤害；任一技能成功追加该伤害后，两个技能都需要等待8秒才能再次追加该伤害。
-    </div>
-
-    <div class="table-wrap" style="max-height:none">
-      <table>
-        <thead><tr><th class="poison-th">技能</th><th class="poison-th">处理顺序</th></tr></thead>
-        <tbody>
-          <tr><td class="narrow"><strong>十字斩</strong></td><td>基础伤害命中 → 检查主目标是否同时带有自身施加的【中毒】和【剧毒侵蚀】 → 检查两个技能是否已结束8秒等待 → 对主目标追加X单%攻击力物理伤害 → 升阶或刷新红阶 → 开始8秒等待</td></tr>
-          <tr><td class="narrow"><strong>病毒散播</strong></td><td>基础范围伤害命中 → 检查主目标是否同时带有自身施加的【中毒】和【剧毒侵蚀】 → 检查两个技能是否已结束8秒等待 → 传播【中毒】 → 对本次命中的最多5名目标各追加X群%攻击力物理伤害 → 升阶或刷新红阶 → 开始8秒等待</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="bd-title poison">核心循环</h3>
     <div class="scenario-block p">
       <div class="scenario-tag">毒刃刺 · 保证循环</div>
       <div class="sb-body">
-        <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">保证循环只使用本BD五张技能卡：</p>
         <div class="branch-paths">
           <div class="bp">
             <span class="bp-label">单体</span>
@@ -522,11 +473,11 @@ footer p{margin-bottom:4px}
               <span class="fa">→</span>
               <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加【剧毒侵蚀】</div></div>
               <span class="fa">→</span>
-              <div class="sn hl"><div class="sn-name">【十字斩】追加X单%攻击力物理伤害</div><div class="sn-cost">25杀意</div><div class="sn-eff">追加伤害+升阶</div></div>
+              <div class="sn hl"><div class="sn-name">【十字斩】提升杀阶</div><div class="sn-cost">25杀意</div><div class="sn-eff">升阶</div></div>
               <span class="fa">→</span>
               <div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">30杀意</div><div class="sn-eff">填充</div></div>
             </div>
-            <div class="loop-back">↻ 补充【中毒】与【剧毒侵蚀】 → 等待8秒后再次用十字斩追加X单%攻击力物理伤害</div>
+            <div class="loop-back">↻ 补充【中毒】与【剧毒侵蚀】 → 再次使用十字斩提升杀阶</div>
           </div>
           <div class="bp">
             <span class="bp-label">群体</span>
@@ -535,9 +486,9 @@ footer p{margin-bottom:4px}
               <span class="fa">→</span>
               <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加【剧毒侵蚀】</div></div>
               <span class="fa">→</span>
-              <div class="sn hl"><div class="sn-name">【病毒散播】追加X群%攻击力物理伤害</div><div class="sn-cost">20杀意</div><div class="sn-eff">传播+追加伤害</div></div>
+              <div class="sn hl"><div class="sn-name">【病毒散播】传播【中毒】并提升杀阶</div><div class="sn-cost">20杀意</div><div class="sn-eff">传播+升阶</div></div>
             </div>
-            <div class="loop-back">↻ 【毒爆】处理 → 填充 → 等待8秒后再次用病毒散播追加X群%攻击力物理伤害</div>
+            <div class="loop-back">↻ 【毒爆】处理 → 填充 → 再次使用病毒散播提升杀阶</div>
           </div>
         </div>
       </div>
@@ -545,17 +496,17 @@ footer p{margin-bottom:4px}
 
     <div class="callout neutral">
       <span class="ct">循环规则</span>
-      白～黄阶下，【十字斩】或【病毒散播】每次成功追加对应物理伤害最多提升1阶。毒性感染始终可用，不再承担使红阶降为黄阶的临时替换按钮。同一施法者重新施加剧毒侵蚀时覆盖旧实例；覆盖移除不触发毒爆。切换目标不会清除杀阶，但新目标仍需重新施加【中毒】和【剧毒侵蚀】。单体循环不要求为了升阶主动释放范围技能；群体循环也不要求额外使用十字斩追加X单%攻击力物理伤害。
+      主目标同时带有【中毒】和【剧毒侵蚀】时，【十字斩】或【病毒散播】使杀阶提升1阶。同一施法者重新施加剧毒侵蚀时覆盖旧实例；覆盖移除不触发毒爆。切换目标不会清除杀阶，但新目标仍需重新施加【中毒】和【剧毒侵蚀】。单体循环使用【十字斩】升阶，群体循环使用【病毒散播】升阶。
     </div>
 
-    <h3 class="bd-title poison">红阶保红与见血封喉</h3>
+    <h3 class="bd-title poison">4.4 红阶保红与见血封喉</h3>
     <div class="spec-box">
       <div class="sb-title poison">见血封喉</div>
-      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">点出精通节点【见血封喉】后，红阶下由【十字斩】成功追加X单%攻击力物理伤害，或由【病毒散播】成功追加X群%攻击力物理伤害时：</p>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">点出精通节点【见血封喉】后，红阶下使用【十字斩】或【病毒散播】命中同时带有【中毒】和【剧毒侵蚀】的主目标时：</p>
       <ul>
         <li>刷新红阶12秒</li>
         <li>【十字斩】按钮临时显示为【见血封喉】</li>
-        <li>【病毒散播】按钮、后台CD、8秒触发等待和CD缩减效果完全不受影响</li>
+        <li>【病毒散播】保持原按钮和剩余CD</li>
         <li>十字斩原CD继续在后台计算</li>
       </ul>
       <div class="table-wrap" style="max-height:none;margin:12px 0 0;box-shadow:none;border:none">
@@ -564,45 +515,48 @@ footer p{margin-bottom:4px}
           <tbody>
             <tr><td class="narrow"><strong>消耗</strong></td><td>25杀意<em class="sim">【模拟值】</em></td></tr>
             <tr><td class="narrow"><strong>可用时间</strong></td><td>6秒<em class="sim">【模拟值】</em></td></tr>
-            <tr><td class="narrow"><strong>CD</strong></td><td>不读取十字斩当前CD；红阶下每次由十字斩或病毒散播成功追加对应物理伤害，最多触发1次按钮替换</td></tr>
+            <tr><td class="narrow"><strong>CD</strong></td><td>不读取十字斩当前CD；每次命中同时带有【中毒】和【剧毒侵蚀】的主目标，最多触发1次按钮替换</td></tr>
             <tr><td class="narrow"><strong>伤害</strong></td><td>造成红阶十字斩120%档基础伤害，并追加X终%攻击力物理伤害【待数值】</td></tr>
             <tr><td class="narrow"><strong>状态</strong></td><td>红→黄；目标身上的【中毒】与【剧毒侵蚀】保留，不刷新、不移除</td></tr>
             <tr><td class="narrow"><strong>追加伤害限制</strong></td><td>不触发毒发、二刀追击和其他命中追加效果，不递归</td></tr>
-            <tr><td class="narrow"><strong>精通继承</strong></td><td>【凝毒穿刺】提高本次追加伤害；【致命涂毒】期间该追加伤害再提高50%</td></tr>
             <tr><td class="narrow"><strong>恢复按钮</strong></td><td>使用或机会到期后恢复十字斩，并继承十字斩后台剩余CD</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-top:12px">这样，玩家可以保留见血封喉，也可以继续等待8秒后再次使用十字斩追加X单%攻击力物理伤害；技能替换不会遮挡病毒散播，单体玩家也不需要依赖病毒散播完成下一次升阶或红阶刷新。</p>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-top:12px">玩家可以暂时保留【见血封喉】，继续使用【病毒散播】处理群体目标；使用或持续时间结束后，按钮恢复为【十字斩】。</p>
     </div>
 
-    <h3 class="bd-title poison">随机事件｜毒发</h3>
+    <h3 class="bd-title poison">4.5 随机事件｜毒发</h3>
     <div class="callout poison">
       <span class="ct">毒发</span>
       <ul>
         <li>同时带有自身施加的【中毒】和【剧毒侵蚀】的目标，其任一状态的自然周期伤害生效时有<strong>12%</strong>概率触发；该效果具有8秒内置冷却。</li>
         <li>施毒高亮6秒，下一次施毒变为免费【毒发刺击】。</li>
-        <li>毒发刺击不刷新中毒，追加X毒发%攻击力物理伤害，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短4秒，并使病毒散播剩余CD缩短4秒；该伤害不能触发十字斩或病毒散播的追加物理伤害，也不能触发其他追加攻击。</li>
+        <li>【毒发刺击】对主目标追加X毒发%攻击力物理伤害，并使【病毒散播】剩余CD缩短4秒。</li>
         <li>致命涂毒期间概率提高到<strong>24%</strong>。</li>
         <li>毒发只提供额外收益，不是基础循环成立条件。</li>
       </ul>
     </div>
 
-    <h3 class="bd-title poison">固定大招替换｜致命涂毒</h3>
-    <div class="callout neutral">
-      <span class="ct">致命涂毒</span>
-      精通节点【致命毒液】将固定终极武器槽中的【影刃解放】替换为【致命涂毒】：
-      <ul style="margin:8px 0 0">
+    <h3 class="bd-title poison">4.6 固定大招替换｜致命涂毒</h3>
+    <div class="spec-box">
+      <div class="sb-title poison">致命涂毒</div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">精通节点【致命毒液】将固定终极武器槽中的【影刃解放】替换为【致命涂毒】：</p>
+      <ul>
         <li>持续8秒，CD45秒。</li>
-        <li>释放时清除【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间，并重置【病毒散播】CD。</li>
+        <li>释放时重置【病毒散播】CD。</li>
         <li>毒发概率12%→24%。</li>
-        <li>致命涂毒期间，【十字斩】与【病毒散播】满足两种状态条件后产生的追加物理伤害提高50%<em class="sim">【模拟值】</em>。</li>
-        <li>每次【致命涂毒】期间，第一次由【十字斩】成功追加X单%攻击力物理伤害，或由【病毒散播】成功追加X群%攻击力物理伤害时，杀阶可以提升2阶。</li>
-        <li>不改变见血封喉按钮规则。</li>
+        <li>持续期间，【十字斩】与【病毒散播】造成的物理伤害提高50%<em class="sim">【模拟值】</em>。</li>
+        <li>持续期间，【十字斩】或【病毒散播】第一次命中同时带有【中毒】和【剧毒侵蚀】的主目标时，杀阶提升2阶。</li>
       </ul>
     </div>
 
-    <h3 class="bd-title poison">精通后循环</h3>
+    <h3 class="bd-title poison">4.7 精通后循环</h3>
+    <div class="cycle-text">
+      <p><strong>单体：</strong>致命涂毒 → 建立【中毒】与【剧毒侵蚀】 → 十字斩提升杀阶并获得【凝毒追刺】和【穿刺毒核】 → 暗影刺击消费【凝毒追刺】 → 毒性感染消费【穿刺毒核】 → 再次用十字斩提升杀阶 → 红阶选择继续刷新或使用见血封喉</p>
+      <p><strong>群体：</strong>致命涂毒 → 重置病毒散播 → 建立【中毒】与【剧毒侵蚀】 → 病毒散播传播【中毒】并提升杀阶 → 疫病回响与【蔓延毒核】结算 → 【毒爆】触发时获得免费病毒散播 → 红阶选择继续刷新或使用见血封喉</p>
+      <p>随机触发的【毒发】可以加快【病毒散播】周转，但不作为保证循环成立的必要条件。</p>
+    </div>
     <div class="scenario-block p">
       <div class="scenario-tag">毒刃刺 · 致命涂毒后循环</div>
       <div class="sb-body">
@@ -610,62 +564,62 @@ footer p{margin-bottom:4px}
           <div class="bp">
             <span class="bp-label">单体</span>
             <div class="skill-flow" style="flex-direction:column;align-items:flex-start;gap:4px">
-              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">清除8秒等待</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">建立／确认【中毒】与【剧毒侵蚀】</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">【十字斩】追加X单%攻击力物理伤害</div><div class="sn-eff">获得【凝毒追刺】+【穿刺毒核】</div></div></div>
+              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">重置【病毒散播】CD</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">建立【中毒】与【剧毒侵蚀】</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">【十字斩】提升杀阶</div><div class="sn-eff">获得【凝毒追刺】+【穿刺毒核】</div></div></div>
               <div class="skill-flow"><div class="sn hl"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">15杀意</div><div class="sn-eff">消费【凝毒追刺】</div></div></div>
               <div class="skill-flow"><div class="sn hl"><div class="sn-name">【毒性感染】</div><div class="sn-eff">消费【穿刺毒核】</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">等待8秒后再次用十字斩追加X单%攻击力物理伤害</div></div><span class="fa">→</span><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">继续刷新</span><span class="ca">／</span><span class="cn hl">【见血封喉】</span></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">再次用十字斩提升杀阶</div></div><span class="fa">→</span><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">继续刷新</span><span class="ca">／</span><span class="cn hl">【见血封喉】</span></div>
             </div>
           </div>
           <div class="bp">
             <span class="bp-label">群体</span>
             <div class="skill-flow" style="flex-direction:column;align-items:flex-start;gap:4px">
-              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">清除8秒等待+重置【病毒散播】</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">建立／确认【中毒】与【剧毒侵蚀】</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">【病毒散播】传播【中毒】并追加X群%攻击力物理伤害</div><div class="sn-eff">【疫病回响】+【蔓延毒核】</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-eff">缩短两种追加伤害共用的8秒等待</div></div></div>
+              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">重置【病毒散播】CD</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">建立【中毒】与【剧毒侵蚀】</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">【病毒散播】传播【中毒】并提升杀阶</div><div class="sn-eff">【疫病回响】+【蔓延毒核】</div></div></div>
               <div class="skill-flow"><div class="sn"><div class="sn-name">【毒爆】触发</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">免费【病毒散播】</div></div></div>
               <div class="skill-flow"><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">继续刷新</span><span class="ca">／</span><span class="cn hl">【见血封喉】</span></div>
             </div>
           </div>
         </div>
-        <div class="loop-back">↻ 随机毒发可以缩短十字斩与病毒散播两种追加物理伤害共用的8秒等待，但不得作为任一保证循环成立的必要条件。</div>
+        <div class="loop-back">↻ 随机触发的【毒发】可以加快【病毒散播】周转，但不作为保证循环成立的必要条件。</div>
       </div>
     </div>
 
-    <h3 class="bd-title poison">单体／群体二择</h3>
+    <h3 class="bd-title poison">4.8 单体／群体</h3>
     <div class="priority-split">
       <div class="ps-item">
         <span class="ps-tag">单体</span>
         <div class="ps-body">
           <div class="ps-skill">凝毒穿刺</div>
-          <div class="ps-detail">【十字斩】成功追加X单%攻击力物理伤害时，为主目标施加持续6秒的目标标记【穿刺毒核】；下一次毒性感染消费标记，追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
+          <div class="ps-detail">【十字斩】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，为其施加持续6秒的【穿刺毒核】；下一次【毒性感染】消费标记，追加X穿刺%攻击力物理伤害，并使新的【剧毒侵蚀】持续时间增加4秒。</div>
         </div>
       </div>
       <div class="ps-item">
         <span class="ps-tag">群体</span>
         <div class="ps-body">
           <div class="ps-skill">毒雾蔓延</div>
-          <div class="ps-detail">【病毒散播】成功追加X群%攻击力物理伤害时，传播完整12秒【中毒】，最多影响4名次要目标，并为次要目标施加持续3秒的延迟伤害标记【蔓延毒核】；标记结束时对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害。</div>
+          <div class="ps-detail">【病毒散播】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，将持续12秒的【中毒】传播给最多4名次要目标，并为这些目标施加持续3秒的【蔓延毒核】。标记结束时，对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害。</div>
         </div>
       </div>
     </div>
+    <div class="callout neutral">两者分别强化【十字斩】的单体后续攻击和【病毒散播】的群体传播。</div>
 
-    <h3 class="bd-title poison">精通路径｜21—30点</h3>
+    <h3 class="bd-title poison">4.9 精通路径｜21—30点</h3>
     <div class="table-wrap">
       <table class="mastery-table">
         <thead><tr><th class="poison-th">点位</th><th class="poison-th">节点ID</th><th class="poison-th">节点</th><th class="poison-th">节点类型</th><th class="poison-th">效果</th></tr></thead>
         <tbody>
-          <tr><td class="center narrow">21</td><td class="narrow">P21</td><td><strong>【感染精研】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>【暗影刺击】直接命中同时带有自身施加的【中毒】和【剧毒侵蚀】的主目标时，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短1秒，并使【病毒散播】剩余CD缩短1秒；该效果具有1秒内置冷却</td></tr>
-          <tr><td class="center narrow">22</td><td class="narrow">P22</td><td><strong>【毒发】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>同时带有自身施加的【中毒】和【剧毒侵蚀】的目标，其任一状态的自然周期伤害生效时有12%概率触发，具有8秒内置冷却；【施毒】在6秒内替换为免费【毒发刺击】，命中追加X毒发%攻击力物理伤害，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短4秒，并使【病毒散播】剩余CD缩短4秒</td></tr>
-          <tr><td class="center narrow">23</td><td class="narrow">P23</td><td><strong>【侵蚀续接】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【毒性感染】重新施加同一施法者的【剧毒侵蚀】时，新实例在当前杀阶基础持续时间上继承旧实例50%的剩余时间，继承部分最多4秒</td></tr>
-          <tr><td class="center narrow">24</td><td class="narrow">P24</td><td><strong>【疫病回响】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【病毒散播】一次释放直接命中至少3名敌人时，于1秒后对本次命中列表中仍存活的目标追加X回响%攻击力物理伤害，最多5名；每次释放最多触发1次</td></tr>
-          <tr><td class="center narrow">25</td><td class="narrow">P25</td><td><strong>【凝毒追刺】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>【十字斩】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标并成功追加X单%攻击力物理伤害后，为自身施加持续6秒的强化状态【凝毒追刺】；下一次【暗影刺击】消费该状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害</td></tr>
-          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26S</td><td><strong>【凝毒穿刺】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>【十字斩】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标并成功追加X单%攻击力物理伤害时，为主目标施加持续6秒的目标标记【穿刺毒核】；下一次【毒性感染】消费标记，追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒</td></tr>
-          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26G</td><td><strong>【毒雾蔓延】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>【病毒散播】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的主目标并成功追加X群%攻击力物理伤害时，传播完整12秒【中毒】，最多影响4名次要目标，并为次要目标施加持续3秒的延迟伤害标记【蔓延毒核】；标记结束时对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害</td></tr>
-          <tr><td class="center narrow">27</td><td class="narrow">P27</td><td><strong>【毒效续接】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>【施毒】命中带有自身施加的【剧毒侵蚀】的目标时，使该状态剩余时间延长2秒；【毒性感染】命中带有自身施加的【中毒】的目标时，使该状态剩余时间延长2秒；每个技能分别具有6秒内置冷却</td></tr>
-          <tr><td class="center narrow">28</td><td class="narrow">P28</td><td><strong>【毒爆回流】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>同一施法者的【毒爆】命中至少1名敌人时，重置【病毒散播】剩余CD，并使下一次病毒散播在6秒内免除杀意消耗；该效果具有8秒内置冷却</td></tr>
-          <tr><td class="center narrow">29</td><td class="narrow">P29</td><td><strong>【致命毒液】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>固定终极武器槽中的【影刃解放】替换为【致命涂毒】；释放后持续8秒、CD45秒，立即清除【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待，并重置【病毒散播】CD；毒发概率12%→24%，两种追加物理伤害提高50%，窗口内第一次成功追加其中一种伤害时额外提升1阶</td></tr>
-          <tr><td class="center narrow">30</td><td class="narrow">P30</td><td><strong>【见血封喉】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>红阶下，【十字斩】成功追加X单%攻击力物理伤害或【病毒散播】成功追加X群%攻击力物理伤害后，使【十字斩】在6秒内替换为【见血封喉】；释放造成红阶十字斩120%档基础伤害并追加X终%攻击力物理伤害，随后使红阶降为黄阶，并恢复十字斩原按钮及后台剩余CD</td></tr>
+          <tr><td class="center narrow">21</td><td class="narrow">P21</td><td><strong>【感染精研】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>【暗影刺击】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，使【病毒散播】剩余CD缩短1秒；内置冷却1秒</td></tr>
+          <tr><td class="center narrow">22</td><td class="narrow">P22</td><td><strong>【毒发】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>同时带有【中毒】和【剧毒侵蚀】的目标受到任一状态的周期伤害时，有12%概率触发【毒发】；内置冷却8秒。【施毒】在6秒内替换为免费【毒发刺击】，命中追加X毒发%攻击力物理伤害，并使【病毒散播】剩余CD缩短4秒</td></tr>
+          <tr><td class="center narrow">23</td><td class="narrow">P23</td><td><strong>【侵蚀续接】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【毒性感染】重新施加【剧毒侵蚀】时，新的【剧毒侵蚀】继承原状态50%的剩余时间，最多继承4秒</td></tr>
+          <tr><td class="center narrow">24</td><td class="narrow">P24</td><td><strong>【疫病回响】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【病毒散播】命中至少3名敌人时，1秒后对本次命中的最多5名存活目标追加X回响%攻击力物理伤害</td></tr>
+          <tr><td class="center narrow">25</td><td class="narrow">P25</td><td><strong>【凝毒追刺】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>【十字斩】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，为自身施加持续6秒的【凝毒追刺】。下一次【暗影刺击】消费状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害</td></tr>
+          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26S</td><td><strong>【凝毒穿刺】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>【十字斩】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，为其施加持续6秒的【穿刺毒核】。下一次【毒性感染】消费标记，追加X穿刺%攻击力物理伤害，并使新的【剧毒侵蚀】持续时间增加4秒</td></tr>
+          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26G</td><td><strong>【毒雾蔓延】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>【病毒散播】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，将持续12秒的【中毒】传播给最多4名次要目标，并为这些目标施加持续3秒的【蔓延毒核】。标记结束时，对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害</td></tr>
+          <tr><td class="center narrow">27</td><td class="narrow">P27</td><td><strong>【毒效续接】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>【施毒】命中带有【剧毒侵蚀】的目标时，使【剧毒侵蚀】延长2秒；【毒性感染】命中带有【中毒】的目标时，使【中毒】延长2秒。两种效果分别具有6秒内置冷却</td></tr>
+          <tr><td class="center narrow">28</td><td class="narrow">P28</td><td><strong>【毒爆回流】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【毒爆】命中敌人时，重置【病毒散播】CD，并使下一次【病毒散播】在6秒内不消耗杀意；内置冷却8秒</td></tr>
+          <tr><td class="center narrow">29</td><td class="narrow">P29</td><td><strong>【致命毒液】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>将【影刃解放】替换为【致命涂毒】。释放后持续8秒、CD45秒，重置【病毒散播】CD，使【毒发】概率12%→24%，并使【十字斩】与【病毒散播】造成的物理伤害提高50%。持续期间，这两个技能第一次命中同时带有【中毒】和【剧毒侵蚀】的主目标时，杀阶提升2阶</td></tr>
+          <tr><td class="center narrow">30</td><td class="narrow">P30</td><td><strong>【见血封喉】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>红阶下，【十字斩】或【病毒散播】命中同时带有【中毒】和【剧毒侵蚀】的主目标时，【十字斩】在6秒内替换为【见血封喉】。【见血封喉】造成红阶十字斩伤害并追加X终%攻击力物理伤害，随后使红阶降为黄阶</td></tr>
         </tbody>
       </table>
     </div>
@@ -676,63 +630,64 @@ footer p{margin-bottom:4px}
     <h2 class="sec-title"><span class="num">五</span>双刀刺｜动态反应型</h2>
 
     <div class="callout dual">
-      <span class="ct">一句话玩法</span>
+      <span class="ct">5.1 一句话玩法</span>
       通过【永恒之斩】完成追斩升阶；蓝阶在追斩窗口内插入【黑色幻影】并完成2次基础追斩后直接进入红阶；红阶时在共享CD内选择用【十字斩】刷新红阶，或用【永恒之斩】追加终结伤害并降为黄阶。
     </div>
 
-    <h3 class="bd-title dual">五张技能卡<span class="badge">5张</span></h3>
+    <h3 class="bd-title dual">5.2 五张技能卡<span class="badge">5张</span></h3>
     <div class="skill-grid d">
       <div class="sc">
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【疾影追斩】命中后为自身施加持续4秒的强化状态【疾影】；下一次永恒之斩首击消费该状态，使第1次追斩杀意消耗15→5，并追加X疾影%攻击力物理伤害。</div>
-          <div class="sc-ml">【连斩不息】允许本技能在永恒之斩窗口内插入1次且不会中断窗口。</div>
-          <div class="sc-ml">【无尽余势】可使下一次本技能杀意消耗降低10。</div>
+          <div class="sc-ml">【疾影追斩】使下一次【永恒之斩】强化第1次追斩。</div>
+          <div class="sc-ml">【连斩不息】允许本技能插入追斩窗口。</div>
+          <div class="sc-ml">【无尽余势】降低本技能杀意消耗并缩短共享CD。</div>
         </div>
         <div class="sc-role">高频填充</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD6s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>快速接近当前目标并造成物理伤害。蓝阶下，在【永恒之斩】追斩窗口内插入本技能并随后完成2次基础追斩，使杀阶直接提升至红阶；红阶下命中后，若在6秒内使用【十字斩】命中目标，则将红阶剩余时间刷新至12秒。
+          <span class="sc-label">基础效果</span>快速接近当前主目标并造成物理伤害。蓝阶下，在【永恒之斩】窗口内释放本技能并完成2次追斩，杀阶直接提升至红阶。红阶下，本技能命中后的6秒内使用【十字斩】命中主目标，刷新红阶持续时间。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【幻影折返】命中后使技能在3秒内替换为免费【残影返身】，释放后返回黑色幻影起始位置，并对返回路径上的最多5名敌人造成X返身%攻击力物理伤害。</div>
-          <div class="sc-ml">【十字回锋】使下一次黑色幻影变为双段攻击。</div>
-          <div class="sc-ml">【幻影回流】可重置本技能，并使下一次释放降低杀意消耗。</div>
+          <div class="sc-ml">【幻影折返】使本技能命中后替换为【残影返身】。</div>
+          <div class="sc-ml">【十字回锋】使下一次本技能变为2段攻击。</div>
+          <div class="sc-ml">【幻影回流】重置本技能并降低下一次释放的杀意消耗。</div>
         </div>
-        <div class="sc-role">机动输出／追斩窗口插入</div>
+        <div class="sc-role">机动输出／窗口插入</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">利刃旋舞</div><div class="sc-cost"><span class="cp-con">30杀意</span> CD12s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对自身周围敌人造成范围物理伤害，并为自身施加1层强化状态【旋刃环绕】；基础持续X秒<em class="sim">待数值</em>。下一次主动技能直接命中主目标时消费该状态，并触发追加攻击【旋刃追击】，对主目标造成X旋刃%攻击力物理伤害<em class="sim">待数值</em>。
+          <span class="sc-label">基础效果</span>对自身周围敌人造成物理伤害，并为自身施加1层持续X秒的【旋刃环绕】。下一次主动技能命中主目标时消费状态，触发【旋刃追击】并造成X旋刃%攻击力物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【旋刃列阵】使旋刃环绕改为3层、持续8秒；后续主动技能直接命中时消费1层，对主目标及其5米内最多2名次要目标造成X旋刃%攻击力物理伤害。</div>
-          <div class="sc-ml">【一敌专攻】与【群刃回响】分别改变追击的单体和群体结算。</div>
+          <div class="sc-ml">【旋刃列阵】使【旋刃环绕】增加至3层，并使【旋刃追击】攻击主目标和次要目标。</div>
+          <div class="sc-ml">【一敌专攻】强化单体追击。</div>
+          <div class="sc-ml">【群刃回响】强化群体追击。</div>
         </div>
-        <div class="sc-role">群体附着</div>
+        <div class="sc-role">追击建立／范围输出</div>
       </div>
       <div class="sc">
-        <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">永恒之斩</div><div class="sc-cost"><span class="cp-con">首击20</span> <span class="cp-con">追斩15</span> 共享8s CD</div></div></div>
+        <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">永恒之斩</div><div class="sc-cost"><span class="cp-con">首击20+追斩15</span> 共享8s CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>首击对当前主目标造成物理伤害，并开启5秒追斩窗口；窗口内最多追加2次追斩，每次造成物理伤害。完成2次基础追斩后，白／绿／黄阶提升1阶；蓝阶插入黑色幻影并完成2次基础追斩时直接提升至红阶；红阶完成第2次基础追斩时追加攻击段【绝刃终结】，造成100%攻击力物理伤害，随后使红阶降为黄阶。
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并开启5秒追斩窗口；窗口内最多释放2次追斩，每次造成物理伤害。完成第2次追斩后，杀阶提升1阶；蓝阶且本次窗口内释放过【黑色幻影】时，杀阶直接提升至红阶；红阶时改为触发【绝刃终结】，造成100%攻击力物理伤害并降为黄阶。
           <span class="sc-label">精通变化</span>
           <div class="sc-ml">【疾影追斩】强化第1次追斩。</div>
-          <div class="sc-ml">【连斩不息】使追斩窗口5→6秒、最大追斩2→3，并允许插入1次暗影刺击且不会中断窗口；第3次追斩在第2次追斩完成升阶或红→黄后执行。</div>
-          <div class="sc-ml">【无尽余势】使完成全部追斩后获得10秒同名强化状态，下一次填充技能减耗并缩短共享杀招CD。</div>
+          <div class="sc-ml">【连斩不息】延长窗口、增加第3次追斩，并允许插入【暗影刺击】。</div>
+          <div class="sc-ml">【无尽余势】在释放当前上限的全部追斩后强化下一次填充技能。</div>
         </div>
         <div class="sc-role">升阶／红阶终结</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> 共享8s CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。红阶状态下，【黑色幻影】命中后的6秒内以本技能命中目标，刷新红阶持续时间至12秒。
+          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。红阶下，在【黑色幻影】命中后的6秒内使用本技能命中主目标，刷新红阶持续时间。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【十字回锋】使本技能直接命中后为自身施加持续6秒的【回锋】；下一次黑色幻影消费该状态并改为2段物理攻击，整次释放只判定1次二刀追击。</div>
+          <div class="sc-ml">【十字回锋】使本技能命中后获得【回锋】；下一次【黑色幻影】消费状态并变为2段物理攻击。</div>
         </div>
-        <div class="sc-role">短窗口兑现／红阶保红</div>
+        <div class="sc-role">红阶刷新</div>
       </div>
     </div>
 
@@ -1220,19 +1175,19 @@ footer p{margin-bottom:4px}
         <thead><tr><th class="shared-th">项目</th><th class="poison-th">毒刃刺</th><th class="dual-th">双刀刺</th><th class="burst-th">爆刺</th></tr></thead>
         <tbody>
           <tr><td class="narrow"><strong>建立阶段</strong></td><td>为目标施加【中毒】与【剧毒侵蚀】</td><td>等待永恒之斩窗口</td><td>爪痕与筹谋建立</td></tr>
-          <tr><td class="narrow"><strong>升阶行为</strong></td><td>单体由【十字斩】追加单体伤害／群体由【病毒散播】追加范围伤害</td><td>永恒之斩完成2次基础追斩</td><td>十字斩或致命影啸消费【基础致命爪痕】</td></tr>
-          <tr><td class="narrow"><strong>技术跃阶</strong></td><td>【致命涂毒】期间第一次满足两种状态条件时额外提升1阶</td><td>蓝阶插入黑色幻影并完成2次基础追斩</td><td>【影袭筹谋】达到2层时额外升阶</td></tr>
-          <tr><td class="narrow"><strong>红阶保留</strong></td><td>满足两种状态条件后再次使用十字斩或病毒散播</td><td>黑色幻影→6秒内十字斩</td><td>大招外消费【基础致命爪痕】</td></tr>
+          <tr><td class="narrow"><strong>升阶行为</strong></td><td>主目标带有【中毒】与【剧毒侵蚀】时，单体使用【十字斩】／群体使用【病毒散播】</td><td>永恒之斩完成2次基础追斩</td><td>十字斩或致命影啸消费【基础致命爪痕】</td></tr>
+          <tr><td class="narrow"><strong>技术跃阶</strong></td><td>【致命涂毒】期间，十字斩或病毒散播第一次命中同时带有【中毒】和【剧毒侵蚀】的主目标</td><td>蓝阶插入黑色幻影并完成2次基础追斩</td><td>【影袭筹谋】达到2层时额外升阶</td></tr>
+          <tr><td class="narrow"><strong>红阶保留</strong></td><td>十字斩或病毒散播命中同时带有【中毒】和【剧毒侵蚀】的主目标</td><td>黑色幻影→6秒内十字斩</td><td>大招外消费【基础致命爪痕】</td></tr>
           <tr><td class="narrow"><strong>红阶转黄</strong></td><td>见血封喉</td><td>永恒之斩第2次追斩→绝刃终结</td><td>暗影超越内消费【超越爪痕】</td></tr>
           <tr><td class="narrow"><strong>决策类型</strong></td><td>状态和CD判断</td><td>连段路线判断</td><td>爆发时机规划</td></tr>
-          <tr><td class="narrow"><strong>失败压力</strong></td><td>【中毒】或【剧毒侵蚀】中断，或错过8秒后的追加伤害时机</td><td>窗口中断或共享CD选错</td><td>筹谋不足或大招窗口未完成</td></tr>
+          <tr><td class="narrow"><strong>失败压力</strong></td><td>【中毒】或【剧毒侵蚀】中断，导致十字斩或病毒散播无法升阶</td><td>窗口中断或共享CD选错</td><td>筹谋不足或大招窗口未完成</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="callout neutral">
       <span class="ct">目标体验</span>
-      <strong>毒刃刺</strong>：观察目标身上的【中毒】与【剧毒侵蚀】以及8秒等待；单体使用【十字斩】追加单体伤害，群体使用【病毒散播】追加范围伤害，并在红阶选择继续刷新还是使用见血封喉。<br>
+      <strong>毒刃刺</strong>：维持目标身上的【中毒】与【剧毒侵蚀】；单体使用【十字斩】升阶，群体使用【病毒散播】传播中毒并升阶，红阶时选择继续刷新或使用【见血封喉】。<br>
       <strong>双刀刺</strong>：读懂短窗口，在固定规则内安排插入动作，并承担共享CD选择成本。<br>
       <strong>爆刺</strong>：提前筹备，在合适杀阶和战斗阶段一次完成两轮处决。
     </div>
