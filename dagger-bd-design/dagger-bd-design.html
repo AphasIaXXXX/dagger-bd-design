@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>匕首｜三BD技能卡与完整精通节点表 V4.1｜杀意·杀势等价迁移版</title>
+<title>匕首｜三BD技能卡与完整精通盘 V6.5｜结构修正版</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -17,9 +17,9 @@
   --shared:#4A7080;--shared-l:#EEF3F5;--shared-b:#BCD0D8;
   --shadow:0 1px 3px rgba(45,42,38,.06),0 4px 12px rgba(45,42,38,.04);
   --shadow-lg:0 4px 16px rgba(45,42,38,.08),0 8px 32px rgba(45,42,38,.06);
-  --poison:#6B4E8F;--poison-l:#F4F0F8;--poison-b:#D0C4DE;
-  --dual:#3A7B99;--dual-l:#E6F0F5;--dual-b:#A4C9E2;
-  --burst:#B5651D;--burst-l:#FBF2E8;--burst-b:#E8D0B0;
+  --poison:#3D7A52;--poison-l:#EEF5F0;--poison-b:#C0DCC8;
+  --dual:#BD7320;--dual-l:#FBF4E8;--dual-b:#E8D5B8;
+  --burst:#6B4E8F;--burst-l:#F4F0F8;--burst-b:#D0C4DE;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
@@ -77,9 +77,9 @@ em{font-style:normal}
 .skill-grid.d .sc-h{background:var(--dual-l)}.skill-grid.d .sc-num{background:var(--dual)}.skill-grid.d .sc-role{background:var(--dual-l);color:var(--dual)}.skill-grid.d .sc-name{color:var(--dual)}
 .skill-grid.b .sc-h{background:var(--burst-l)}.skill-grid.b .sc-num{background:var(--burst)}.skill-grid.b .sc-role{background:var(--burst-l);color:var(--burst)}.skill-grid.b .sc-name{color:var(--burst)}
 .callout{border-radius:10px;padding:16px 20px;margin:16px 0;font-size:13px;line-height:1.7;border:1px solid;border-left:4px solid}
-.callout.poison{background:var(--poison-l);border-color:var(--poison-b);border-left-color:var(--poison);color:#2E2A45}
-.callout.dual{background:var(--dual-l);border-color:var(--dual-b);border-left-color:var(--dual);color:#1A3A4A}
-.callout.burst{background:var(--burst-l);border-color:var(--burst-b);border-left-color:var(--burst);color:#5A3A10}
+.callout.poison{background:var(--poison-l);border-color:var(--poison-b);border-left-color:var(--poison);color:#2E5A3A}
+.callout.dual{background:var(--dual-l);border-color:var(--dual-b);border-left-color:var(--dual);color:#5A4015}
+.callout.burst{background:var(--burst-l);border-color:var(--burst-b);border-left-color:var(--burst);color:#3A2A50}
 .callout.neutral{background:var(--bg2);border-color:var(--rule2);border-left-color:var(--accent);color:var(--ink2);box-shadow:var(--shadow)}
 .callout.shared{background:var(--shared-l);border-color:var(--shared-b);border-left-color:var(--shared);color:#2A4A55}
 .callout strong{color:var(--ink);font-weight:700}
@@ -99,8 +99,12 @@ tbody td{padding:10px 16px;vertical-align:top;line-height:1.65}
 td.center{text-align:center;white-space:nowrap}td.narrow{white-space:nowrap}
 .mastery-table td:nth-child(5){min-width:320px}
 .sim{font-size:11px;padding:2px 6px;border-radius:4px;background:var(--bg3);color:var(--muted);border:1px solid var(--rule);font-weight:500}
+.design{background:var(--shared-l);color:var(--shared);border-color:var(--shared-b)}
+.balance{background:#FFF8E8;color:#8A6D20;border-color:#E8D5A8}
 .nt{display:inline-block;font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600;white-space:nowrap;border:1px solid}
 .nt-basic{background:#F0EBE5;color:#8A7B6E;border-color:#DCCFC0}
+.nt-root{background:#E8F0F5;color:#4B6B95;border-color:#B0C4D8}
+.nt-entry{background:#F5F0FA;color:#7B5DA5;border-color:#D4C0E5}
 .nt-weapon{background:#E8EEF5;color:#4B6B95;border-color:#B0C4D8}
 .nt-feel{background:#F0EDE5;color:#9A8B7E;border-color:#DCD0C0}
 .nt-cycle{background:#E8EEF5;color:#4B6B95;border-color:#B0C4D8}
@@ -123,32 +127,6 @@ td.center{text-align:center;white-space:nowrap}td.narrow{white-space:nowrap}
 .bd-title.burst .badge{background:var(--burst);color:#FFF}
 .bd-title.shared{background:var(--shared-l);border-left:4px solid var(--shared);color:var(--shared)}
 .bd-title.shared .badge{background:var(--shared);color:#FFF}
-.cycle-text{background:var(--bg2);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;font-family:"JetBrains Mono","Cascadia Code",monospace;font-size:13px;line-height:2;color:var(--ink2);white-space:pre-wrap;margin:14px 0;overflow-x:auto;box-shadow:var(--shadow)}
-.cycle-text.p{border-left:4px solid var(--poison)}
-.cycle-text.d{border-left:4px solid var(--dual)}
-.cycle-text.b{border-left:4px solid var(--burst)}
-.cycle-text.neutral{border-left:4px solid var(--accent)}
-.cycle{border:1px solid var(--rule);border-radius:12px;background:var(--bg2);overflow:hidden;margin:16px 0;box-shadow:var(--shadow)}
-.cycle-h{padding:12px 18px;font-size:16px;font-weight:700;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:10px;font-family:"Noto Serif SC",serif}
-.cycle.p .cycle-h{background:var(--poison-l);color:var(--poison);border-bottom:2px solid var(--poison)}
-.cycle.d .cycle-h{background:var(--dual-l);color:var(--dual);border-bottom:2px solid var(--dual)}
-.cycle.b .cycle-h{background:var(--burst-l);color:var(--burst);border-bottom:2px solid var(--burst)}
-.cycle.n .cycle-h{background:var(--bg3);color:var(--ink);border-bottom:2px solid var(--rule2)}
-.cycle-summary{padding:10px 18px;font-size:13px;font-weight:600;color:var(--accent2);border-bottom:1px solid var(--rule);background:var(--accent-l);display:flex;align-items:center;gap:8px}
-.cycle-summary::before{content:"一句话打法";font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;background:var(--accent);color:#FFF;letter-spacing:.06em;flex-shrink:0}
-.cycle-body{padding:16px 18px}
-.cycle-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;flex-wrap:wrap}
-.cycle-row:last-child{margin-bottom:0}
-.cycle-stage{flex-shrink:0;width:60px;font-size:11px;font-weight:700;padding:5px 8px;border-radius:6px;text-align:center;color:#FFF;margin-top:2px}
-.cycle.p .cycle-stage{background:var(--poison)}.cycle.d .cycle-stage{background:var(--dual)}.cycle.b .cycle-stage{background:var(--burst)}.cycle.n .cycle-stage{background:var(--accent)}
-.cycle-flow{display:flex;align-items:center;flex-wrap:wrap;gap:4px;padding-top:3px;flex:1}
-.cn{padding:5px 12px;background:#FFF;border:1px solid var(--rule);border-radius:20px;font-size:13px;white-space:nowrap;color:var(--ink2)}
-.cn.hl{font-weight:700;border-width:2px}
-.cycle.p .cn.hl{background:var(--poison-l);border-color:var(--poison);color:var(--poison)}
-.cycle.d .cn.hl{background:var(--dual-l);border-color:var(--dual);color:var(--dual)}
-.cycle.b .cn.hl{background:var(--burst-l);border-color:var(--burst);color:var(--burst)}
-.cycle.n .cn.hl{background:var(--accent-l);border-color:var(--accent);color:var(--accent2)}
-.ca{color:var(--accent);font-size:15px;margin:0 2px}
 .scenario-block{border:1px solid var(--rule);border-radius:12px;background:var(--bg2);overflow:hidden;margin:12px 0;box-shadow:var(--shadow)}
 .scenario-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 14px;border-radius:8px 8px 0 0;margin:0;letter-spacing:.02em}
 .scenario-block.p .scenario-tag{background:var(--poison-l);color:var(--poison);border-bottom:2px solid var(--poison)}
@@ -200,9 +178,9 @@ td.center{text-align:center;white-space:nowrap}td.narrow{white-space:nowrap}
 .spec-box ul li{font-size:13px;color:var(--ink2);line-height:1.7;padding:4px 0;padding-left:20px;position:relative}
 .spec-box ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);position:absolute;left:4px;top:12px}
 .spec-box ul li strong{color:var(--ink);font-weight:700}
-.phase-label{font-size:12px;font-weight:700;margin:10px 0 6px;padding:4px 12px;border-radius:4px;display:inline-block}
-.phase-label.round{color:var(--burst);background:var(--burst-l)}
-.phase-note{font-size:12px;font-weight:700;color:var(--accent2);margin:8px 0 6px;text-align:center;padding:5px 14px;background:var(--accent-l);border-radius:6px;border:1px dashed var(--peach-d)}
+.spec-box .sb-title.poison::before{background:var(--poison)}
+.spec-box .sb-title.dual::before{background:var(--dual)}
+.spec-box .sb-title.burst::before{background:var(--burst)}
 .tt{position:relative;cursor:help;font-weight:600}
 .tt .tt-content{display:none}
 .tt-mastery{color:#B89BE6}
@@ -221,40 +199,48 @@ td.center{text-align:center;white-space:nowrap}td.narrow{white-space:nowrap}
 #global-tt.cat-skill .gtt-cat{background:#4A9D6A;color:#fff}
 #global-tt.cat-weapon{border-color:#D4943A}
 #global-tt.cat-weapon .gtt-cat{background:#D4943A;color:#fff}
-.hud-demo{margin:16px 0;padding:16px;background:var(--bg3);border-radius:10px;border:1px solid var(--rule2)}
-.hud-demo-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
-.hud-demo-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px}
-.hud-frame{padding:4px;border-radius:12px;display:inline-block;min-width:320px;box-sizing:border-box}
-.hud-frame-inactive{border:3px solid #555;background:rgba(0,0,0,0.15)}
-.hud-frame-white{border:3px solid #ccc;background:rgba(255,255,255,0.1)}
-.hud-frame-green{border:3px solid #4CAF50;background:rgba(76,175,80,0.1)}
-.hud-frame-blue{border:3px solid #2196F3;background:rgba(33,150,243,0.1)}
-.hud-frame-yellow{border:3px solid #FF9800;background:rgba(255,152,0,0.1)}
-.hud-frame-red{border:3px solid #f44336;background:rgba(244,67,54,0.15);box-shadow:0 0 12px rgba(244,67,54,0.3)}
-.hud-bar{position:relative;height:28px;background:rgba(0,0,0,0.3);border-radius:8px;overflow:hidden}
-.hud-bar-fill{position:absolute;left:0;top:0;height:100%;background:linear-gradient(90deg,#4a90d9,#357abd);border-radius:8px;transition:width 0.3s}
-.hud-bar-text{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:13px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.5);white-space:nowrap}
-.hud-colors{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.hud-color-chip{padding:4px 12px;border-radius:6px;font-size:12px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.3)}
-.hud-demo-note{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.5}
-@media(max-width:600px){.hud-frame{min-width:100%}.hud-demo-row{flex-direction:column}}
+.phase-label{font-size:12px;font-weight:700;margin:10px 0 6px;padding:4px 12px;border-radius:4px;display:inline-block}
+.phase-label.round{color:var(--burst);background:var(--burst-l)}
+.phase-label.poison{color:var(--poison);background:var(--poison-l)}
+.phase-label.dual{color:var(--dual);background:var(--dual-l)}
+.phase-note{font-size:12px;font-weight:700;color:var(--accent2);margin:8px 0 6px;text-align:center;padding:5px 14px;background:var(--accent-l);border-radius:6px;border:1px dashed var(--peach-d)}
+.hud-demo{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0}
+.hud-card{flex:1;min-width:260px;background:var(--bg2);border:1px solid var(--rule);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+.hud-card .hc-label{font-size:11px;font-weight:700;color:var(--muted2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.hud-frame{border:3px solid var(--muted2);border-radius:10px;padding:14px;transition:.3s}
+.hud-frame.tier-white{border-color:#C0C0C0}
+.hud-frame.tier-green{border-color:var(--poison)}
+.hud-frame.tier-blue{border-color:#4A70B0}
+.hud-frame.tier-yellow{border-color:#D4A020}
+.hud-frame.tier-red{border-color:#C0392B;animation:pulse-red 1.5s ease-in-out infinite}
+@keyframes pulse-red{0%,100%{box-shadow:0 0 0 0 rgba(192,57,43,.3)}50%{box-shadow:0 0 12px 3px rgba(192,57,43,.2)}}
+.hud-bar{height:14px;background:var(--bg3);border-radius:7px;overflow:hidden;position:relative;margin-top:4px}
+.hud-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:7px;transition:width .3s}
+.hud-bar-text{font-size:11px;font-family:"JetBrains Mono",monospace;color:var(--muted);margin-top:4px;text-align:center}
+.hud-tier-label{font-size:12px;font-weight:700;margin-top:8px;text-align:center}
+.hud-tier-label.tier-red{color:#C0392B}
+.hud-tier-label.tier-yellow{color:#D4A020}
+.hud-tier-label.tier-blue{color:#4A70B0}
+.hud-tier-label.tier-green{color:var(--poison)}
+.hud-tier-label.tier-white{color:#888}
+.hud-tier-label.tier-none{color:var(--muted2)}
 footer{border-top:1px solid var(--rule2);padding:28px 24px;text-align:center;color:var(--muted2);font-size:12px;background:var(--bg3)}
 footer p{margin-bottom:4px}
 .back-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#FFF;border:none;font-size:18px;cursor:pointer;box-shadow:0 4px 16px rgba(184,92,56,.3);opacity:0;visibility:hidden;transition:.3s;z-index:100}
 .back-top.show{opacity:1;visibility:visible}
 .back-top:hover{background:var(--accent2);transform:translateY(-3px)}
-@media(max-width:600px){.doc-header h1{font-size:24px}.sec-title{font-size:20px}.content{padding:20px 16px 56px}table{font-size:13px}thead th{font-size:11px;padding:8px 10px}tbody td{padding:8px 10px}.section{margin-bottom:48px}.section:not(:first-child)::before{top:-24px}}
+@media(max-width:600px){.doc-header h1{font-size:24px}.sec-title{font-size:20px}.content{padding:20px 16px 56px}table{font-size:13px}thead th{font-size:11px;padding:8px 10px}tbody td{padding:8px 10px}.section{margin-bottom:48px}.section:not(:first-child)::before{top:-24px}.sn{min-width:84px;padding:6px 8px}.sn .sn-name{font-size:12px}.sn .sn-cost{font-size:9px}.sn .sn-eff{font-size:9px}.bp{min-width:100%}.priority-split{flex-direction:column}.ps-item+.ps-item{border-left:none;border-top:2px solid var(--rule)}}
 </style>
 </head>
 <body>
 
 <header class="doc-header">
-  <span class="ver">V4.1 · 杀意·杀势等价迁移版</span>
-  <h1>匕首｜三BD技能卡与完整精通节点表</h1>
-  <p class="sub">三套BD共享匕首武器体系。原能量等价迁移为杀意，原连击点等价迁移为杀势品质阶。不重构原有产消数学、终结条件、BD循环与精通联动。</p>
+  <span class="ver">V6.5 · 结构修正版</span>
+  <h1>匕首｜三BD技能卡与完整精通盘</h1>
+  <p class="sub">以高频近战积累杀阶，在红阶选择维持或解放的输出武器。三套BD共享杀意管理与杀阶系统，通过催化、连斩和筹谋产生差异化体验。</p>
   <div class="doc-tags">
     <span>近战</span>
-    <span>杀意体系</span>
+    <span>杀阶体系</span>
     <span class="p">毒刃刺·状态维护</span>
     <span class="d">双刀刺·动态反应</span>
     <span class="b">爆刺·爆发终结</span>
@@ -263,1008 +249,915 @@ footer p{margin-bottom:4px}
 
 <main class="content">
 
-<nav class="toc">
-  <div class="toc-title">目录</div>
-  <div class="toc-links">
-    <a href="#sec1">共通资源</a>
-    <a href="#sec2">毒刃刺</a>
-    <a href="#sec3">双刀刺</a>
-    <a href="#sec4">爆刺</a>
-    <a href="#sec5">武器技能池</a>
-    <a href="#sec6">共通精通</a>
-    <a href="#sec7">HUD与表现</a>
-  </div>
-</nav>
-
-<div class="legend-bar">
-  <span class="legend-title">BD色标</span>
-  <span class="legend-item"><span class="legend-dot" style="background:var(--poison)"></span>毒刃刺</span>
-  <span class="legend-item"><span class="legend-dot" style="background:var(--dual)"></span>双刀刺</span>
-  <span class="legend-item"><span class="legend-dot" style="background:var(--burst)"></span>爆刺</span>
-  <span class="legend-item"><span class="legend-dot" style="background:var(--shared)"></span>共通/武器</span>
-</div>
-
-<!-- ===== Section 1: 共通资源 ===== -->
-<section class="section" id="sec1">
-  <h2 class="sec-title"><span class="num">一</span>共通资源</h2>
-  <p class="sec-lead">原【能量】→【杀意】，原【连击点】→【杀势】品质阶。原0—5点连击点对应无阶—红阶。</p>
-  <div class="info-grid">
-    <div class="info-box">
-      <div class="ib-t"><span class="ic">杀</span>杀意</div>
-      <div class="ib-b">上限<strong>100</strong>，战斗初始<strong>100</strong>，自然恢复<strong>12点/秒</strong>。原【能量】的所有获取、消耗、上限与恢复规则等价迁移。</div>
+  <nav class="toc">
+    <div class="toc-title">目录</div>
+    <div class="toc-links">
+      <a href="#sec1">职业定位</a>
+      <a href="#sec2">共通资源</a>
+      <a href="#sec3">精通盘规则</a>
+      <a href="#sec4">毒刃刺</a>
+      <a href="#sec5">双刀刺</a>
+      <a href="#sec6">爆刺</a>
+      <a href="#sec7">合法构筑</a>
+      <a href="#sec8">武器技能</a>
+      <a href="#sec9">BD差异</a>
     </div>
-    <div class="info-box">
-      <div class="ib-t"><span class="ic">势</span>杀势</div>
-      <div class="ib-b">最高<strong>红阶</strong>，内部按0—5阶处理：0=无阶、1=白、2=绿、3=蓝、4=黄、5=红。由原生成技能提升阶位，由原终结技能按原规则消耗；切换目标保留，脱战、换武器、换BD时清空并回到无阶。</div>
+  </nav>
+
+  <div class="legend-bar">
+    <span class="legend-title">BD色标</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--poison)"></span>毒刃刺</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--dual)"></span>双刀刺</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--burst)"></span>爆刺</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--shared)"></span>共通/武器</span>
+  </div>
+
+  <!-- ===== Section 1: 职业定位与动作条规则 ===== -->
+  <section class="section" id="sec1">
+    <h2 class="sec-title"><span class="num">一</span>职业定位与动作条规则</h2>
+    <p class="sec-lead">匕首是以高频近战攻击积累【杀阶】，并在红阶选择维持或解放的输出武器。三套BD共享杀意管理与杀阶系统，通过各自的升阶行为、保红方式和解放杀招形成差异化体验。</p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <div class="ib-t"><span class="ic">D</span>匕首定位</div>
+        <div class="ib-b">高频近战输出武器，通过<strong>杀意管理 → 升阶行为 → 红阶维持/解放</strong>的节奏循环输出伤害。</div>
+      </div>
+      <div class="info-box">
+        <div class="ib-t"><span class="ic">R</span>三BD共享节奏</div>
+        <div class="ib-b"><strong>杀意管理 → 完成BD升阶行为 → 进入红阶 → 保红或主动解放 → 回到黄阶后再次回红</strong></div>
+      </div>
+      <div class="info-box">
+        <div class="ib-t"><span class="ic">V</span>红阶决策差异</div>
+        <div class="ib-b">毒刃刺：催化后选择维持或见血封喉<br>双刀刺：共享杀招CD选择保红或解放<br>爆刺：开大招前决定是否投入筹谋和红阶</div>
+      </div>
     </div>
-    <div class="info-box">
-      <div class="ib-t"><span class="ic">UI</span>杀势UI</div>
-      <div class="ib-b">品质外框包裹在【杀意】数值条外侧。杀势提升或下降时只改变外框品质与升降阶反馈，不新增第二条独立资源条。</div>
+
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th>类型</th><th>规则</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>技能卡动作条</strong></td><td>每套BD固定携带5张技能卡，构成保证循环</td></tr>
+          <tr><td class="narrow"><strong>随机武器技能条</strong></td><td>从6个战术武器技能中获得，最多装备5个；不作为基础循环前提</td></tr>
+          <tr><td class="narrow"><strong>固定终极武器槽</strong></td><td>必定拥有【影刃解放】；不占技能卡槽，也不占随机武器技能槽</td></tr>
+          <tr><td class="narrow"><strong>BD大招替换</strong></td><td>对应爆发节点将固定终极武器槽中的【影刃解放】替换为本BD大招</td></tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-</section>
 
-<!-- ===== Section 2: 毒刃刺 ===== -->
-<section class="section" id="sec2">
-  <h2 class="sec-title"><span class="num">二</span>毒刃刺｜状态维护型</h2>
+    <div class="callout neutral">
+      即使玩家没有获得任何随机武器技能，三套BD的五卡循环和大招结构仍然成立。
+    </div>
+  </section>
 
-  <div class="callout neutral">
-    <strong style="font-size:15px">一句话玩法：</strong>维持【中毒】，用杀势施加【剧毒侵蚀】；单体时及时补剧毒，群怪时让剧毒自然结束触发毒爆后再重新施加，两个毒都稳定时用【十字斩】直接打伤害。
-  </div>
+  <!-- ===== Section 2: 共通资源与状态规则 ===== -->
+  <section class="section" id="sec2">
+    <h2 class="sec-title"><span class="num">二</span>共通资源与状态规则</h2>
 
-  <div class="callout poison">
-    <span class="ct">状态机制</span>
-    <strong>【中毒】</strong>：持续12秒，每2秒造成N点物理伤害，共结算6次；最多1层，重复施加刷新持续时间。周期伤害不提升杀势、不触发【二刀追击】。<br><br>
-    <strong>【剧毒侵蚀】</strong>：由【毒性感染】施加。消耗的杀势阶位越高，【感染强度】越高，持续时间和伤害越高。白／绿／蓝／黄／红阶分别对应原1／2／3／4／5点版本，持续6／9／12／15／18秒；周期伤害与自然结束伤害分别按红阶版本的20%／40%／60%／80%／100%结算。重复施加会覆盖旧效果，覆盖不会触发结束伤害。周期伤害不提升杀势、不触发【二刀追击】。
-  </div>
+    <div class="info-grid">
+      <div class="info-box">
+        <div class="ib-t"><span class="ic">杀</span>杀意</div>
+        <div class="ib-b">上限<strong>100</strong>，战斗初始<strong>100</strong>，自然恢复<strong>12点/秒</strong>。<em class="sim">模拟值</em> 支付主动技能消耗，限制高频技能连续释放。唯一数值资源条。</div>
+      </div>
+      <div class="info-box">
+        <div class="ib-t"><span class="ic">阶</span>杀阶</div>
+        <div class="ib-b"><strong>白 → 绿 → 蓝 → 黄 → 红</strong>。初始白阶，完成BD升阶行为后提升。红阶进入12秒维持窗口<em class="sim">模拟值</em>。杀阶属于玩家自身，切换目标不清除。</div>
+      </div>
+      <div class="info-box">
+        <div class="ib-t"><span class="ic">UI</span>杀阶UI</div>
+        <div class="ib-b">红阶外框是主要战斗提示。剩余约4秒时呼吸脉冲加快。完成保红时外框重新点亮；解放或失败时切换为黄阶。</div>
+      </div>
+    </div>
 
-  <div class="callout poison">
-    <span class="ct">BD特色升阶规则</span>
-    【毒发】触发后的【毒发刺击】仍继承原版"获得2点连击点"的数学，现表现为<strong>杀势提升2阶</strong>。它是毒刃在正确维护双DoT后获得的额外升阶加速器，不改变基础施毒／病毒散播的原有升阶速度。
-  </div>
+    <h3 class="bd-title shared">杀意消耗结算顺序<span class="summary">7步依次结算</span></h3>
+    <div class="spec-box">
+      <ol style="padding-left:20px;color:var(--ink2);font-size:13px;line-height:2">
+        <li>读取技能基础消耗</li>
+        <li>应用技能形态覆盖（如暗影连袭消费超越处决时30→20）</li>
+        <li>应用杀阶带来的技能专属消耗变化</li>
+        <li>应用精通、随机事件和临时状态提供的固定值减耗</li>
+        <li>应用大招窗口内的额外消耗变化</li>
+        <li>非免费技能最终消耗最低为<strong>5点杀意</strong>；明确写为"免费"的效果最终消耗为0</li>
+        <li>先支付杀意，再结算【杀招回流】等释放后恢复效果</li>
+      </ol>
+      <p style="margin-top:8px;font-size:12px;color:var(--muted)">同名减耗效果不重复叠加；不同来源可以叠加，但仍受最低消耗限制。</p>
+    </div>
 
-  <h3 class="bd-title poison">技能卡<span class="badge">5张</span></h3>
-  <div class="skill-grid p">
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">1</span>
-        <div class="sc-h-text">
-          <div class="sc-name">暗影刺击</div>
-          <div class="sc-cost"><span class="cp-gen">+2阶杀势</span> 30杀意 · 无CD</div>
+    <h3 class="bd-title shared">杀阶规则</h3>
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">规则</th><th class="shared-th">说明</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>初始</strong></td><td>进入战斗默认白阶</td></tr>
+          <tr><td class="narrow"><strong>归属</strong></td><td>杀阶属于玩家自身，切换目标不清除</td></tr>
+          <tr><td class="narrow"><strong>提升</strong></td><td>完成本BD升阶行为后提升；特定高质量行为可以跨阶，最高红阶</td></tr>
+          <tr><td class="narrow"><strong>红阶</strong></td><td>进入12秒维持窗口<em class="sim">模拟值</em>，不再继续升阶</td></tr>
+          <tr><td class="narrow"><strong>保红</strong></td><td>在窗口内完成本BD保红动作，重新获得完整12秒</td></tr>
+          <tr><td class="narrow"><strong>解放</strong></td><td>使用本BD解放杀招，获得爆发并使红→黄</td></tr>
+          <tr><td class="narrow"><strong>自然衰退</strong></td><td>蓝阶30秒、黄阶24秒、红阶12秒<em class="sim">模拟值</em></td></tr>
+          <tr><td class="narrow"><strong>MMO保护</strong></td><td>Boss无敌、强制转阶段、系统判定暂时不可攻击时暂停衰退</td></tr>
+          <tr><td class="narrow"><strong>脱战</strong></td><td>脱战后逐步下降，最低回到白阶</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bd-title shared">杀阶UI演示</h3>
+    <div class="hud-demo">
+      <div class="hud-card">
+        <div class="hc-label">白阶 · 基础状态</div>
+        <div class="hud-frame tier-white">
+          <div class="hud-bar"><div class="hud-bar-fill" style="width:85%"></div></div>
+          <div class="hud-bar-text">杀意 85 / 100</div>
         </div>
+        <div class="hud-tier-label tier-white">白阶</div>
       </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>使用短剑高速刺击主目标，造成物理伤害并使【杀势】提升2阶
-        <span class="sc-label">精通变化</span>【感染精研】：每点使【致命涂毒】期间命中同时拥有【中毒】与【剧毒侵蚀】的目标时，【病毒散播】剩余CD缩短1秒
-      </div>
-      <div class="sc-role">高频主生成</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">2</span>
-        <div class="sc-h-text">
-          <div class="sc-name">施毒</div>
-          <div class="sc-cost"><span class="cp-gen">+1阶杀势</span> 25杀意 · 无CD</div>
+      <div class="hud-card">
+        <div class="hc-label">蓝阶 · 中阶战斗</div>
+        <div class="hud-frame tier-blue">
+          <div class="hud-bar"><div class="hud-bar-fill" style="width:72%"></div></div>
+          <div class="hud-bar-text">杀意 72 / 100</div>
         </div>
+        <div class="hud-tier-label tier-blue">蓝阶</div>
       </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>使用带毒匕首攻击目标，造成物理伤害、使【杀势】提升1阶并施加12秒【中毒】；目标已中毒时刷新持续时间
-        <span class="sc-label">精通变化</span>【毒刃训练】：每点使【中毒】周期伤害提高5%；【毒发】：双DoT周期伤害概率使【施毒】高亮并免费变为【毒发刺击】；【致命毒液】：【致命涂毒】期间【毒发】概率12%→24%
-      </div>
-      <div class="sc-role">中毒建立、维护与随机高亮承载技能</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">3</span>
-        <div class="sc-h-text">
-          <div class="sc-name">病毒散播</div>
-          <div class="sc-cost"><span class="cp-gen">+1阶杀势</span> 20杀意 · CD8s</div>
+      <div class="hud-card">
+        <div class="hc-label">红阶 · 维持窗口（呼吸脉冲）</div>
+        <div class="hud-frame tier-red">
+          <div class="hud-bar"><div class="hud-bar-fill" style="width:60%"></div></div>
+          <div class="hud-bar-text">杀意 60 / 100 · 红阶剩余 8.2s</div>
         </div>
+        <div class="hud-tier-label tier-red">红阶 · 维持中</div>
       </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>对主目标及附近敌人造成物理伤害并使【杀势】提升1阶；若主目标处于【中毒】，将【中毒】传播给附近至多4名敌人；若主目标处于【剧毒侵蚀】，额外使当前【剧毒侵蚀】按其【感染强度】立即额外结算1次周期伤害。每次施放最多使杀势提升1阶
-        <span class="sc-label">精通变化</span>【病毒培养】：每点直接伤害+4%、传播半径+0.5米；【毒雾蔓延】：传播的【中毒】获得完整12秒持续时间；【致命毒液】：【致命涂毒】期间额外结算1次→2次
-      </div>
-      <div class="sc-role">中CD生成、毒素推进与群体扩散</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">4</span>
-        <div class="sc-h-text">
-          <div class="sc-name">毒性感染</div>
-          <div class="sc-cost"><span class="cp-con">消耗全部杀势</span> 30杀意 · 无CD</div>
+      <div class="hud-card">
+        <div class="hc-label">黄阶 · 解放后</div>
+        <div class="hud-frame tier-yellow">
+          <div class="hud-bar"><div class="hud-bar-fill" style="width:45%"></div></div>
+          <div class="hud-bar-text">杀意 45 / 100</div>
         </div>
+        <div class="hud-tier-label tier-yellow">黄阶 · 已解放</div>
       </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>消耗当前白—红阶【杀势】，为目标施加对应1—5级【剧毒侵蚀】。持续6／9／12／15／18秒；周期伤害与自然结束伤害分别按红阶效果的20%／40%／60%／80%／100%结算。重复施加会以新的等级覆盖旧效果
-        <span class="sc-label">资源</span>消耗当前1—5阶杀势并回到无阶
-      </div>
-      <div class="sc-role">杀势持续终结</div>
     </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">5</span>
-        <div class="sc-h-text">
-          <div class="sc-name">十字斩</div>
-          <div class="sc-cost"><span class="cp-con">消耗全部杀势</span> 25杀意 · 无CD</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>快速接近目标，以双手交叉持刃的动作表现发动斩击，一次性消耗当前白—红阶【杀势】造成物理伤害；消费阶位越高伤害越高
-        <span class="sc-label">精通变化</span>【见血封喉】：目标同时拥有【中毒】与【剧毒侵蚀】时，实际消耗红阶【杀势】的【十字斩】额外造成X%攻击力物理伤害 <em class="sim">待数值</em>
-      </div>
-      <div class="sc-role">直接终结、短时间兑现</div>
-    </div>
-  </div>
 
-  <h3 class="bd-title poison">循环</h3>
-  <div class="scenario-block p">
-    <div class="scenario-tag">毒刃刺 · 状态维护循环</div>
-    <div class="sb-body">
-      <div class="skill-flow">
-        <div class="sn"><div class="sn-name">【施毒】</div><div class="sn-cost">25杀意 +1阶</div><div class="sn-eff">施加【中毒】12秒</div></div>
-        <span class="fa">→</span>
-        <div class="sn"><div class="sn-name">【病毒散播】</div><div class="sn-cost">20杀意 +1阶</div><div class="sn-eff">CD8s·传播中毒+推进剧毒</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">消耗杀势·施加【剧毒侵蚀】</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">消耗全部杀势·终结兑现</div></div>
+    <h3 class="bd-title shared">核心杀招映射</h3>
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">BD</th><th class="shared-th">核心杀招</th><th class="shared-th">成功判定</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>毒刃刺</strong></td><td>十字斩、见血封喉</td><td>直接伤害命中主目标；每次释放最多触发1次</td></tr>
+          <tr><td class="narrow"><strong>双刀刺</strong></td><td>完整永恒之斩、十字斩</td><td>永恒之斩至少完成基础要求的2次追斩；十字斩直接命中</td></tr>
+          <tr><td class="narrow"><strong>爆刺</strong></td><td>消费基础或超越爪痕的十字斩／致命影啸</td><td>必须实际消费爪痕；免费幻影杀招不算核心杀招</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== Section 3: 精通盘统一规则 ===== -->
+  <section class="section" id="sec3">
+    <h2 class="sec-title"><span class="num">三</span>精通盘统一规则</h2>
+    <p class="sec-lead">精通盘总30点，共享主干占0—20点，BD分支占21—30点。真正的构筑选择发生在BD入口和第26点单群二择。</p>
+
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">精通盘规则</th><th class="shared-th">值</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>总点数</strong></td><td class="center">30</td></tr>
+          <tr><td class="narrow"><strong>共享点数</strong></td><td class="center">20</td></tr>
+          <tr><td class="narrow"><strong>入口点数</strong></td><td class="center">1</td></tr>
+          <tr><td class="narrow"><strong>分支点数</strong></td><td class="center">9</td></tr>
+          <tr><td class="narrow"><strong>同层选择数</strong></td><td class="center">1</td></tr>
+          <tr><td class="narrow"><strong>终局点位</strong></td><td class="center">30</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout shared">
+      <span class="ct">补充规则</span>
+      二择标题不消耗点数，选中的实体选项消耗1点。三个BD分支严格隔离，不允许跨BD购买节点。单条合法路径达到30点即可，不要求购买未选择的平行节点。0—20点是匕首共通成长主干；真正的构筑选择发生在BD入口和第26点单群二择。所有后续节点都要求当前BD路径已经连通。
+    </div>
+
+    <h3 class="bd-title shared">共通主干｜1—20点</h3>
+    <div class="table-wrap">
+      <table class="mastery-table">
+        <thead><tr>
+          <th class="shared-th">点位</th><th class="shared-th">节点ID</th><th class="shared-th">节点</th><th class="shared-th">节点类型</th><th class="shared-th">效果</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="center narrow">1</td><td class="narrow">C01</td><td><strong>【短刃训练I】</strong></td><td><span class="nt nt-root">根节点</span></td><td>短剑技能物理伤害+3%，包括周期物理伤害</td></tr>
+          <tr><td class="center narrow">2</td><td class="narrow">C02</td><td><strong>【杀意储备I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意上限+5</td></tr>
+          <tr><td class="center narrow">3</td><td class="narrow">C03</td><td><strong>【短刃训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>短剑技能物理伤害再+3%</td></tr>
+          <tr><td class="center narrow">4</td><td class="narrow">C04</td><td><strong>【杀意储备II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意上限再+5</td></tr>
+          <tr><td class="center narrow">5</td><td class="narrow">C05</td><td><strong>【二刀追击】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>主动攻击技能每次释放首次直接命中主目标时20%概率追加1次物理攻击；派生伤害不判定、不递归</td></tr>
+          <tr><td class="center narrow">6</td><td class="narrow">C06</td><td><strong>【影刃专注I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>短剑主动攻击暴击率+1.5%</td></tr>
+          <tr><td class="center narrow">7</td><td class="narrow">C07</td><td><strong>【迅击调息I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>基础循环技能杀意消耗-1</td></tr>
+          <tr><td class="center narrow">8</td><td class="narrow">C08</td><td><strong>【影刃专注II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>短剑主动攻击暴击率再+1.5%</td></tr>
+          <tr><td class="center narrow">9</td><td class="narrow">C09</td><td><strong>【迅击调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>基础循环技能杀意消耗再-1</td></tr>
+          <tr><td class="center narrow">10</td><td class="narrow">C10</td><td><strong>【杀招回流】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>成功使用本BD核心杀招后恢复5杀意；先支付再恢复</td></tr>
+          <tr><td class="center narrow">11</td><td class="narrow">C11</td><td><strong>【杀招训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>十字斩、永恒之斩、致命影啸直接伤害+2.5%</td></tr>
+          <tr><td class="center narrow">12</td><td class="narrow">C12</td><td><strong>【杀意调息I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意自然恢复速度+3%</td></tr>
+          <tr><td class="center narrow">13</td><td class="narrow">C13</td><td><strong>【杀招训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>对应直接伤害再+2.5%</td></tr>
+          <tr><td class="center narrow">14</td><td class="narrow">C14</td><td><strong>【杀意调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意自然恢复速度再+3%</td></tr>
+          <tr><td class="center narrow">15</td><td class="narrow">C15</td><td><strong>【短刃节律】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>使用核心杀招后，下一次暗影刺击或黑色幻影攻击动作后延迟缩短10%，持续6秒</td></tr>
+          <tr><td class="center narrow">16</td><td class="narrow">C16</td><td><strong>【致命训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>短剑技能暴击伤害+3%</td></tr>
+          <tr><td class="center narrow">17</td><td class="narrow">C17</td><td><strong>【连段训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>二刀追击、额外攻击段和精通派生追击伤害+4%</td></tr>
+          <tr><td class="center narrow">18</td><td class="narrow">C18</td><td><strong>【致命训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>短剑技能暴击伤害再+3%</td></tr>
+          <tr><td class="center narrow">19</td><td class="narrow">C19</td><td><strong>【连段训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>对应派生攻击伤害再+4%</td></tr>
+          <tr><td class="center narrow">20</td><td class="narrow">C20</td><td><strong>【轻巧身法】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>使用核心杀招后移动速度+15%，持续2秒</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== Section 4: 毒刃刺 ===== -->
+  <section class="section" id="sec4">
+    <h2 class="sec-title"><span class="num">四</span>毒刃刺｜状态维护型</h2>
+
+    <div class="callout poison">
+      <span class="ct">一句话玩法</span>
+      维持【中毒】和【剧毒侵蚀】；单体用【十字斩】凝毒催化，群体用【病毒散播】扩散催化；进入红阶后继续催化保红，并决定是否使用【见血封喉】将红阶换成爆发。
+    </div>
+
+    <div class="callout neutral">
+      <span class="ct">状态机制</span>
+      <strong>【中毒】</strong>：持续12秒，每2秒造成物理伤害。最多1层，重复施加刷新持续时间。周期伤害不提供升阶机会、不触发二刀追击。<br><br>
+      <strong>【剧毒侵蚀】</strong>：由【毒性感染】施加。按施放时杀阶决定初始持续时间和强度。最多1层；重复施加覆盖旧效果。自然结束时对附近其他敌人造成结束伤害（毒爆），不对主目标造成该次伤害。
+    </div>
+
+    <h3 class="bd-title poison">技能卡<span class="badge">5张</span></h3>
+    <div class="skill-grid p">
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>高速刺击主目标，造成物理伤害
+          <span class="sc-label">精通变化</span>黄阶以上消耗27<em class="sim">模拟值</em>；感染精研可缩短催化锁和病毒散播CD
+        </div>
+        <div class="sc-role">高频填充</div>
       </div>
-      <div class="branch-cond">【剧毒侵蚀】即将结束 — 检查附近是否有次要目标</div>
-      <div class="branch-paths">
-        <div class="bp">
-          <span class="bp-label">单体</span>
-          <div class="skill-flow">
-            <span class="cn">结束前</span>
-            <span class="ca">→</span>
-            <span class="cn hl">【毒性感染】重新施加</span>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">施毒</div><div class="sc-cost"><span class="cp-con">25杀意</span> 无CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>造成物理伤害并施加12秒【中毒】；目标已中毒时刷新持续时间
+          <span class="sc-label">精通变化</span>维持催化所需双毒条件；毒发会生成特殊免费施毒
+        </div>
+        <div class="sc-role">中毒建立与维护</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">病毒散播</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD8s</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>范围伤害、传播中毒，对双毒主目标执行扩散催化
+          <span class="sc-label">精通变化</span>与十字斩共用8秒催化锁；白～黄催化升阶，红阶催化保红
+        </div>
+        <div class="sc-role">群体扩散／群体催化</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">毒性感染</div><div class="sc-cost"><span class="cp-con">30/25杀意</span> 无CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>造成物理伤害并施加当前杀阶的【剧毒侵蚀】
+          <span class="sc-label">精通变化</span>白～蓝30杀意；黄／红25杀意；按当前杀阶决定侵蚀初始持续时间
+        </div>
+        <div class="sc-role">剧毒建立与维护</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD5s<em class="sim">模拟值</em></div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>高额单体杀招；命中双毒主目标时执行凝毒催化
+          <span class="sc-label">精通变化</span>与病毒散播共用8秒催化锁；红阶催化后临时变为见血封喉按钮
+        </div>
+        <div class="sc-role">单体催化／红阶解放入口</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title poison">双催化入口</h3>
+    <div class="spec-box">
+      <div class="sb-title poison">催化系统</div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">目标同时拥有同一施法者的【中毒】和【剧毒侵蚀】时，玩家可以主动选择两种催化方式。两种催化共用8秒<strong>催化锁</strong><em class="sim">模拟值</em>。</p>
+      <ul>
+        <li><strong>凝毒催化</strong>（十字斩）：集中攻击主目标，不传播中毒。毒蚀爆发只命中十字斩主目标。</li>
+        <li><strong>扩散催化</strong>（病毒散播）：传播中毒并处理范围目标。毒蚀爆发沿用病毒散播命中列表，最多5名。</li>
+        <li>白～黄阶成功催化使杀阶+1，每次释放最多提升1阶</li>
+        <li>红阶成功催化刷新红阶12秒，并生成1次见血封喉机会</li>
+        <li>催化锁期间，十字斩和病毒散播仍可正常造成伤害，但不能再次催化、升阶或保红</li>
+        <li><strong>毒蚀爆发</strong>不读取DoT跳伤害、不触发/重置DoT周期、不消耗/刷新DoT、不触发其他追加效果</li>
+      </ul>
+    </div>
+
+    <div class="callout neutral">
+      <span class="ct">玩家记忆三条</span>
+      1. 双毒成立才可催化　2. 单体按十字斩、群体按病毒散播　3. 每8秒只能成功催化一次
+    </div>
+
+    <h3 class="bd-title poison">循环</h3>
+    <div class="scenario-block p">
+      <div class="scenario-tag">毒刃刺 · 保证循环</div>
+      <div class="sb-body">
+        <div class="branch-cond">单体路线</div>
+        <div class="skill-flow">
+          <div class="sn"><div class="sn-name">【施毒】</div><div class="sn-cost">25杀意</div><div class="sn-eff">施加中毒</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加剧毒侵蚀</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【十字斩】凝毒催化</div><div class="sn-cost">25杀意</div><div class="sn-eff">毒蚀爆发+升阶</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">30杀意</div><div class="sn-eff">填充</div></div>
+        </div>
+        <div class="loop-back">↻ 补双毒 → 下一次十字斩凝毒催化</div>
+
+        <div class="branch-cond" style="margin-top:16px">群体路线</div>
+        <div class="skill-flow">
+          <div class="sn"><div class="sn-name">主目标【施毒】</div><div class="sn-cost">25杀意</div><div class="sn-eff">施加中毒</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加剧毒侵蚀</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【病毒散播】扩散催化</div><div class="sn-cost">20杀意</div><div class="sn-eff">传播+毒蚀爆发</div></div>
+        </div>
+        <div class="loop-back">↻ 中毒传播/毒爆处理 → 填充 → 下一次病毒散播扩散催化</div>
+
+        <div class="branch-cond" style="margin-top:16px">红阶选择 — 红阶催化成功后</div>
+        <div class="branch-paths">
+          <div class="bp">
+            <span class="bp-label">保红</span>
+            <div class="skill-flow">
+              <span class="cn hl">继续催化</span>
+              <span class="ca">→</span>
+              <span class="cn">刷新红阶12秒</span>
+            </div>
+            <div class="bp-note">继续维持催化节奏，等待下一次催化锁结束</div>
           </div>
-          <div class="bp-note">目标仍会存活较长时间时优先补剧毒</div>
-        </div>
-        <div class="bp">
-          <span class="bp-label">群体</span>
-          <div class="skill-flow">
-            <span class="cn">等待自然结束</span>
-            <span class="ca">→</span>
-            <span class="cn hl">毒爆</span>
-            <span class="ca">→</span>
-            <span class="cn">【毒性感染】重新施加</span>
-          </div>
-          <div class="bp-note">附近有次要目标时让剧毒自然结束触发毒爆</div>
-        </div>
-      </div>
-      <div class="branch-cond">【病毒散播】可用 — 检查目标数量</div>
-      <div class="priority-split">
-        <div class="ps-item">
-          <span class="ps-tag">单体</span>
-          <div class="ps-body">
-            <div class="ps-skill">推进剧毒1次周期结算</div>
-            <div class="ps-detail">不传播，仅额外结算【剧毒侵蚀】</div>
-          </div>
-        </div>
-        <div class="ps-item">
-          <span class="ps-tag">群体</span>
-          <div class="ps-body">
-            <div class="ps-skill">推进剧毒 + 传播【中毒】</div>
-            <div class="ps-detail">至多4名次要目标获得完整12秒中毒</div>
-          </div>
-        </div>
-      </div>
-      <div class="loop-back">↻ 回到施毒维护中毒，杀势足够时用十字斩兑现</div>
-    </div>
-  </div>
-
-  <h3 class="bd-title poison">精通盘<span class="badge">21—30点</span></h3>
-  <div class="table-wrap">
-    <table class="mastery-table">
-      <thead>
-        <tr>
-          <th class="poison-th">投入</th>
-          <th class="poison-th">节点名称</th>
-          <th class="poison-th">点数</th>
-          <th class="poison-th">节点类型</th>
-          <th class="poison-th">完整效果</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【毒刃训练】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使【中毒】周期物理伤害提高5%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【感染精研】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-link">技能联动</span></td>
-          <td>每点使【致命涂毒】期间【暗影刺击】命中同时拥有【中毒】与【剧毒侵蚀】的目标时，【病毒散播】剩余CD缩短1秒</td>
-        </tr>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【毒发】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-rand">随机事件</span></td>
-          <td>主目标的【中毒】或【剧毒侵蚀】每次自然周期结算时有12%概率触发【毒发】，共享8秒ICD。触发后【施毒】按钮高亮6秒；下一次施毒杀意消耗为0，改为【毒发刺击】：不刷新当前【中毒】剩余时间，立即额外结算1次【中毒】，并使【杀势】提升2阶。额外结算不能再次触发毒发</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【病毒培养】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使【病毒散播】直接伤害提高4%，传播中毒半径提高0.5米</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【致命毒液】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-burst">爆发节点</span></td>
-          <td>将武器技能【影刃解放】替换为【致命涂毒】。【致命涂毒】持续8秒，CD45秒；立即重置【病毒散播】CD，使【毒发】基础触发概率由12%提高至24%，并使【病毒散播】对【剧毒侵蚀】的额外周期结算由1次提高至2次；期间杀意恢复速度提高。</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【毒雾蔓延】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-group">群体节点</span></td>
-          <td>【病毒散播】传播给次要目标的【中毒】获得完整12秒持续时间；每次最多4名次要目标，派生传播不能继续传播</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【见血封喉】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-ult">终极节点</span></td>
-          <td>主目标同时拥有施法者【中毒】与【剧毒侵蚀】时，实际消耗红阶【杀势】的【十字斩】额外造成X%攻击力的物理伤害；不刷新、缩短或移除【中毒】与【剧毒侵蚀】，也不触发【毒发】。<em class="sim">待数值</em></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ===== Section 3: 双刀刺 ===== -->
-<section class="section" id="sec3">
-  <h2 class="sec-title"><span class="num">三</span>双刀刺｜动态反应型</h2>
-
-  <div class="callout neutral">
-    <strong style="font-size:15px">一句话玩法：</strong>快速提升杀势，能安心贴着Boss输出时用【永恒之斩】连续追砍，Boss要跑或需要马上打伤害时就用【十字斩】，看到【黑色幻影】高亮就穿插进去。
-  </div>
-
-  <div class="callout dual">
-    <span class="ct">BD特色升阶规则</span>
-    【双刀追击】触发后获得【双刃机会】，下一次【黑色幻影】仍继承原版"额外获得1点连击点"的数学，现表现为<strong>额外使杀势提升1阶</strong>。这使双刀的Proc直接加快下一轮杀势构筑，但不改变基础暗影刺击／黑色幻影／利刃旋舞的原有升阶值。
-  </div>
-
-  <h3 class="bd-title dual">技能卡<span class="badge">5张</span></h3>
-  <div class="skill-grid d">
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">1</span>
-        <div class="sc-h-text">
-          <div class="sc-name">暗影刺击</div>
-          <div class="sc-cost"><span class="cp-gen">+2阶杀势</span> 30杀意 · 无CD</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>高速刺击主目标并使【杀势】提升2阶
-        <span class="sc-label">精通变化</span>【双刀追击】：触发【二刀追击】时重置【黑色幻影】CD并获得【双刃机会】；【无尽双刃】：消耗【无尽余势】时杀意消耗降低10点并额外使杀势提升1阶
-      </div>
-      <div class="sc-role">高频稳定生成</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">2</span>
-        <div class="sc-h-text">
-          <div class="sc-name">黑色幻影</div>
-          <div class="sc-cost"><span class="cp-gen">+2阶杀势</span> 25杀意 · CD8s</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>快速接近目标并攻击，使【杀势】提升2阶；已在近战范围时不强制穿过目标
-        <span class="sc-label">精通变化</span>【双刀追击】：【双刃机会】使下一次【黑色幻影】杀意-15并额外使杀势提升1阶；连斩中使用时窗口+1秒；【烈火战车】期间ICD缩短至4秒；【烈火战车】：【黑色幻影】变为双段【烈火幻影】；【无尽双刃】：消耗【无尽余势】时杀意-10并额外+1阶
-      </div>
-      <div class="sc-role">中CD高效生成与Proc响应</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">3</span>
-        <div class="sc-h-text">
-          <div class="sc-name">利刃旋舞</div>
-          <div class="sc-cost"><span class="cp-gen">+1阶杀势</span> 30杀意 · CD12s</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>对周围敌人造成一次物理伤害并使【杀势】提升1阶，随后获得6秒【旋刃环绕】。期间【暗影刺击】【黑色幻影】【永恒之斩】首击与每次【追斩】【十字斩】的直接攻击段命中时，驱动环绕刀刃发动1次【旋刃追击】；每个攻击段最多触发1次。【旋刃追击】优先攻击附近至多4名其他敌人，每名造成40%攻击力物理伤害；没有合法次要目标时改为对主目标造成10%攻击力物理伤害。【二刀追击】与其他派生追击不会再次驱动【旋刃追击】
-        <span class="sc-label">精通变化</span>【旋刃精研】：每点持续+0.5秒、群体【旋刃追击】伤害40%→45%→50%；【一敌专攻】：无次要目标时单体10%→20%；【群刃回响】：群体命中≥2名次要目标时追加1次20%攻击力物理伤害
-      </div>
-      <div class="sc-role">连击驱动旋刃，连斩频率转化为群体输出</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">4</span>
-        <div class="sc-h-text">
-          <div class="sc-name">永恒之斩</div>
-          <div class="sc-cost"><span class="cp-con">消耗3阶杀势</span> 首击20杀意 · 追斩15/次</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span><strong>高杀意／持续终结。</strong>需要至少蓝阶【杀势】，消耗3阶杀势发动首击并开启3秒【连斩窗口】，按钮替换为【追斩】。基础最多主动释放2次【追斩】；每次按下【追斩】消耗15杀意，不再消耗杀势。窗口中可插入【暗影刺击】或【黑色幻影】，按钮仍保持【追斩】且计时不会暂停；窗口结束后按钮恢复，未使用的追斩次数直接作废。完整打完全部追斩时，单位杀势总收益高于【十字斩】
-        <span class="sc-label">精通变化</span>【连斩不息】：连斩窗口3→4秒、最大追斩2→3次，【烈火战车】期间追斩杀意15→10；【无尽双刃】：完整追斩后获得【无尽余势】，加速下一次升阶
-      </div>
-      <div class="sc-role">高杀意、高站桩、高总收益持续终结</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">5</span>
-        <div class="sc-h-text">
-          <div class="sc-name">十字斩</div>
-          <div class="sc-cost"><span class="cp-con">消耗全部杀势</span> 25杀意 · 无CD</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span><strong>低承诺／瞬时终结。</strong>一次性消耗当前白—红阶【杀势】立即结算物理伤害；红阶时瞬时伤害最高。适合低杀意、Boss即将移动／无敌／转阶段、目标快死亡或杀势接近红阶溢出的场景
-        <span class="sc-label">精通变化</span>【致命收割】：目标生命值低于20%时，【十字斩】造成的伤害提高25%
-      </div>
-      <div class="sc-role">低杀意、短窗口、防溢出与斩杀阶段瞬时终结</div>
-    </div>
-  </div>
-
-  <h3 class="bd-title dual">循环</h3>
-  <div class="scenario-block d">
-    <div class="scenario-tag">双刀刺 · 动态反应循环</div>
-    <div class="sb-body">
-      <div class="skill-flow">
-        <div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">30杀意 +2阶</div><div class="sn-eff">高频主生成</div></div>
-        <span class="fa">→</span>
-        <div class="sn"><div class="sn-name">【黑色幻影】</div><div class="sn-cost">25杀意 +2阶</div><div class="sn-eff">CD8s·高效生成</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">杀势达到蓝阶</div><div class="sn-eff">检查杀意+战况</div></div>
-      </div>
-      <div class="branch-cond">杀势达到蓝阶 — 检查杀意与接下来3—4秒战况</div>
-      <div class="branch-paths">
-        <div class="bp">
-          <span class="bp-label">持续终结</span>
-          <div class="skill-flow">
-            <div class="sn hl"><div class="sn-name">【永恒之斩】</div><div class="sn-cost">首击20杀意</div><div class="sn-eff">消耗3阶杀势</div></div>
-            <span class="fa">→</span>
-            <div class="sn hl"><div class="sn-name">【追斩】×2-3</div><div class="sn-cost">15杀意/次</div><div class="sn-eff">不再消耗杀势</div></div>
-            <span class="fa">→</span>
-            <div class="sn"><div class="sn-name">【无尽余势】</div><div class="sn-eff">加速下一轮升阶</div></div>
-          </div>
-          <div class="bp-note">杀意足够+Boss稳定可攻击时，完整追斩总收益高于十字斩</div>
-        </div>
-        <div class="bp">
-          <span class="bp-label">瞬时终结</span>
-          <div class="skill-flow">
-            <div class="sn"><div class="sn-name">提升至黄/红阶</div><div class="sn-eff">继续暗影刺击/黑色幻影</div></div>
-            <span class="fa">→</span>
-            <div class="sn hl"><div class="sn-name">【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">消耗全部杀势·立即兑现</div></div>
-          </div>
-          <div class="bp-note">杀意不足/Boss即将移动/目标快死/杀势接近溢出时使用</div>
-        </div>
-      </div>
-      <div class="branch-cond">随机事件 — 【二刀追击】触发时</div>
-      <div class="skill-flow">
-        <div class="sn"><div class="sn-name">【二刀追击】</div><div class="sn-eff">概率触发·追加攻击</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">获得【双刃机会】</div><div class="sn-cost">6秒</div><div class="sn-eff">下一次黑色幻影+1阶-15杀意</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">【黑色幻影】</div><div class="sn-cost">10杀意 +3阶</div><div class="sn-eff">消耗双刃机会</div></div>
-      </div>
-      <div class="loop-back">↻ 回到暗影刺击/黑色幻影继续提升杀势</div>
-    </div>
-  </div>
-
-  <h3 class="bd-title dual">精通盘<span class="badge">21—30点</span></h3>
-  <div class="table-wrap">
-    <table class="mastery-table">
-      <thead>
-        <tr>
-          <th class="dual-th">投入</th>
-          <th class="dual-th">节点名称</th>
-          <th class="dual-th">点数</th>
-          <th class="dual-th">节点类型</th>
-          <th class="dual-th">完整效果</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【致命收割】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使【十字斩】对生命值低于20%的目标造成的伤害提高12.5%；点满后共提高25%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【旋刃精研】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使【旋刃环绕】持续时间延长0.5秒，并使群体【旋刃追击】伤害由40%攻击力提高5个百分点；点满后为50%攻击力</td>
-        </tr>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【双刀追击】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-rand">随机事件</span></td>
-          <td>触发共通精通【二刀追击】时，立即重置【黑色幻影】CD并获得6秒【双刃机会】；下一次【黑色幻影】杀意消耗降低15点并额外使【杀势】提升1阶。若在【永恒之斩】连斩窗口内消耗【双刃机会】释放【黑色幻影】，当前连斩窗口延长1秒；每次【永恒之斩】最多触发1次。常态8秒ICD，【烈火战车】期间缩短至4秒</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【连斩不息】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-trans">技能质变</span></td>
-          <td>【永恒之斩】连斩窗口3→4秒，最大追斩2→3次；窗口内插入暗影刺击／黑色幻影不会取消窗口或消耗追斩次数；【烈火战车】期间追斩杀意消耗15→10</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【烈火战车】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-burst">爆发节点</span></td>
-          <td>将武器技能【影刃解放】替换为【烈火战车】。【烈火战车】持续10秒，CD45秒；提高杀意恢复速度，立即重置【黑色幻影】并获得【双刃机会】；【二刀追击】触发率+20个百分点；【黑色幻影】变为双段【烈火幻影】，额外攻击段可触发【二刀追击】。</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【一敌专攻】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-single">单体节点</span></td>
-          <td>【旋刃环绕】期间无合法次要目标时，单体【旋刃追击】由10%攻击力提高至20%；追击不提升杀势、不触发【二刀追击】</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【群刃回响】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-group">群体节点</span></td>
-          <td>【旋刃环绕】期间，【旋刃追击】同时命中至少2名次要目标时，对本次命中的次要目标追加1次20%攻击力物理伤害；追加伤害不提升杀势、不触发【二刀追击】、不再次触发【群刃回响】</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【无尽双刃】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-ult">终极节点</span></td>
-          <td>完整打完当前【永恒之斩】全部追斩后获得10秒【无尽余势】；下一次【暗影刺击】或【黑色幻影】消耗【无尽余势】，杀意消耗降低10点并额外使【杀势】提升1阶。该额外升阶为真实杀势</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ===== Section 4: 爆刺 ===== -->
-<section class="section" id="sec4">
-  <h2 class="sec-title"><span class="num">四</span>爆刺｜筹备执行型</h2>
-
-  <div class="callout neutral">
-    <strong style="font-size:15px">一句话玩法：</strong>给敌人施加【致命爪痕】，把杀势提升至红阶后用终结技消耗它，每完成一次获得1层【影袭筹谋】；攒满2层后开启【暗影超越】，进入高速爆发并连续完成两轮爪痕终结。
-  </div>
-
-  <div class="callout burst">
-    <span class="ct">【影袭筹谋】机制</span>
-    点出【影袭准备】后，<strong>暗影超越外</strong>，实际消耗红阶【杀势】的【十字斩】或【致命影啸】成功消费【致命爪痕】时获得1层，最多2层，持续30秒。开启【暗影超越】时消耗全部筹谋；每层分别强化窗口内下一次尚未被强化的【暗影连袭】，使其杀意消耗降低10点，并使该次【暗影连袭】总计使【杀势】提升4阶，最多强化前2次。暗影超越期间消费【致命爪痕】不会获得筹谋。
-  </div>
-
-  <div class="callout burst">
-    <span class="ct">BD特色升阶规则</span>
-    【影袭筹谋】仍继承原版的爆发资源数学：每层筹谋把下一次【暗影连袭】从基础提升3阶强化为<strong>总计提升4阶</strong>。配合【致命爪痕】的1阶，正好形成"白阶来源 + 4阶连袭 = 红阶"的两轮处决结构，不改变原版5点爆发数学。
-  </div>
-
-  <h3 class="bd-title burst">技能卡<span class="badge">5张</span></h3>
-  <div class="skill-grid b">
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">1</span>
-        <div class="sc-h-text">
-          <div class="sc-name">暗影刺击</div>
-          <div class="sc-cost"><span class="cp-gen">+2阶杀势</span> 30杀意 · 无CD</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>对目标造成物理伤害并使【杀势】提升2阶
-        <span class="sc-label">精通变化</span>【影袭准备】：每层【影袭筹谋】使开大后下一次【暗影连袭】杀意-10，并使该次【暗影连袭】总计使杀势提升4阶，最多2次；【潜袭训练】：每点使【暗影连袭】伤害+4%
-      </div>
-      <div class="sc-role">常态主生成</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">2</span>
-        <div class="sc-h-text">
-          <div class="sc-name">黑色幻影</div>
-          <div class="sc-cost"><span class="cp-gen">+2阶杀势</span> 25杀意 · CD8s</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>快速接近并攻击目标，使【杀势】提升2阶
-        <span class="sc-label">精通变化</span>【幻影终结】：命中时25%概率使【十字斩】与【致命影啸】高亮并免费释放一次；暗影超越期间触发概率不提高；【超越回响】：开大期间实际红阶终结使【黑色幻影】剩余CD缩短4秒
-      </div>
-      <div class="sc-role">中CD高效生成与随机事件入口</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">3</span>
-        <div class="sc-h-text">
-          <div class="sc-name">致命爪痕</div>
-          <div class="sc-cost"><span class="cp-gen">+1阶杀势</span> 20杀意 · CD10s</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>对目标造成物理伤害并使【杀势】提升1阶，同时施加8秒【致命爪痕】。下一次实际消耗红阶杀势的【十字斩】或【致命影啸】命中时消耗标记，并追加1次物理伤害
-        <span class="sc-label">精通变化</span>【影袭准备】：实际红阶终结消费【致命爪痕】时获得1层【影袭筹谋】，最多2层；【爪痕追猎】：开大时重置【致命爪痕】CD，第一次消费爪痕后再重置1次
-      </div>
-      <div class="sc-role">中CD生成、刺杀准备与筹谋来源</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">4</span>
-        <div class="sc-h-text">
-          <div class="sc-name">十字斩</div>
-          <div class="sc-cost"><span class="cp-con">消耗全部杀势</span> 25杀意 · 无CD</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>一次性消耗当前白—红阶【杀势】造成高额单体物理伤害；爆刺主要以红阶释放
-        <span class="sc-label">精通变化</span>【幻影终结】：触发后可免费且不消耗真实杀势释放；常态按蓝阶效果结算，暗影超越期间按红阶效果结算；【孤影绝杀】：开大期间实际红阶【十字斩】仅命中1名敌人时，下一次【暗影连袭】对该目标伤害+20%
-      </div>
-      <div class="sc-role">单体实际终结</div>
-    </div>
-    <div class="sc">
-      <div class="sc-h">
-        <span class="sc-num">5</span>
-        <div class="sc-h-text">
-          <div class="sc-name">致命影啸</div>
-          <div class="sc-cost"><span class="cp-con">需红阶·消耗全部</span> 35杀意 · CD12s</div>
-        </div>
-      </div>
-      <div class="sc-body">
-        <span class="sc-label">基础效果</span>攻击主目标及附近敌人；需要红阶【杀势】，消耗全部红阶杀势造成群体物理伤害。半径5米，最多5名敌人
-        <span class="sc-label">精通变化</span>【幻影终结】：触发后可免费且不消耗真实杀势释放；常态免费版造成完整红阶版本60%的伤害，暗影超越期间按完整红阶效果结算；不能借此绕过自身CD；【群影收割】：开大期间首次实际红阶【致命影啸】命中≥3名敌人时立即重置自身CD
-      </div>
-      <div class="sc-role">群体实际终结</div>
-    </div>
-  </div>
-
-  <h3 class="bd-title burst">基础循环与筹谋</h3>
-  <div class="scenario-block b">
-    <div class="scenario-tag">爆刺 · 筹备执行循环</div>
-    <div class="sb-body">
-      <div class="skill-flow">
-        <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">20杀意 +1阶</div><div class="sn-eff">CD10s·施加8秒爪痕</div></div>
-        <span class="fa">→</span>
-        <div class="sn"><div class="sn-name">【暗影刺击】／【黑色幻影】</div><div class="sn-cost">30/25杀意 +2阶</div><div class="sn-eff">升至红阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">红阶终结</div><div class="sn-eff">消费【致命爪痕】+追加伤害</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">获得1层【影袭筹谋】</div><div class="sn-eff">最多2层·持续30秒</div></div>
-      </div>
-      <div class="branch-cond">红阶终结 — 检查目标数量</div>
-      <div class="branch-paths">
-        <div class="bp">
-          <span class="bp-label">单体</span>
-          <div class="skill-flow">
-            <div class="sn hl"><div class="sn-name">【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">消耗全部红阶杀势</div></div>
-          </div>
-          <div class="bp-note">高额单体物理伤害</div>
-        </div>
-        <div class="bp">
-          <span class="bp-label">群体</span>
-          <div class="skill-flow">
-            <div class="sn hl"><div class="sn-name">【致命影啸】</div><div class="sn-cost">35杀意</div><div class="sn-eff">需红阶·消耗全部杀势</div></div>
-          </div>
-          <div class="bp-note">半径5米·至多5名敌人</div>
-        </div>
-      </div>
-      <div class="branch-cond">重复一轮 — 积攒第2层【影袭筹谋】</div>
-      <div class="skill-flow">
-        <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">+1阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn"><div class="sn-name">升至红阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">红阶终结</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">获得第2层【影袭筹谋】</div></div>
-      </div>
-      <div class="branch-cond">大招前池化 — 当【暗影超越】接近可用</div>
-      <div class="skill-flow">
-        <div class="sn hl"><div class="sn-name">影袭筹谋=2层</div></div>
-        <span class="fa">→</span>
-        <div class="sn"><div class="sn-name">减少不必要杀意消费</div><div class="sn-eff">目标：70+杀意+无阶—白阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl burst-skill"><div class="sn-name">开启【暗影超越】</div></div>
-      </div>
-      <div class="loop-back">如果大招即将转好但筹谋不足 → 先补完整一轮致命爪痕→红阶终结，或放弃1层筹谋直接开大</div>
-    </div>
-  </div>
-
-  <div class="phase-label round">暗影超越｜爆发阶段</div>
-  <div class="spec-box">
-    <div class="sb-title">开启【暗影超越】后</div>
-    <ul>
-      <li>持续<strong>10秒</strong>，CD30秒</li>
-      <li>杀意上限<strong>+30</strong></li>
-      <li>杀意自然恢复速度<strong>+50%</strong></li>
-      <li>立即重置【黑色幻影】CD</li>
-      <li>立即重置【致命爪痕】CD</li>
-      <li>消耗全部【影袭筹谋】</li>
-      <li>【暗影刺击】按钮临时替换为【暗影连袭】</li>
-      <li>暗影超越结束后，【暗影连袭】恢复为【暗影刺击】</li>
-    </ul>
-  </div>
-
-  <div class="spec-box">
-    <div class="sb-title">【暗影连袭】</div>
-    <ul>
-      <li>基础杀意消耗<strong>30点</strong></li>
-      <li>对主目标连续造成2个攻击段</li>
-      <li>基础使【杀势】提升<strong>3阶</strong></li>
-      <li>若主目标附近存在至少2名其他敌人，第2攻击段同时攻击附近至多3名敌人，并额外使【杀势】提升1阶</li>
-      <li>每层被消耗的【影袭筹谋】使窗口内下一次尚未被强化的【暗影连袭】杀意消耗降低10点，并使该次【暗影连袭】总计使【杀势】提升<strong>4阶</strong>；最多强化前2次。若已满足群体条件，原本额外提升的1阶不再叠加，总计仍为4阶</li>
-    </ul>
-  </div>
-
-  <div class="phase-label round">爆发循环｜两轮刺杀</div>
-  <div class="scenario-block b">
-    <div class="scenario-tag">暗影超越 · 两轮刺杀</div>
-    <div class="sb-body">
-      <div class="branch-cond">暗影超越开启 → 黑色幻影／致命爪痕立即可用</div>
-      <div class="skill-flow">
-        <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">+1阶</div><div class="sn-eff">白阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】×1</div><div class="sn-cost">消耗第1层筹谋</div><div class="sn-eff">+4阶→红阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">红阶终结</div><div class="sn-eff">消费爪痕</div></div>
-      </div>
-      <div class="branch-cond">群体首次红阶致命影啸命中≥3名敌人 → 群影收割重置CD</div>
-      <div class="branch-cond">爪痕追猎重置致命爪痕CD</div>
-      <div class="skill-flow">
-        <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">+1阶</div><div class="sn-eff">白阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】×2</div><div class="sn-cost">消耗第2层筹谋</div><div class="sn-eff">+4阶→红阶</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">红阶终结</div><div class="sn-eff">消费爪痕</div></div>
-      </div>
-      <div class="loop-back">暗影超越结束 → 回到基础循环重新积攒筹谋</div>
-    </div>
-  </div>
-
-  <div class="phase-label round">随机事件｜幻影终结</div>
-  <div class="scenario-block b">
-    <div class="scenario-tag">幻影终结 · 随机触发</div>
-    <div class="sb-body">
-      <div class="skill-flow">
-        <div class="sn"><div class="sn-name">【黑色幻影】</div></div>
-        <span class="fa">→</span>
-        <div class="sn hl"><div class="sn-name">触发【幻影终结】</div><div class="sn-eff">25%概率</div></div>
-      </div>
-      <div class="branch-cond">玩家选择其一（8秒内有效）</div>
-      <div class="branch-paths">
-        <div class="bp">
-          <div class="bp-label">单体</div>
-          <div class="skill-flow">
-            <span class="cn hl">免费【十字斩】</span>
-          </div>
-          <div class="bp-note">常态按蓝阶效果·暗影超越期间按红阶效果</div>
-        </div>
-        <div class="bp">
-          <div class="bp-label">群体</div>
-          <div class="skill-flow">
-            <span class="cn hl">免费【致命影啸】</span>
-          </div>
-          <div class="bp-note">常态按红阶60%伤害·暗影超越期间按完整红阶</div>
-        </div>
-      </div>
-      <div class="loop-back">免费终结不消费爪痕、不获得筹谋、不触发实际红阶事件</div>
-    </div>
-  </div>
-
-  <div class="spec-box">
-    <div class="sb-title">幻影终结规则</div>
-    <ul>
-      <li>持续<strong>8秒</strong></li>
-      <li>触发概率固定为<strong>25%</strong>，暗影超越期间不提高</li>
-      <li>共享8秒ICD</li>
-      <li>下一次使用【十字斩】或【致命影啸】时消耗【幻影终结】</li>
-      <li>免费释放不消耗杀意、不消耗真实杀势</li>
-      <li>免费【十字斩】：常态按<strong>蓝阶</strong>效果结算；暗影超越期间按<strong>红阶</strong>效果结算</li>
-      <li>免费【致命影啸】：常态造成完整红阶版本<strong>60%</strong>的伤害；暗影超越期间按完整红阶版本结算</li>
-      <li>免费终结<strong>不消费【致命爪痕】</strong></li>
-      <li>免费终结不获得【影袭筹谋】，不触发任何"实际红阶终结"事件</li>
-      <li>【致命影啸】处于CD时不能借【幻影终结】绕过CD；此时仍可选择【十字斩】</li>
-    </ul>
-  </div>
-
-  <h3 class="bd-title burst">精通盘<span class="badge">21—30点</span></h3>
-  <div class="table-wrap">
-    <table class="mastery-table">
-      <thead>
-        <tr>
-          <th class="burst-th">投入</th>
-          <th class="burst-th">节点名称</th>
-          <th class="burst-th">点数</th>
-          <th class="burst-th">节点类型</th>
-          <th class="burst-th">完整效果</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【暗影超越】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-burst">爆发节点</span></td>
-          <td>将武器技能【影刃解放】替换为【暗影超越】。【暗影超越】持续10秒，CD30秒；提高杀意上限与杀意恢复速度，立即重置【黑色幻影】与【致命爪痕】CD，并使【暗影刺击】替换为【暗影连袭】。</td>
-        </tr>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【潜袭训练】</strong></td>
-          <td class="center"><span class="pts">3/3</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使【暗影连袭】伤害提高4%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">21—25</td>
-          <td class="narrow"><strong>【影袭准备】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-cycle">循环节点</span></td>
-          <td>暗影超越外，实际红阶【十字斩】或【致命影啸】成功消费施法者的【致命爪痕】时获得1层【影袭筹谋】，最多2层，持续30秒。开启【暗影超越】时消耗全部筹谋；每层分别使窗口内下一次尚未被强化的【暗影连袭】杀意消耗降低10点，并使该次【暗影连袭】总计使【杀势】提升4阶，最多强化前2次。暗影超越期间消费爪痕不获得筹谋</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【幻影终结】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-rand">随机事件</span></td>
-          <td>【黑色幻影】命中主目标时25%概率获得8秒【幻影终结】，共享8秒ICD；暗影超越期间触发概率仍为25%。【十字斩】与【致命影啸】同时高亮，下一次使用其中一个时免费且不消耗真实杀势：常态免费【十字斩】按蓝阶效果结算，暗影超越期间按红阶效果结算；常态免费【致命影啸】造成完整红阶版本60%的伤害，暗影超越期间按完整红阶版本结算。免费终结不消费【致命爪痕】、不生成【影袭筹谋】、不触发实际红阶事件；【致命影啸】不能借此绕过自身CD</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【超越回响】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-cycle">循环节点</span></td>
-          <td>暗影超越期间，实际消耗红阶【杀势】的【十字斩】或【致命影啸】使【黑色幻影】剩余CD缩短4秒；节点自身4秒ICD</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【孤影绝杀】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-single">单体节点</span></td>
-          <td>暗影超越期间，实际红阶【十字斩】仅命中1名敌人时，使下一次【暗影连袭】对该目标伤害提高20%；持续6秒</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【群影收割】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-group">群体节点</span></td>
-          <td>【暗影超越】期间，第一次实际消耗红阶【杀势】的【致命影啸】命中至少3名敌人时，立即重置【致命影啸】CD；每次【暗影超越】最多触发1次。</td>
-        </tr>
-        <tr>
-          <td class="center narrow">26—30</td>
-          <td class="narrow"><strong>【爪痕追猎】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-ult">终极节点</span></td>
-          <td>开启【暗影超越】时立即重置【致命爪痕】CD；暗影超越期间第一次由实际红阶【十字斩】或【致命影啸】成功消费【致命爪痕】后，再次重置【致命爪痕】CD。每次暗影超越最多触发1次该额外重置</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ===== Section 5: 武器技能池 ===== -->
-<section class="section" id="sec5">
-  <h2 class="sec-title"><span class="num">五</span>武器技能池</h2>
-  <div class="table-wrap" style="max-height:none">
-    <table>
-      <thead>
-        <tr>
-          <th class="shared-th">武器技能</th>
-          <th class="shared-th">RO表现来源</th>
-          <th class="shared-th">职责</th>
-          <th class="shared-th">基础效果</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="narrow"><strong>【伪装】</strong></td>
-          <td class="narrow">刺客</td>
-          <td class="narrow">隐蔽／接近</td>
-          <td>进入短时隐蔽移动状态，用于接近、绕位或规避战况</td>
-        </tr>
-        <tr>
-          <td class="narrow"><strong>【后退回避】</strong></td>
-          <td class="narrow">盗贼任务技能</td>
-          <td class="narrow">后撤位移</td>
-          <td>向后快速滑退一段距离</td>
-        </tr>
-        <tr>
-          <td class="narrow"><strong>【喷沙】</strong></td>
-          <td class="narrow">盗贼任务技能</td>
-          <td class="narrow">控制／干扰</td>
-          <td>对近距离目标造成低伤害并附加短时间命中干扰</td>
-        </tr>
-        <tr>
-          <td class="narrow"><strong>【解毒】</strong></td>
-          <td class="narrow">盗贼</td>
-          <td class="narrow">解异常</td>
-          <td>解除自身或友方一个中毒类异常</td>
-        </tr>
-        <tr>
-          <td class="narrow"><strong>【武器抵御】</strong></td>
-          <td class="narrow">十字切割者</td>
-          <td class="narrow">短时防护</td>
-          <td>短时间抵御一次近战攻击并获得反击机会</td>
-        </tr>
-        <tr>
-          <td class="narrow"><strong>【幻影步】</strong></td>
-          <td class="narrow">十字切割者</td>
-          <td class="narrow">生存／机动</td>
-          <td>短时间大幅提高回避并获得魔法伤害规避能力</td>
-        </tr>
-        <tr>
-          <td class="narrow"><strong>【影刃解放】</strong></td>
-          <td class="narrow">匕首</td>
-          <td class="narrow">爆发／增益</td>
-          <td>持续10秒，提高杀意自然恢复速度；CD45秒。不同BD可通过精通替换为专属爆发技能</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ===== Section 6: 共通主干精通 ===== -->
-<section class="section" id="sec6">
-  <h2 class="sec-title"><span class="num">六</span>共通主干精通｜0—20点</h2>
-  <div class="table-wrap">
-    <table class="mastery-table">
-      <thead>
-        <tr>
-          <th class="shared-th">投入</th>
-          <th class="shared-th">节点名称</th>
-          <th class="shared-th">点数</th>
-          <th class="shared-th">节点类型</th>
-          <th class="shared-th">完整效果</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="center narrow">0—5</td>
-          <td class="narrow"><strong>【短刃训练】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使短剑技能造成的物理伤害提高3%，包括由短剑技能施加的周期物理伤害</td>
-        </tr>
-        <tr>
-          <td class="center narrow">0—5</td>
-          <td class="narrow"><strong>【杀意储备】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使杀意上限提高5点</td>
-        </tr>
-        <tr>
-          <td class="center narrow">0—5</td>
-          <td class="narrow"><strong>【二刀追击】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-rand">随机事件</span></td>
-          <td>使用主动攻击技能直接命中敌人时，有一定概率追加1次物理攻击。追加攻击不消耗杀意、不提升杀势，且不能再次触发【二刀追击】。</td>
-        </tr>
-        <tr>
-          <td class="center narrow">6—10</td>
-          <td class="narrow"><strong>【影刃专注】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使短剑主动攻击暴击率提高1.5%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">6—10</td>
-          <td class="narrow"><strong>【迅击调息】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使所有能够提升杀势的主动技能杀意消耗降低1点</td>
-        </tr>
-        <tr>
-          <td class="center narrow">6—10</td>
-          <td class="narrow"><strong>【杀势回流】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-cycle">循环节点</span></td>
-          <td>使用终结技能实际消耗杀势后，立即恢复等同于本次实际消耗杀势阶数的杀意；免费终结、虚拟阶位与未实际消费的杀势不计入恢复</td>
-        </tr>
-        <tr>
-          <td class="center narrow">11—15</td>
-          <td class="narrow"><strong>【终结训练】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使消耗真实杀势的终结技能伤害提高2.5%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">11—15</td>
-          <td class="narrow"><strong>【杀意调息】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使杀意自然恢复速度提高3%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">11—15</td>
-          <td class="narrow"><strong>【短刃节律】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-feel">武器手感</span></td>
-          <td>使用任意消耗杀势的终结技能后，下一次【暗影刺击】或【黑色幻影】攻击动作后延迟缩短10%；持续6秒，成功释放后消耗</td>
-        </tr>
-        <tr>
-          <td class="center narrow">16—20</td>
-          <td class="narrow"><strong>【致命训练】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使短剑技能暴击伤害提高3%</td>
-        </tr>
-        <tr>
-          <td class="center narrow">16—20</td>
-          <td class="narrow"><strong>【连段训练】</strong></td>
-          <td class="center"><span class="pts">2/2</span></td>
-          <td><span class="nt nt-basic">基础强化</span></td>
-          <td>每点使【二刀追击】追加攻击、技能额外攻击段以及精通派生追击造成的伤害提高4%；不提高资源产出</td>
-        </tr>
-        <tr>
-          <td class="center narrow">16—20</td>
-          <td class="narrow"><strong>【轻巧身法】</strong></td>
-          <td class="center"><span class="pts">1/1</span></td>
-          <td><span class="nt nt-feel">武器手感</span></td>
-          <td>使用终结技能后移动速度提高15%，持续2秒</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ===== Section 7: HUD与表现规则 ===== -->
-<section class="section" id="sec7">
-  <h2 class="sec-title"><span class="num">七</span>HUD与表现规则</h2>
-
-  <h3 class="bd-title shared">7.1 资源布局</h3>
-  <div class="hud-demo">
-    <div class="hud-demo-row">
-      <div>
-        <div class="hud-demo-label">无阶（暗色未激活）</div>
-        <div class="hud-frame hud-frame-inactive">
-          <div class="hud-bar">
-            <div class="hud-bar-fill" style="width:72%"></div>
-            <div class="hud-bar-text">杀意 72 / 100</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="hud-demo-label">激活品质框</div>
-        <div class="hud-frame hud-frame-blue">
-          <div class="hud-bar">
-            <div class="hud-bar-fill" style="width:72%"></div>
-            <div class="hud-bar-text">杀意 72 / 100</div>
+          <div class="bp">
+            <span class="bp-label">解放</span>
+            <div class="skill-flow">
+              <div class="sn hl burst-skill"><div class="sn-name">【见血封喉】</div><div class="sn-cost">25杀意</div><div class="sn-eff">红→黄·爆发</div></div>
+            </div>
+            <div class="bp-note">红阶十字斩120%档+高额毒蚀爆发</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="hud-colors">
-      <span class="hud-color-chip" style="background:#ccc">白阶</span>
-      <span class="hud-color-chip" style="background:#4CAF50">绿阶</span>
-      <span class="hud-color-chip" style="background:#2196F3">蓝阶</span>
-      <span class="hud-color-chip" style="background:#FF9800">黄阶</span>
-      <span class="hud-color-chip" style="background:#f44336">红阶</span>
-    </div>
-    <p class="hud-demo-note">外层为【杀势】品质框，内层为【杀意】数值条。杀势提升或下降时只改变外框品质与升降阶反馈，不新增第二条独立资源条。</p>
-  </div>
 
-  <h3 class="bd-title shared">7.2 表现要求</h3>
-  <div class="spec-box">
-    <div class="sb-title">资源UI表现规范</div>
-    <ul>
-      <li>【杀意】为内层<strong>数值条</strong>，显示当前值／上限</li>
-      <li>【杀势】以包裹杀意条外侧的<strong>品质框／外环</strong>表现</li>
-      <li>无阶时为<strong>暗色未激活框</strong></li>
-      <li>白／绿／蓝／黄／红分别改变外框品质颜色</li>
-      <li>终结消费时外框<strong>破碎／收缩</strong>并回到无阶</li>
-      <li>切换目标保留当前杀势</li>
-      <li>死亡、脱战、换武器、换BD时回到无阶</li>
-      <li>正常战斗中杀势不会因停手自动掉阶</li>
-    </ul>
-  </div>
-</section>
+    <h3 class="bd-title poison">见血封喉规则</h3>
+    <div class="spec-box">
+      <div class="sb-title poison">见血封喉</div>
+      <ul>
+        <li>消耗：<strong>25杀意</strong><em class="sim">模拟值</em></li>
+        <li>可用时间：<strong>6秒</strong><em class="sim">模拟值</em></li>
+        <li>CD：不读取十字斩当前CD；每次红阶催化最多生成1次</li>
+        <li>伤害：红阶十字斩<strong>120%档</strong>＋一次高额毒蚀爆发物理伤害<em class="sim">待数值</em></li>
+        <li>状态：红→黄；双毒保留，不刷新、不移除</li>
+        <li>精通继承：凝毒穿刺提高本次毒蚀爆发；致命涂毒期间毒蚀爆发+50%</li>
+        <li>使用或机会到期后恢复十字斩，继承十字斩后台剩余CD</li>
+      </ul>
+    </div>
+
+    <h3 class="bd-title poison">随机事件｜毒发</h3>
+    <div class="callout poison">
+      <span class="ct">毒发</span>
+      双毒目标的自然DoT跳伤害生效时有<strong>12%</strong>概率触发，共享8秒ICD。施毒高亮6秒，下一次施毒变为免费<strong>【毒发刺击】</strong>。毒发刺击使催化锁剩余时间-4秒、病毒散播剩余CD-4秒。致命涂毒期间概率提高到<strong>24%</strong>。毒发只提供额外收益，不是基础循环成立条件。
+    </div>
+
+    <h3 class="bd-title poison">固定大招替换｜致命涂毒</h3>
+    <div class="spec-box">
+      <div class="sb-title poison">致命涂毒</div>
+      <ul>
+        <li>持续<strong>8秒</strong>，CD<strong>45秒</strong></li>
+        <li>释放时重置共享催化锁和病毒散播CD</li>
+        <li>毒发概率12%→24%</li>
+        <li>毒蚀爆发伤害提高<strong>50%</strong><em class="sim">模拟值</em></li>
+        <li>每次致命涂毒最多有1次强化催化可以提升2阶</li>
+        <li>不改变见血封喉按钮规则</li>
+      </ul>
+    </div>
+
+    <h3 class="bd-title poison">精通后循环</h3>
+    <div class="scenario-block p">
+      <div class="scenario-tag">毒刃刺 · 致命涂毒后循环</div>
+      <div class="sb-body">
+        <div class="branch-paths">
+          <div class="bp">
+            <span class="bp-label">单体</span>
+            <div class="skill-flow" style="flex-direction:column;align-items:flex-start;gap:4px">
+              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">重置催化锁</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">建立双毒</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">十字斩强化凝毒</div><div class="sn-eff">+2阶</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">填充</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">红阶凝毒催化</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">选择</div></div><span class="fa">→</span><span class="cn hl">保红</span><span class="ca">／</span><span class="cn hl">见血封喉</span></div>
+            </div>
+          </div>
+          <div class="bp">
+            <span class="bp-label">群体</span>
+            <div class="skill-flow" style="flex-direction:column;align-items:flex-start;gap:4px">
+              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">重置催化+散播</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">建立双毒</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">病毒散播强化扩散</div><div class="sn-eff">+2阶</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">填充</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">红阶扩散催化</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">选择</div></div><span class="fa">→</span><span class="cn hl">保红</span><span class="ca">／</span><span class="cn hl">见血封喉</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="loop-back">↻ 随机毒发可缩短下一次催化等待时间，但不是必要条件</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title poison">单体／群体二择</h3>
+    <div class="priority-split">
+      <div class="ps-item">
+        <span class="ps-tag">单体</span>
+        <div class="ps-body">
+          <div class="ps-skill">凝毒穿刺</div>
+          <div class="ps-detail">十字斩凝毒催化直接伤害+12%；毒蚀爆发伤害提高Y单%<em class="sim">模拟值</em></div>
+        </div>
+      </div>
+      <div class="ps-item">
+        <span class="ps-tag">群体</span>
+        <div class="ps-body">
+          <div class="ps-skill">毒雾蔓延</div>
+          <div class="ps-detail">传播中毒获得完整12秒，最多4名次要目标；扩散催化毒蚀爆发+Y群%<em class="sim">模拟值</em></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bd-title poison">精通路径｜21—30点</h3>
+    <div class="table-wrap">
+      <table class="mastery-table">
+        <thead><tr><th class="poison-th">点位</th><th class="poison-th">节点</th><th class="poison-th">节点类型</th><th class="poison-th">效果</th></tr></thead>
+        <tbody>
+          <tr><td class="center narrow">21</td><td><strong>【毒刃训练I】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>中毒周期伤害+5%</td></tr>
+          <tr><td class="center narrow">22</td><td><strong>【毒刃训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>中毒周期伤害再+5%</td></tr>
+          <tr><td class="center narrow">23</td><td><strong>【感染精研I】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>致命涂毒期间暗影刺击命中双毒目标使催化锁与病毒散播剩余CD各-1秒</td></tr>
+          <tr><td class="center narrow">24</td><td><strong>【感染精研II】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>对应两项剩余时间再各-1秒</td></tr>
+          <tr><td class="center narrow">25</td><td><strong>【毒发】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>解锁毒发刺击</td></tr>
+          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td><strong>【凝毒穿刺】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>十字斩凝毒催化直接伤害+12%；凝毒催化与见血封喉的毒蚀爆发+Y单%</td></tr>
+          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td><strong>【毒雾蔓延】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>传播中毒获得完整12秒，最多4名次要目标；扩散催化毒蚀爆发+Y群%</td></tr>
+          <tr><td class="center narrow">27</td><td><strong>【病毒培养I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>病毒散播直接伤害+4%、传播半径+0.5米</td></tr>
+          <tr><td class="center narrow">28</td><td><strong>【病毒培养II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>对应效果再提高一次</td></tr>
+          <tr><td class="center narrow">29</td><td><strong>【致命毒液】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>影刃解放替换为致命涂毒；重置催化锁和病毒散播，毒蚀爆发+50%</td></tr>
+          <tr><td class="center narrow">30</td><td><strong>【见血封喉】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>红阶催化后解锁见血封喉机会</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== Section 5: 双刀刺 ===== -->
+  <section class="section" id="sec5">
+    <h2 class="sec-title"><span class="num">五</span>双刀刺｜动态反应型</h2>
+
+    <div class="callout dual">
+      <span class="ct">一句话玩法</span>
+      通过【永恒之斩】完成追斩升阶，蓝阶主动插入【黑色幻影】形成高质量连斩直达红阶；红阶每轮共享杀招CD选择保红或解放。
+    </div>
+
+    <h3 class="bd-title dual">技能卡<span class="badge">5张</span></h3>
+    <div class="skill-grid d">
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>高频单体刺击
+          <span class="sc-label">精通变化</span>黄阶消耗降低；精通后可合法插入永恒窗口
+        </div>
+        <div class="sc-role">高频填充</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD6s<em class="sim">模拟值</em></div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>快速接近并攻击目标
+          <span class="sc-label">精通变化</span>蓝阶高质量连斩和红阶保红的前置动作
+        </div>
+        <div class="sc-role">机动输出／技术插入</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">利刃旋舞</div><div class="sc-cost"><span class="cp-con">30杀意</span> CD12s</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>范围伤害并获得旋刃环绕
+          <span class="sc-label">精通变化</span>不负责升阶；后续直接攻击驱动旋刃追击
+        </div>
+        <div class="sc-role">群体附着</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">永恒之斩</div><div class="sc-cost"><span class="cp-con">首击20</span> <span class="cp-con">追斩15</span> 共享8s CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>首击后开启追斩窗口
+          <span class="sc-label">精通变化</span>白／绿／黄升阶；蓝阶高质量连斩直达红；红阶触发绝刃终结
+        </div>
+        <div class="sc-role">升阶／红阶解放</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> 共享8s CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>一次性交叉斩击
+          <span class="sc-label">精通变化</span>红阶黑色幻影后6秒内命中可保红
+        </div>
+        <div class="sc-role">短窗口兑现／红阶保红</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title dual">永恒之斩时间窗口</h3>
+    <div class="spec-box">
+      <div class="sb-title dual">窗口规则</div>
+      <ul>
+        <li>基础窗口：<strong>5秒</strong>（4→5秒平衡调整值）</li>
+        <li>连斩不息窗口：<strong>6秒</strong>（5→6秒平衡调整值）</li>
+        <li>基础合法序列：永恒首击 → 黑色幻影 → 追斩1 → 追斩2</li>
+        <li>精通合法序列：永恒首击 → 黑色幻影 → 暗影刺击 → 追斩1 → 追斩2 → 可选追斩3</li>
+        <li>基础窗口只允许插入1次黑色幻影；插入其他技能取消窗口</li>
+        <li>连斩不息额外允许插入1次暗影刺击</li>
+        <li>第2次基础追斩完成时立即判定升阶或红阶解放</li>
+      </ul>
+    </div>
+
+    <h3 class="bd-title dual">循环</h3>
+    <div class="scenario-block d">
+      <div class="scenario-tag">双刀刺 · 基础循环</div>
+      <div class="sb-body">
+        <div class="skill-flow">
+          <div class="sn hl"><div class="sn-name">【永恒之斩】</div><div class="sn-cost">首击20杀意</div><div class="sn-eff">开启窗口</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">【追斩】×2</div><div class="sn-cost">15×2</div><div class="sn-eff">杀阶+1</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">填充</div><div class="sn-eff">暗影刺击/黑色幻影/利刃旋舞</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">等待共享杀招CD</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">下一轮永恒之斩</div></div>
+        </div>
+        <div class="loop-back">↻ 循环往复</div>
+
+        <div class="branch-cond" style="margin-top:16px">蓝阶技术跃迁 — 主动插入黑色幻影</div>
+        <div class="skill-flow">
+          <div class="sn hl"><div class="sn-name">【永恒之斩】首击</div><div class="sn-cost">20杀意</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【黑色幻影】</div><div class="sn-cost">25杀意</div><div class="sn-eff">技术插入</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【追斩】×2</div><div class="sn-cost">15×2</div><div class="sn-eff">蓝直接升红</div></div>
+        </div>
+        <div class="bp-note" style="text-align:center">该技术跃迁由玩家操作确定完成</div>
+
+        <div class="branch-cond" style="margin-top:16px">红阶选择 — 共享8秒杀招CD</div>
+        <div class="branch-paths">
+          <div class="bp">
+            <span class="bp-label">保红路线</span>
+            <div class="skill-flow">
+              <div class="sn"><div class="sn-name">【黑色幻影】</div><div class="sn-cost">25杀意</div></div>
+              <span class="fa">→</span>
+              <div class="sn hl"><div class="sn-name">6秒内【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">刷新红阶12秒</div></div>
+            </div>
+            <div class="bp-note">继续维持红阶窗口</div>
+          </div>
+          <div class="bp">
+            <span class="bp-label">解放路线</span>
+            <div class="skill-flow">
+              <div class="sn hl"><div class="sn-name">【永恒之斩】</div><div class="sn-cost">20杀意</div></div>
+              <span class="fa">→</span>
+              <div class="sn hl"><div class="sn-name">完成第2追斩</div></div>
+              <span class="fa">→</span>
+              <div class="sn hl burst-skill"><div class="sn-name">【绝刃终结】</div><div class="sn-eff">100%攻击力</div></div>
+            </div>
+            <div class="bp-note">红→黄·获得爆发</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bd-title dual">随机事件｜双刀追击</h3>
+    <div class="callout dual">
+      <span class="ct">二刀追击触发</span>
+      共通【二刀追击】触发且节点ICD可用时：重置黑色幻影CD、获得6秒双刃机会、下一次黑色幻影杀意-15。若在永恒之斩窗口内消费，当前窗口延长1秒。常态ICD8秒；烈火战车期间4秒。随机事件只提高容错，不决定蓝阶能否直达红阶。
+    </div>
+
+    <h3 class="bd-title dual">固定大招替换｜烈火战车</h3>
+    <div class="spec-box">
+      <div class="sb-title dual">烈火战车</div>
+      <ul>
+        <li>持续<strong>10秒</strong>，CD<strong>45秒</strong></li>
+        <li>提高杀意恢复速度</li>
+        <li>释放时重置黑色幻影并获得1次双刃机会</li>
+        <li>二刀追击概率20%→40%</li>
+        <li>黑色幻影变为双段攻击，但整次释放仍只判定一次随机事件</li>
+        <li><strong>战车余势</strong>使持续10→12秒，只增加爆发容错</li>
+      </ul>
+    </div>
+
+    <h3 class="bd-title dual">精通后循环</h3>
+    <div class="scenario-block d">
+      <div class="scenario-tag">双刀刺 · 烈火战车后循环</div>
+      <div class="sb-body">
+        <div class="skill-flow">
+          <div class="sn hl burst-skill"><div class="sn-name">烈火战车</div><div class="sn-eff">重置黑色幻影+双段</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【黑色幻影】双段</div><div class="sn-cost">10杀意</div><div class="sn-eff">双刃机会</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【永恒之斩】连斩</div><div class="sn-cost">20+15×2</div><div class="sn-eff">蓝→红</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">选择</div><div class="sn-eff">保红/解放</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">【无尽余势】</div><div class="sn-eff">10秒增益</div></div>
+        </div>
+        <div class="loop-back">↻ 下一次填充杀意-10、共享杀招CD-2秒</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title dual">单体／群体二择</h3>
+    <div class="priority-split">
+      <div class="ps-item">
+        <span class="ps-tag">单体</span>
+        <div class="ps-body">
+          <div class="ps-skill">一敌专攻</div>
+          <div class="ps-detail">旋刃追击无合法次要目标时，对主目标追击10%→20%攻击力</div>
+        </div>
+      </div>
+      <div class="ps-item">
+        <span class="ps-tag">群体</span>
+        <div class="ps-body">
+          <div class="ps-skill">群刃回响</div>
+          <div class="ps-detail">旋刃追击同时命中≥2名次要目标时，追加20%攻击力范围伤害</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bd-title dual">精通路径｜21—30点</h3>
+    <div class="table-wrap">
+      <table class="mastery-table">
+        <thead><tr><th class="dual-th">点位</th><th class="dual-th">节点</th><th class="dual-th">节点类型</th><th class="dual-th">效果</th></tr></thead>
+        <tbody>
+          <tr><td class="center narrow">21</td><td><strong>【致命收割I】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>十字斩对生命低于20%的目标伤害+12.5%</td></tr>
+          <tr><td class="center narrow">22</td><td><strong>【致命收割II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>对应斩杀伤害再+12.5%</td></tr>
+          <tr><td class="center narrow">23</td><td><strong>【旋刃精研I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>旋刃环绕持续+0.5秒，群体追击伤害+5个百分点</td></tr>
+          <tr><td class="center narrow">24</td><td><strong>【旋刃精研II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>对应效果再提高一次</td></tr>
+          <tr><td class="center narrow">25</td><td><strong>【双刀追击】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>二刀追击触发时重置黑色幻影并获得双刃机会</td></tr>
+          <tr style="background:var(--dual-l)"><td class="center narrow">26</td><td><strong>【一敌专攻】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>无合法次要目标时强化单体旋刃追击（10%→20%）</td></tr>
+          <tr style="background:var(--dual-l)"><td class="center narrow">26</td><td><strong>【群刃回响】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>命中≥2名次要目标时追加20%攻击力范围伤害</td></tr>
+          <tr><td class="center narrow">27</td><td><strong>【连斩不息】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>永恒窗口5→6秒，最大追斩2→3，允许插入1次暗影刺击</td></tr>
+          <tr><td class="center narrow">28</td><td><strong>【烈火战车】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>影刃解放替换为烈火战车</td></tr>
+          <tr><td class="center narrow">29</td><td><strong>【战车余势】</strong></td><td><span class="nt nt-burst">爆发强化</span></td><td>烈火战车持续10→12秒</td></tr>
+          <tr><td class="center narrow">30</td><td><strong>【无尽双刃】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>完成永恒全部追斩后获得10秒无尽余势；下一次暗影刺击/黑色幻影杀意-10，共享杀招CD-2秒</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== Section 6: 爆刺 ===== -->
+  <section class="section" id="sec6">
+    <h2 class="sec-title"><span class="num">六</span>爆刺｜筹备执行型</h2>
+
+    <div class="callout burst">
+      <span class="ct">一句话玩法</span>
+      常态使用【致命爪痕】完成处决来升阶和积累筹谋；在合适杀阶和2层筹谋时开启【暗影超越】，集中完成两轮超越处决。爆刺的红阶选择主要发生在"是否现在开启暗影超越"，而不是每次处决时即时二择。
+    </div>
+
+    <h3 class="bd-title burst">技能卡<span class="badge">5张</span></h3>
+    <div class="skill-grid b">
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>对目标造成物理伤害
+          <span class="sc-label">精通变化</span>命中基础致命爪痕目标时使其剩余CD-0.5秒；1秒ICD<em class="sim">模拟值</em>
+        </div>
+        <div class="sc-role">高频填充／推进爪痕</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD8s</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>快速接近并攻击目标
+          <span class="sc-label">精通变化</span>命中基础致命爪痕目标时使其剩余CD-1.5秒<em class="sim">模拟值</em>
+        </div>
+        <div class="sc-role">中CD输出／强推进爪痕</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">致命爪痕</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD10s</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>造成伤害并施加基础致命爪痕
+          <span class="sc-label">精通变化</span>白阶8秒、绿以上10秒；暗影超越期间不施加基础爪痕
+        </div>
+        <div class="sc-role">刺杀准备</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD4s<em class="sim">模拟值</em></div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>高额单体杀招
+          <span class="sc-label">精通变化</span>消费基础或超越爪痕完成单体处决
+        </div>
+        <div class="sc-role">单体处决</div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">致命影啸</div><div class="sc-cost"><span class="cp-con">35杀意</span> CD12s</div></div></div>
+        <div class="sc-body">
+          <span class="sc-label">基础效果</span>主目标及周围群体伤害（5米、最多5名）
+          <span class="sc-label">精通变化</span>消费基础或超越爪痕完成群体处决
+        </div>
+        <div class="sc-role">群体处决</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title burst">循环</h3>
+    <div class="scenario-block b">
+      <div class="scenario-tag">爆刺 · 基础循环</div>
+      <div class="sb-body">
+        <div class="skill-flow">
+          <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">20杀意</div><div class="sn-eff">施加爪痕</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">【暗影刺击】/【黑色幻影】</div><div class="sn-eff">推进爪痕CD</div></div>
+          <span class="fa">→</span>
+          <div class="branch-cond" style="margin:0">检查目标数量</div>
+        </div>
+        <div class="branch-paths" style="margin-top:8px">
+          <div class="bp">
+            <span class="bp-label">单体处决</span>
+            <div class="skill-flow">
+              <div class="sn hl"><div class="sn-name">【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">消费爪痕·杀阶+1</div></div>
+            </div>
+            <div class="bp-note">获得1层影袭筹谋</div>
+          </div>
+          <div class="bp">
+            <span class="bp-label">群体处决</span>
+            <div class="skill-flow">
+              <div class="sn hl"><div class="sn-name">【致命影啸】</div><div class="sn-cost">35杀意</div><div class="sn-eff">消费爪痕·杀阶+1</div></div>
+            </div>
+            <div class="bp-note">获得1层影袭筹谋</div>
+          </div>
+        </div>
+        <div class="branch-cond" style="margin-top:12px">筹谋达到2层时额外再提升1阶（最高红阶）</div>
+        <div class="loop-back">↻ 下一轮致命爪痕</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title burst">暗影超越</h3>
+    <div class="spec-box">
+      <div class="sb-title burst">暗影超越 · 爆刺大招</div>
+      <ul>
+        <li>持续<strong>10秒</strong>，CD<strong>30秒</strong></li>
+        <li>杀意上限<strong>+30</strong>，杀意恢复速度<strong>+50%</strong></li>
+        <li>只重置黑色幻影CD</li>
+        <li>致命爪痕只造成直接伤害，不施加基础标记</li>
+        <li>暗影刺击替换为<strong>暗影连袭</strong></li>
+        <li>每层影袭筹谋转化为1次超越处决</li>
+        <li>大招期间暂停杀阶自然衰退</li>
+        <li><strong>超越蓄势</strong>：以2层筹谋开启时持续10→12秒</li>
+      </ul>
+    </div>
+
+    <div class="spec-box">
+      <div class="sb-title burst">暗影连袭 与 超越爪痕</div>
+      <ul>
+        <li><strong>暗影连袭</strong>：基础消耗30杀意，造成2段攻击。存在超越处决时消耗降至20</li>
+        <li>消耗1次超越处决；当前杀阶低于红阶时本轮唯一一次杀阶+1</li>
+        <li>施加6秒<strong>超越爪痕</strong>：与基础致命爪痕硬互斥</li>
+        <li>下一次十字斩/致命影啸优先且只消费超越爪痕</li>
+        <li>消费视为完整处决，但不生成筹谋、不再次升阶</li>
+        <li>消费时若为红阶，执行红阶解放并使红→黄</li>
+      </ul>
+    </div>
+
+    <div class="phase-label round">两轮爆发</div>
+    <div class="scenario-block b">
+      <div class="scenario-tag">爆刺 · 暗影超越两轮爆发</div>
+      <div class="sb-body">
+        <div class="branch-cond">推荐前提：黄阶以上 + 2层筹谋</div>
+        <div class="branch-cond">第1轮</div>
+        <div class="skill-flow">
+          <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】×1</div><div class="sn-cost">20杀意</div><div class="sn-eff">消耗第1层筹谋·黄→红</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">超越爪痕</div><div class="sn-eff">6秒</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">红阶解放</div><div class="sn-eff">消费爪痕·红→黄</div></div>
+        </div>
+        <div class="branch-cond" style="margin-top:12px">第2轮</div>
+        <div class="skill-flow">
+          <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】×2</div><div class="sn-cost">20杀意</div><div class="sn-eff">消耗第2层筹谋·黄→红</div></div>
+          <span class="fa">→</span>
+          <div class="sn"><div class="sn-name">超越爪痕</div><div class="sn-eff">6秒</div></div>
+          <span class="fa">→</span>
+          <div class="sn hl"><div class="sn-name">第二轮红阶解放</div><div class="sn-eff">消费爪痕·红→黄</div></div>
+        </div>
+        <div class="loop-back">↻ 完成30点路径后，2层筹谋使窗口延长到12秒，为两轮处决保留容错</div>
+      </div>
+    </div>
+
+    <h3 class="bd-title burst">随机事件｜幻影终结</h3>
+    <div class="callout burst">
+      <span class="ct">幻影终结</span>
+      黑色幻影命中时<strong>25%</strong>概率触发，ICD8秒，储存8秒。结算优先级：①目标有爪痕时正常处决，幻影终结不消耗；②无爪痕时显示幻影高亮，可释放免费幻影杀招；③免费杀招不消耗杀意、不消费爪痕、不升阶、不生成筹谋、不触发红阶解放；④不能绕过原技能CD；⑤释放其中一个后消耗事件，另一个恢复正常。
+    </div>
+
+    <h3 class="bd-title burst">单体／群体二择</h3>
+    <div class="priority-split">
+      <div class="ps-item">
+        <span class="ps-tag">单体</span>
+        <div class="ps-body">
+          <div class="ps-skill">孤影绝杀</div>
+          <div class="ps-detail">红阶十字斩解放仅命中1名敌人时，下一次暗影连袭对该目标伤害+20%，持续6秒</div>
+        </div>
+      </div>
+      <div class="ps-item">
+        <span class="ps-tag">群体</span>
+        <div class="ps-body">
+          <div class="ps-skill">群影收割</div>
+          <div class="ps-detail">暗影超越期间第一次致命影啸红阶解放命中≥3名敌人时，重置致命影啸CD；每次大招最多1次</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bd-title burst">精通路径｜21—30点</h3>
+    <div class="table-wrap">
+      <table class="mastery-table">
+        <thead><tr><th class="burst-th">点位</th><th class="burst-th">节点</th><th class="burst-th">节点类型</th><th class="burst-th">效果</th></tr></thead>
+        <tbody>
+          <tr><td class="center narrow">21</td><td><strong>【暗影超越】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>影刃解放替换为暗影超越</td></tr>
+          <tr><td class="center narrow">22</td><td><strong>【潜袭训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>暗影连袭伤害+4%</td></tr>
+          <tr><td class="center narrow">23</td><td><strong>【潜袭训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>暗影连袭伤害再+4%</td></tr>
+          <tr><td class="center narrow">24</td><td><strong>【潜袭训练III】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>暗影连袭伤害再+4%</td></tr>
+          <tr><td class="center narrow">25</td><td><strong>【影袭准备】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>暗影超越外完整处决获得筹谋，最多2层共享30秒</td></tr>
+          <tr style="background:var(--burst-l)"><td class="center narrow">26</td><td><strong>【孤影绝杀】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>单体红阶解放强化下一次暗影连袭+20%</td></tr>
+          <tr style="background:var(--burst-l)"><td class="center narrow">26</td><td><strong>【群影收割】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>首次群体红阶解放命中≥3名敌人时重置致命影啸CD</td></tr>
+          <tr><td class="center narrow">27</td><td><strong>【幻影终结】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>解锁带处决优先级的免费幻影杀招</td></tr>
+          <tr><td class="center narrow">28</td><td><strong>【超越回响】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>大招期间完成红阶解放时黑色幻影剩余CD-4秒；4秒ICD</td></tr>
+          <tr><td class="center narrow">29</td><td><strong>【超越蓄势】</strong></td><td><span class="nt nt-burst">爆发容错</span></td><td>以2层筹谋开启暗影超越时持续10→12秒</td></tr>
+          <tr><td class="center narrow">30</td><td><strong>【爪痕追猎】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>第一次红阶解放后，第二次超越爪痕的处决追加伤害+30%；每次大招最多1次</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== Section 7: 30点合法构筑选择 ===== -->
+  <section class="section" id="sec7">
+    <h2 class="sec-title"><span class="num">七</span>30点合法构筑选择</h2>
+    <p class="sec-lead">以下构筑用于证明每个BD的单体／群体路径都可以在30点预算内闭合，不代表唯一推荐加点顺序。</p>
+
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">Build</th><th class="shared-th">BD</th><th class="shared-th">预算</th><th class="shared-th">闭合</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>毒刃刺单体</strong></td><td>poison</td><td class="center">30</td><td class="center">✓</td></tr>
+          <tr><td class="narrow"><strong>毒刃刺群体</strong></td><td>poison</td><td class="center">30</td><td class="center">✓</td></tr>
+          <tr><td class="narrow"><strong>双刀刺单体</strong></td><td>dual</td><td class="center">30</td><td class="center">✓</td></tr>
+          <tr><td class="narrow"><strong>双刀刺群体</strong></td><td>dual</td><td class="center">30</td><td class="center">✓</td></tr>
+          <tr><td class="narrow"><strong>爆刺单体</strong></td><td>burst</td><td class="center">30</td><td class="center">✓</td></tr>
+          <tr><td class="narrow"><strong>爆刺群体</strong></td><td>burst</td><td class="center">30</td><td class="center">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout shared">
+      每条路径 = C01—C20（共通主干20点）+ 对应BD的21—30点（含单体或群体二择之一）。6条路径全部在30点预算内闭合。
+    </div>
+  </section>
+
+  <!-- ===== Section 8: 武器技能 ===== -->
+  <section class="section" id="sec8">
+    <h2 class="sec-title"><span class="num">八</span>武器技能</h2>
+
+    <h3 class="bd-title shared">固定终极武器技能</h3>
+    <div class="spec-box">
+      <div class="sb-title">影刃解放</div>
+      <ul>
+        <li>获取：装备匕首后必定拥有</li>
+        <li>槽位：固定终极武器槽（不占技能卡槽，不占随机武器技能槽）</li>
+        <li>效果：持续<strong>10秒</strong>，提高杀意自然恢复速度；CD<strong>45秒</strong></li>
+        <li>BD爆发节点只替换该固定槽，不要求随机生成或额外装备</li>
+      </ul>
+    </div>
+
+    <h3 class="bd-title shared">随机战术武器技能池</h3>
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">武器技能</th><th class="shared-th">职责</th><th class="shared-th">基础效果</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>伪装</strong></td><td>隐蔽／接近</td><td>短时隐蔽移动，用于接近、绕位或规避战况</td></tr>
+          <tr><td class="narrow"><strong>后退回避</strong></td><td>后撤位移</td><td>向后快速滑退一段距离</td></tr>
+          <tr><td class="narrow"><strong>喷沙</strong></td><td>控制／干扰</td><td>近距离低伤害并附加短时间命中干扰</td></tr>
+          <tr><td class="narrow"><strong>解毒</strong></td><td>解异常</td><td>解除自身或友方一个中毒类异常</td></tr>
+          <tr><td class="narrow"><strong>武器抵御</strong></td><td>短时防护</td><td>短时间抵御一次近战攻击并获得反击机会</td></tr>
+          <tr><td class="narrow"><strong>幻影步</strong></td><td>生存／机动</td><td>短时间提高回避并获得魔法伤害规避能力</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout neutral">随机战术武器技能不参与三套BD的保证循环，也不改变精通盘合法路径。</div>
+  </section>
+
+  <!-- ===== Section 9: 三BD差异与玩家心流 ===== -->
+  <section class="section" id="sec9">
+    <h2 class="sec-title"><span class="num">九</span>三BD差异与玩家心流</h2>
+
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">项目</th><th class="poison-th">毒刃刺</th><th class="dual-th">双刀刺</th><th class="burst-th">爆刺</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>建立阶段</strong></td><td>双毒建立</td><td>等待永恒之斩窗口</td><td>爪痕与筹谋建立</td></tr>
+          <tr><td class="narrow"><strong>升阶行为</strong></td><td>单体十字斩凝毒／群体病毒散播扩散</td><td>完整永恒之斩</td><td>完整爪痕处决</td></tr>
+          <tr><td class="narrow"><strong>技术跃阶</strong></td><td>大招内强化催化</td><td>蓝阶插入黑色幻影</td><td>筹谋达到2层时额外升阶</td></tr>
+          <tr><td class="narrow"><strong>红阶保留</strong></td><td>再次成功催化</td><td>黑色幻影→十字斩</td><td>大招外完整爪痕处决</td></tr>
+          <tr><td class="narrow"><strong>红阶解放</strong></td><td>见血封喉</td><td>永恒之斩→绝刃终结</td><td>暗影超越内超越爪痕处决</td></tr>
+          <tr><td class="narrow"><strong>决策类型</strong></td><td>状态和CD判断</td><td>连段路线判断</td><td>爆发时机规划</td></tr>
+          <tr><td class="narrow"><strong>失败压力</strong></td><td>双毒断裂或催化延误</td><td>窗口中断或共享CD选错</td><td>筹谋不足或大招窗口未完成</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <span class="ct">目标体验</span>
+      <strong>毒刃刺</strong>：观察双毒和催化锁；单体主动凝毒、群体主动扩散，并在红阶选择维持还是兑现。<br>
+      <strong>双刀刺</strong>：读懂短窗口，在固定规则内安排插入动作，并承担共享CD选择成本。<br>
+      <strong>爆刺</strong>：提前筹备，在合适杀阶和战斗阶段一次完成两轮处决。
+    </div>
+  </section>
 
 </main>
 
 <footer>
-  <p>匕首 · 三BD技能卡与完整精通节点表</p>
-  <p>V4.1 · 杀意·杀势等价迁移版</p>
+  <p>匕首｜三BD技能卡与完整精通盘 V6.5 · 结构修正版</p>
+  <p>所有标记为模拟值的参数均不是运行时结论</p>
 </footer>
 
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
@@ -1274,105 +1167,127 @@ window.addEventListener('scroll',function(){var b=document.querySelector('.back-
 
 <script>
 var tips={
-  '杀意':'上限100，战斗初始100，自然恢复12点/秒。原能量的所有获取、消耗、上限与恢复规则等价迁移。',
-  '杀势':'最高红阶，内部按0—5阶处理：0=无阶、1=白、2=绿、3=蓝、4=黄、5=红。由原生成技能提升阶位，由原终结技能按原规则消耗；切换目标保留，脱战、换武器、换BD时清空并回到无阶。',
-  '杀势UI':'品质外框包裹在杀意数值条外侧。杀势提升或下降时只改变外框品质与升降阶反馈，不新增第二条独立资源条。',
-  '中毒':'持续12秒，每2秒造成N点物理伤害，共结算6次；最多1层，重复施加刷新持续时间。周期伤害不提升杀势、不触发二刀追击。',
-  '剧毒侵蚀':'由毒性感染施加。消耗的杀势阶位越高，感染强度越高，持续时间和伤害越高。白/绿/蓝/黄/红阶分别对应原1/2/3/4/5点版本，持续6/9/12/15/18秒；周期伤害与自然结束伤害分别按红阶版本的20%/40%/60%/80%/100%结算。重复施加会覆盖旧效果，覆盖不会触发结束伤害。周期伤害不提升杀势、不触发二刀追击。',
-  '感染强度':'毒刃刺机制。毒性感染消耗的杀势阶位决定感染强度。白/绿/蓝/黄/红阶分别对应1/2/3/4/5级，持续6/9/12/15/18秒。周期伤害与自然结束伤害分别按红阶版本的20%/40%/60%/80%/100%结算。',
-  '毒发':'毒刃刺随机事件。主目标中毒或剧毒侵蚀周期结算时12%概率触发，共享8秒ICD。触发后施毒高亮6秒；下一次施毒杀意消耗为0，改为毒发刺击：不刷新当前中毒剩余时间，立即额外结算1次中毒，并使杀势提升2阶。致命涂毒期间概率提高至24%。',
-  '毒发刺击':'毒发触发后的施毒变体。不刷新当前中毒剩余时间，立即额外结算1次中毒，并使杀势提升2阶。额外结算不能再次触发毒发。',
-  '影袭筹谋':'点出影袭准备后，暗影超越外，实际消耗红阶杀势的十字斩或致命影啸成功消费致命爪痕时获得1层，最多2层，持续30秒。开启暗影超越时消耗全部筹谋；每层分别强化窗口内下一次尚未被强化的暗影连袭，使其杀意消耗降低10点，并使该次暗影连袭总计使杀势提升4阶，最多强化前2次。暗影超越期间消费致命爪痕不会获得筹谋。',
-  '双刃机会':'双刀刺精通双刀追击产物。触发二刀追击时获得6秒双刃机会；下一次黑色幻影杀意消耗降低15点并额外使杀势提升1阶。连斩窗口内使用可延长窗口1秒。',
-  '无尽余势':'双刀刺精通无尽双刃产物。完整打完永恒之斩全部追斩后获得10秒无尽余势；下一次暗影刺击或黑色幻影消耗余势，杀意消耗降低10点并额外使杀势提升1阶。',
-  '旋刃环绕':'双刀刺利刃旋舞施加的6秒状态。期间暗影刺击、黑色幻影、永恒之斩首击与每次追斩、十字斩的直接攻击段命中时，驱动环绕刀刃发动旋刃追击。',
-  '旋刃追击':'旋刃环绕期间的派生追击。优先攻击附近至多4名其他敌人，每名造成40%攻击力物理伤害；没有合法次要目标时改为对主目标造成10%攻击力物理伤害。二刀追击与其他派生追击不会再次驱动旋刃追击。',
-  '烈火幻影':'双刀刺烈火战车期间黑色幻影的双段形态，额外攻击段可触发二刀追击。',
-  '追斩':'双刀刺永恒之斩连斩窗口中的按钮替换形态。每次追斩继续消耗杀意，不再消耗杀势。完整打完全部追斩时单位杀势总收益高于十字斩。',
-  '幻影终结':'爆刺随机事件。黑色幻影命中时25%概率获得8秒幻影终结，共享8秒ICD；十字斩与致命影啸同时高亮，下一次使用其中一个免费。免费释放不消耗杀意、不消耗真实杀势、不消费致命爪痕、不生成影袭筹谋。免费十字斩常态按蓝阶效果、暗影超越期间按红阶效果结算；免费致命影啸常态造成红阶完整版本60%、暗影超越期间按完整红阶效果结算。',
-  '暗影刺击':'高速刺击主目标，造成物理伤害并使杀势提升2阶。30杀意，无独立CD。各BD有不同精通联动。',
-  '施毒':'毒刃刺技能。使用带毒匕首攻击目标，造成物理伤害、使杀势提升1阶并施加12秒中毒；目标已中毒时刷新持续时间。25杀意，无独立CD。',
-  '病毒散播':'毒刃刺技能。对主目标及附近敌人造成物理伤害并使杀势提升1阶；若主目标处于中毒，传播给至多4名敌人；若主目标处于剧毒侵蚀，额外使其按感染强度立即结算1次周期伤害。每次施放最多使杀势提升1阶。20杀意，CD8秒，半径5米，最多5名敌人。',
-  '毒性感染':'毒刃刺技能与终结。消耗当前白—红阶杀势，为目标施加对应1—5级剧毒侵蚀。持续6/9/12/15/18秒；周期伤害与自然结束伤害分别按红阶效果的20%/40%/60%/80%/100%结算。重复施加会以新等级覆盖旧效果。30杀意，消耗当前1—5阶杀势并回到无阶。',
-  '十字斩':'终结技能。快速接近目标发动交叉斩击，一次性消耗当前白—红阶杀势造成物理伤害；消费阶位越高伤害越高。25杀意，无独立CD，消耗当前全部杀势。',
-  '黑色幻影':'快速接近目标并攻击，使杀势提升2阶；已在近战范围时不强制穿过目标。25杀意，CD8秒。',
-  '利刃旋舞':'双刀刺技能。对周围敌人造成一次物理伤害并使杀势提升1阶，随后获得6秒旋刃环绕。30杀意，CD12秒。',
-  '永恒之斩':'双刀刺高杀意/持续终结。需要至少蓝阶杀势，消耗3阶杀势发动首击并开启3秒连斩窗口，按钮替换为追斩。基础最多2次追斩，每次消耗15杀意，不再消耗杀势。完整打完全部追斩时单位杀势总收益高于十字斩。首击20杀意+3阶杀势；追斩15杀意/次。',
-  '致命爪痕':'爆刺技能。对目标造成物理伤害并使杀势提升1阶，同时施加8秒致命爪痕。下一次实际消耗红阶杀势的十字斩或致命影啸命中时消费标记并追加1次物理伤害。20杀意，CD10秒。',
-  '致命影啸':'爆刺群体终结。需要红阶杀势，消耗全部红阶杀势造成群体物理伤害。35杀意，CD12秒，半径5米，最多5名敌人。',
-  '暗影连袭':'爆刺暗影超越期间暗影刺击的替换形态。基础消耗30杀意，连续造成2个攻击段，使杀势提升3阶。附近≥2名敌人时第2段同时攻击至多3名敌人并额外使杀势提升1阶。每层影袭筹谋使下一次暗影连袭杀意-10并总计使杀势提升4阶，最多强化2次。',
-  '暗影超越':'爆刺精通替换影刃解放后的爆发技能。持续10秒，CD30秒；杀意上限+30、恢复+50%，重置黑色幻影与致命爪痕CD，暗影刺击替换为暗影连袭。消耗全部影袭筹谋，由强化暗影连袭逐层消费用于快速升至红阶。',
-  '伪装':'刺客技能。进入短时隐蔽移动状态，用于接近、绕位或规避战况。',
-  '后退回避':'盗贼任务技能。向后快速滑退一段距离。',
-  '喷沙':'盗贼任务技能。对近距离目标造成低伤害并附加短时间命中干扰。',
-  '解毒':'盗贼技能。解除自身或友方一个中毒类异常。',
-  '武器抵御':'十字切割者技能。短时间抵御一次近战攻击并获得反击机会。',
-  '幻影步':'十字切割者技能。短时间大幅提高回避并获得魔法伤害规避能力。',
-  '影刃解放':'匕首基础武器技能。持续10秒，提高杀意自然恢复速度；CD45秒。不同BD可通过精通替换为专属爆发技能。',
-  '致命涂毒':'毒刃刺精通致命毒液替换影刃解放后的爆发技能。持续8秒，CD45秒；立即重置病毒散播CD，毒发概率12%→24%，病毒散播对剧毒侵蚀的额外周期结算1→2次；期间杀意恢复速度提高。',
-  '烈火战车':'双刀刺精通替换影刃解放后的爆发技能。持续10秒，CD45秒；提高杀意恢复速度，立即重置黑色幻影并获得双刃机会；二刀追击触发率+20个百分点；黑色幻影变为双段烈火幻影。',
-  '短刃训练':'共通0-5点，2/2。每点使短剑技能造成的物理伤害提高3%，包括由短剑技能施加的周期物理伤害。',
-  '杀意储备':'共通0-5点，2/2。每点使杀意上限提高5点。',
-  '二刀追击':'共通0-5点，1/1。使用主动攻击技能直接命中敌人时，有一定概率追加1次物理攻击。追加攻击不消耗杀意、不提升杀势，且不能再次触发二刀追击。',
-  '影刃专注':'共通6-10点，2/2。每点使短剑主动攻击暴击率提高1.5%。',
-  '迅击调息':'共通6-10点，2/2。每点使所有能够提升杀势的主动技能杀意消耗降低1点。',
-  '杀势回流':'共通6-10点，1/1。使用终结技能实际消耗杀势后，立即恢复等同于本次实际消耗杀势阶数的杀意；免费终结、虚拟阶位与未实际消费的杀势不计入恢复。',
-  '终结训练':'共通11-15点，2/2。每点使消耗真实杀势的终结技能伤害提高2.5%。',
-  '杀意调息':'共通11-15点，2/2。每点使杀意自然恢复速度提高3%。',
-  '短刃节律':'共通11-15点，1/1。使用任意消耗杀势的终结技能后，下一次暗影刺击或黑色幻影攻击动作后延迟缩短10%；持续6秒，成功释放后消耗。',
-  '致命训练':'共通16-20点，2/2。每点使短剑技能暴击伤害提高3%。',
-  '连段训练':'共通16-20点，2/2。每点使二刀追击追加攻击、技能额外攻击段以及精通派生追击造成的伤害提高4%；不提高资源产出。',
-  '轻巧身法':'共通16-20点，1/1。使用终结技能后移动速度提高15%，持续2秒。',
-  '毒刃训练':'毒刃刺21-25点，2/2。每点使中毒周期物理伤害提高5%。',
-  '感染精研':'毒刃刺21-25点，2/2。每点使致命涂毒期间暗影刺击命中同时拥有中毒与剧毒侵蚀的目标时，病毒散播剩余CD缩短1秒。',
-  '病毒培养':'毒刃刺26-30点，2/2。每点使病毒散播直接伤害提高4%，传播中毒半径提高0.5米。',
-  '致命毒液':'毒刃刺26-30点，1/1。将影刃解放替换为致命涂毒。持续8秒，CD45秒；立即重置病毒散播CD，毒发概率12%→24%，病毒散播对剧毒侵蚀的额外周期结算1→2次；期间杀意恢复速度提高。',
-  '毒雾蔓延':'毒刃刺26-30点，1/1。病毒散播传播给次要目标的中毒获得完整12秒持续时间；每次最多4名次要目标，派生传播不能继续传播。',
-  '见血封喉':'毒刃刺26-30点，1/1。主目标同时拥有施法者中毒与剧毒侵蚀时，实际消耗红阶杀势的十字斩额外造成X%攻击力物理伤害；不刷新、缩短或移除双毒，也不触发毒发。',
-  '致命收割':'双刀刺21-25点，2/2。每点使十字斩对生命值低于20%的目标造成的伤害提高12.5%；点满后共提高25%。',
-  '旋刃精研':'双刀刺21-25点，2/2。每点使旋刃环绕持续时间延长0.5秒，并使群体旋刃追击伤害由40%攻击力提高5个百分点；点满后为50%攻击力。',
-  '双刀追击':'双刀刺21-25点，1/1。触发二刀追击时，立即重置黑色幻影CD并获得6秒双刃机会；下一次黑色幻影杀意-15并额外使杀势提升1阶。连斩窗口内使用延长窗口1秒。常态8秒ICD，烈火战车期间4秒。',
-  '连斩不息':'双刀刺26-30点，1/1。永恒之斩连斩窗口3→4秒，最大追斩2→3次；窗口内插入暗影刺击/黑色幻影不会取消窗口或消耗追斩次数；烈火战车期间追斩杀意15→10。',
-  '一敌专攻':'双刀刺26-30点，1/1。旋刃环绕期间无合法次要目标时，单体旋刃追击由10%攻击力提高至20%；追击不提升杀势、不触发二刀追击。',
-  '群刃回响':'双刀刺26-30点，1/1。旋刃环绕期间，旋刃追击同时命中至少2名次要目标时，对本次命中的次要目标追加1次20%攻击力物理伤害；追加伤害不提升杀势、不触发二刀追击、不再次触发群刃回响。',
-  '无尽双刃':'双刀刺26-30点，1/1。完整打完当前永恒之斩全部追斩后获得10秒无尽余势；下一次暗影刺击或黑色幻影消耗余势，杀意消耗降低10点并额外使杀势提升1阶。该额外升阶为真实杀势。',
-  '潜袭训练':'爆刺21-25点，3/3。每点使暗影连袭伤害提高4%。',
-  '影袭准备':'爆刺21-25点，1/1。暗影超越外，实际红阶十字斩或致命影啸成功消费致命爪痕时获得1层影袭筹谋，最多2层，持续30秒。开启暗影超越时消耗全部筹谋；每层使下一次暗影连袭杀意-10并总计使杀势提升4阶，最多强化2次。',
-  '超越回响':'爆刺26-30点，1/1。暗影超越期间，实际消耗红阶杀势的十字斩或致命影啸使黑色幻影剩余CD缩短4秒；节点自身4秒ICD。',
-  '孤影绝杀':'爆刺26-30点，1/1。暗影超越期间，实际红阶十字斩仅命中1名敌人时，使下一次暗影连袭对该目标伤害提高20%；持续6秒。',
-  '群影收割':'爆刺26-30点，1/1。暗影超越期间，第一次实际消耗红阶杀势的致命影啸命中至少3名敌人时，立即重置致命影啸CD；每次暗影超越最多触发1次。',
-  '爪痕追猎':'爆刺26-30点，1/1。开启暗影超越时立即重置致命爪痕CD；暗影超越期间第一次由实际红阶十字斩或致命影啸成功消费致命爪痕后，再次重置致命爪痕CD。每次暗影超越最多触发1次该额外重置。'
+  '杀意':'匕首基础数值资源。上限100，战斗初始100，自然恢复12点/秒。支付主动技能消耗，限制高频技能连续释放。',
+  '杀阶':'匕首第二资源。白→绿→蓝→黄→红五阶。初始白阶，完成BD升阶行为后提升。红阶进入12秒维持窗口。',
+  '保红':'红阶12秒窗口内完成本BD保红动作，重新获得完整12秒。',
+  '解放':'使用本BD解放杀招，获得爆发并使红→黄。',
+  '催化':'目标同时拥有中毒和剧毒侵蚀时，主动选择凝毒催化（十字斩）或扩散催化（病毒散播）。',
+  '催化锁':'8秒共享内置冷却。催化成功后进入，期间不能再次催化、升阶或保红。',
+  '凝毒催化':'十字斩命中双毒主目标时执行的催化形态。集中攻击主目标，不传播中毒。',
+  '扩散催化':'病毒散播命中双毒主目标时执行的催化形态。传播中毒并处理范围目标。',
+  '毒蚀爆发':'催化成功时追加的派生物理伤害。不读取DoT跳伤害，不触发其他追加效果。',
+  '毒爆':'剧毒侵蚀自然结束或目标死亡时产生的范围爆炸，与毒蚀爆发不是同一事件。',
+  '中毒':'持续12秒，每2秒造成物理伤害。最多1层，重复施加刷新持续时间。周期伤害不提供升阶机会。',
+  '剧毒侵蚀':'由毒性感染施加。按施放时杀阶决定初始持续时间和强度。最多1层；重复施加覆盖旧效果。',
+  '致命爪痕':'由技能致命爪痕施加。暗影超越期间不施加基础爪痕。被十字斩/致命影啸消费完成处决。',
+  '超越爪痕':'暗影连袭施加的6秒特殊爪痕。与基础爪痕硬互斥。消费视为完整处决但不生成筹谋。',
+  '影袭筹谋':'爆刺完整处决获得的筹备资源。最多2层，共享30秒。2层时额外升1阶。',
+  '超越处决':'暗影超越期间由影袭筹谋转化的处决机会。每层筹谋转化为1次。',
+  '双刃机会':'二刀追击触发后获得的6秒增益。下一次黑色幻影杀意-15。',
+  '无尽余势':'双刀刺完成永恒之斩全部追斩后获得的10秒增益。下一次暗影刺击/黑色幻影杀意-10，共享杀招CD-2秒。',
+  '旋刃环绕':'利刃旋舞获得的持续伤害状态。后续直接攻击驱动旋刃追击。',
+  '旋刃追击':'旋刃环绕期间直接攻击触发的追加范围伤害。',
+  '影刃解放':'匕首固定终极武器技能。持续10秒提高杀意恢复速度，CD45秒。BD爆发节点替换此槽位。',
+  '幻影终结':'爆刺随机事件。黑色幻影命中25%概率触发，提供免费幻影杀招。有处决优先级。',
+  '见血封喉':'毒刃刺红阶解放杀招。红阶十字斩120%档+高额毒蚀爆发。红→黄。',
+  '绝刃终结':'双刀刺红阶解放追加。100%攻击力物理伤害。红→黄。',
+  '暗影刺击':'高频单体刺击。30杀意，无独立CD。',
+  '施毒':'造成物理伤害并施加12秒中毒。25杀意，无独立CD。',
+  '病毒散播':'范围伤害、传播中毒，双毒主目标执行扩散催化。20杀意，CD8秒。',
+  '毒性感染':'造成物理伤害并施加当前杀阶的剧毒侵蚀。白~蓝30杀意，黄/红25杀意。',
+  '十字斩':'高额单体杀招。命中双毒主目标时执行凝毒催化。25杀意。',
+  '黑色幻影':'快速接近并攻击目标。25杀意，CD6秒。',
+  '利刃旋舞':'范围伤害并获得旋刃环绕。30杀意，CD12秒。不负责升阶。',
+  '永恒之斩':'首击后开启追斩窗口。首击20杀意，追斩每次15。与十字斩共享8秒CD。',
+  '追斩':'永恒之斩窗口内的连续攻击。每次15杀意。',
+  '致命影啸':'主目标及周围群体伤害。35杀意，CD12秒。消费爪痕完成群体处决。',
+  '暗影连袭':'暗影超越期间替换暗影刺击。30杀意，消耗超越处决时降至20。2段攻击。',
+  '暗影超越':'爆刺大招。替换影刃解放。持续10秒，CD30秒。杀意上限+30，恢复+50%。',
+  '致命涂毒':'毒刃刺大招。替换影刃解放。持续8秒，CD45秒。重置催化锁和病毒散播CD。',
+  '烈火战车':'双刀刺大招。替换影刃解放。持续10秒，CD45秒。提高杀意恢复，重置黑色幻影。',
+  '毒发':'毒刃刺随机事件。双毒DoT跳伤害12%概率触发。施毒高亮变为免费毒发刺击。',
+  '毒发刺击':'毒发触发后的免费施毒。使催化锁-4秒、病毒散播CD-4秒。',
+  '二刀追击':'共通随机事件。主动攻击首次命中20%概率追加1次物理攻击。',
+  '杀招回流':'共通精通节点。成功使用核心杀招后恢复5杀意。',
+  '短刃节律':'共通精通节点。使用核心杀招后下一次暗影刺击/黑色幻影延迟缩短10%。',
+  '轻巧身法':'共通精通节点。使用核心杀招后移动速度+15%，持续2秒。',
+  '连斩不息':'双刀刺精通节点。永恒窗口5→6秒，最大追斩2→3，允许插入1次暗影刺击。',
+  '战车余势':'双刀刺精通节点。烈火战车持续10→12秒。',
+  '超越蓄势':'爆刺精通节点。以2层筹谋开启暗影超越时持续10→12秒。',
+  '超越回响':'爆刺精通节点。大招期间完成红阶解放时黑色幻影剩余CD-4秒。',
+  '爪痕追猎':'爆刺精通终局节点。第一次红阶解放后第二次超越爪痕处决+30%。',
+  '凝毒穿刺':'毒刃刺单体二择。十字斩凝毒催化直接伤害+12%，毒蚀爆发+Y单%。',
+  '毒雾蔓延':'毒刃刺群体二择。传播中毒获得完整12秒，扩散催化毒蚀爆发+Y群%。',
+  '一敌专攻':'双刀刺单体二择。无合法次要目标时旋刃追击10%→20%。',
+  '群刃回响':'双刀刺群体二择。命中≥2名次要目标时追加20%攻击力范围伤害。',
+  '孤影绝杀':'爆刺单体二择。红阶十字斩解放仅命中1名敌人时下一次暗影连袭+20%。',
+  '群影收割':'爆刺群体二择。暗影超越期间首次致命影啸红阶解放命中≥3名敌人时重置CD。',
+  '致命毒液':'毒刃刺爆发节点。影刃解放替换为致命涂毒。',
+  '致命训练I':'共通精通。短剑技能暴击伤害+3%。',
+  '致命训练II':'共通精通。短剑技能暴击伤害再+3%。',
+  '连段训练I':'共通精通。二刀追击、额外攻击段和精通派生追击伤害+4%。',
+  '连段训练II':'共通精通。对应派生攻击伤害再+4%。',
+  '影刃专注I':'共通精通。短剑主动攻击暴击率+1.5%。',
+  '影刃专注II':'共通精通。短剑主动攻击暴击率再+1.5%。',
+  '杀意调息I':'共通精通。杀意自然恢复速度+3%。',
+  '杀意调息II':'共通精通。杀意自然恢复速度再+3%。',
+  '迅击调息I':'共通精通。基础循环技能杀意消耗-1。',
+  '迅击调息II':'共通精通。基础循环技能杀意消耗再-1。',
+  '短刃训练I':'共通精通。短剑技能物理伤害+3%。',
+  '短刃训练II':'共通精通。短剑技能物理伤害再+3%。',
+  '杀意储备I':'共通精通。杀意上限+5。',
+  '杀意储备II':'共通精通。杀意上限再+5。',
+  '杀招训练I':'共通精通。十字斩、永恒之斩、致命影啸直接伤害+2.5%。',
+  '杀招训练II':'共通精通。对应直接伤害再+2.5%。',
+  '毒刃训练I':'毒刃刺精通。中毒周期伤害+5%。',
+  '毒刃训练II':'毒刃刺精通。中毒周期伤害再+5%。',
+  '感染精研I':'毒刃刺精通。致命涂毒期间暗影刺击命中双毒目标使催化锁与病毒散播CD各-1秒。',
+  '感染精研II':'毒刃刺精通。对应两项剩余时间再各-1秒。',
+  '病毒培养I':'毒刃刺精通。病毒散播直接伤害+4%、传播半径+0.5米。',
+  '病毒培养II':'毒刃刺精通。对应效果再提高一次。',
+  '致命收割I':'双刀刺精通。十字斩对生命低于20%的目标伤害+12.5%。',
+  '致命收割II':'双刀刺精通。对应斩杀伤害再+12.5%。',
+  '旋刃精研I':'双刀刺精通。旋刃环绕持续+0.5秒，群体追击伤害+5个百分点。',
+  '旋刃精研II':'双刀刺精通。对应效果再提高一次。',
+  '双刀追击':'双刀刺精通。二刀追击触发时重置黑色幻影并获得双刃机会。',
+  '潜袭训练I':'爆刺精通。暗影连袭伤害+4%。',
+  '潜袭训练II':'爆刺精通。暗影连袭伤害再+4%。',
+  '潜袭训练III':'爆刺精通。暗影连袭伤害再+4%。',
+  '影袭准备':'爆刺精通。暗影超越外完整处决获得筹谋，最多2层共享30秒。',
+  '伪装':'随机战术武器技能。短时隐蔽移动。',
+  '后退回避':'随机战术武器技能。向后快速滑退。',
+  '喷沙':'随机战术武器技能。近距离低伤害+命中干扰。',
+  '解毒':'随机战术武器技能。解除中毒类异常。',
+  '武器抵御':'随机战术武器技能。抵御一次近战攻击并获得反击机会。',
+  '幻影步':'随机战术武器技能。短时间提高回避+魔法伤害规避。'
 };
-
 var tipCats={
-  '杀意':'mech','杀势':'mech','杀势UI':'mech','中毒':'mech','剧毒侵蚀':'mech','感染强度':'mech',
-  '毒发':'mech','毒发刺击':'mech','影袭筹谋':'mech','双刃机会':'mech','无尽余势':'mech',
-  '旋刃环绕':'mech','旋刃追击':'mech','烈火幻影':'mech','追斩':'mech','幻影终结':'mech',
-  '暗影刺击':'skill','施毒':'skill','病毒散播':'skill','毒性感染':'skill','十字斩':'skill',
-  '黑色幻影':'skill','利刃旋舞':'skill','永恒之斩':'skill','致命爪痕':'skill','致命影啸':'skill',
-  '暗影连袭':'skill','暗影超越':'skill',
-  '伪装':'weapon','后退回避':'weapon','喷沙':'weapon','解毒':'weapon','武器抵御':'weapon',
-  '幻影步':'weapon','影刃解放':'weapon','致命涂毒':'weapon','烈火战车':'weapon',
-  '短刃训练':'mastery','杀意储备':'mastery','二刀追击':'mastery','影刃专注':'mastery',
-  '迅击调息':'mastery','杀势回流':'mastery','终结训练':'mastery','杀意调息':'mastery',
-  '短刃节律':'mastery','致命训练':'mastery','连段训练':'mastery','轻巧身法':'mastery',
-  '毒刃训练':'mastery','感染精研':'mastery','病毒培养':'mastery','致命毒液':'mastery',
-  '毒雾蔓延':'mastery','见血封喉':'mastery','致命收割':'mastery','旋刃精研':'mastery',
-  '双刀追击':'mastery','连斩不息':'mastery','一敌专攻':'mastery','群刃回响':'mastery',
-  '无尽双刃':'mastery','潜袭训练':'mastery','影袭准备':'mastery',
-  '超越回响':'mastery','孤影绝杀':'mastery','群影收割':'mastery','爪痕追猎':'mastery'
+  '杀意':'mech','杀阶':'mech','保红':'mech','解放':'mech','催化':'mech','催化锁':'mech',
+  '凝毒催化':'mech','扩散催化':'mech','毒蚀爆发':'mech','毒爆':'mech',
+  '中毒':'mech','剧毒侵蚀':'mech','致命爪痕':'mech','超越爪痕':'mech',
+  '影袭筹谋':'mech','超越处决':'mech','双刃机会':'mech','无尽余势':'mech',
+  '旋刃环绕':'mech','旋刃追击':'mech','幻影终结':'mech',
+  '影刃解放':'weapon','见血封喉':'skill','绝刃终结':'skill',
+  '暗影刺击':'skill','施毒':'skill','病毒散播':'skill','毒性感染':'skill',
+  '十字斩':'skill','黑色幻影':'skill','利刃旋舞':'skill','永恒之斩':'skill','追斩':'skill',
+  '致命影啸':'skill','暗影连袭':'skill','暗影超越':'skill','致命涂毒':'skill','烈火战车':'skill',
+  '毒发':'mech','毒发刺击':'mech','二刀追击':'mech',
+  '杀招回流':'mastery','短刃节律':'mastery','轻巧身法':'mastery',
+  '连斩不息':'mastery','战车余势':'mastery','超越蓄势':'mastery','超越回响':'mastery','爪痕追猎':'mastery',
+  '凝毒穿刺':'mastery','毒雾蔓延':'mastery','一敌专攻':'mastery','群刃回响':'mastery',
+  '孤影绝杀':'mastery','群影收割':'mastery','致命毒液':'mastery',
+  '致命训练I':'mastery','致命训练II':'mastery','连段训练I':'mastery','连段训练II':'mastery',
+  '影刃专注I':'mastery','影刃专注II':'mastery','杀意调息I':'mastery','杀意调息II':'mastery',
+  '迅击调息I':'mastery','迅击调息II':'mastery','短刃训练I':'mastery','短刃训练II':'mastery',
+  '杀意储备I':'mastery','杀意储备II':'mastery','杀招训练I':'mastery','杀招训练II':'mastery',
+  '毒刃训练I':'mastery','毒刃训练II':'mastery','感染精研I':'mastery','感染精研II':'mastery',
+  '病毒培养I':'mastery','病毒培养II':'mastery','致命收割I':'mastery','致命收割II':'mastery',
+  '旋刃精研I':'mastery','旋刃精研II':'mastery','双刀追击':'mastery',
+  '潜袭训练I':'mastery','潜袭训练II':'mastery','潜袭训练III':'mastery','影袭准备':'mastery',
+  '伪装':'weapon','后退回避':'weapon','喷沙':'weapon','解毒':'weapon','武器抵御':'weapon','幻影步':'weapon'
 };
-
 var catLabels={'mastery':'精通盘','mech':'机制','skill':'技能卡','weapon':'武器技能'};
-
-function shouldExclude(node){
-  var p=node.parentNode;
-  while(p&&p!==document.body){
-    if(!p.classList){p=p.parentNode;continue}
-    if(p.tagName==='STRONG'&&p.parentNode&&p.parentNode.tagName==='TD')return true;
-    p=p.parentNode}
-  return false}
-
+function shouldExclude(node){var p=node.parentNode;while(p&&p!==document.body){if(!p.classList){p=p.parentNode;continue}if(p.tagName==='STRONG'&&p.parentNode&&p.parentNode.tagName==='TD')return true;p=p.parentNode}return false}
 function initTooltips(){
   var terms=Object.keys(tips).sort(function(a,b){return b.length-a.length});
   var pattern=new RegExp('【('+terms.join('|')+')】','g');
