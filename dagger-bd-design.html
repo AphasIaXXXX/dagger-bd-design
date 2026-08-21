@@ -250,7 +250,7 @@ footer p{margin-bottom:4px}
 <header class="doc-header">
   <span class="ver">V6.5 · 结构修正版</span>
   <h1>匕首｜三BD技能卡与完整精通盘</h1>
-  <p class="sub">以高频近战积累杀阶，在红阶选择维持或解放的输出武器。三套BD共享杀意管理与杀阶系统，通过催化、连斩和筹谋产生差异化体验。</p>
+  <p class="sub">以高频近战积累杀阶，在红阶选择继续维持红阶，或主动使红阶降为黄阶的输出武器。三套BD共享杀意管理与杀阶系统，通过状态维护、连斩窗口和筹谋爆发产生差异化体验。</p>
   <div class="doc-tags">
     <span>近战</span>
     <span>杀阶体系</span>
@@ -290,20 +290,20 @@ footer p{margin-bottom:4px}
   <!-- ===== Section 1: 职业定位 ===== -->
   <section class="section" id="sec1">
     <h2 class="sec-title"><span class="num">一</span>职业定位</h2>
-    <p class="sec-lead">匕首是以高频近战攻击积累【杀阶】，并在红阶选择维持或解放的输出武器。</p>
+    <p class="sec-lead">匕首是以高频近战攻击积累【杀阶】，并在红阶选择继续维持红阶，或主动使红阶降为黄阶的输出武器。</p>
 
     <div class="callout shared">
       <span class="ct">三套BD共享节奏</span>
-      <strong>杀意管理 → 完成BD升阶行为 → 进入红阶 → 保红或主动解放 → 回到黄阶后再次回红</strong>
+      <strong>杀意管理 → 完成BD升阶行为 → 进入红阶 → 刷新红阶或主动降为黄阶 → 再次完成升阶行为回到红阶</strong>
     </div>
 
     <div class="table-wrap" style="max-height:none">
       <table>
         <thead><tr><th class="shared-th">BD</th><th class="shared-th">核心玩法</th><th class="shared-th">红阶决策层级</th></tr></thead>
         <tbody>
-          <tr><td class="narrow"><strong style="color:var(--poison)">毒刃刺</strong></td><td>维持【中毒】与【剧毒侵蚀】，单体使用【十字斩】、群体使用【病毒散播】触发【毒蚀爆发】</td><td>红阶触发【毒蚀爆发】后，决定继续维持红阶或使用【见血封喉】</td></tr>
-          <tr><td class="narrow"><strong style="color:var(--dual)">双刀刺</strong></td><td>在连斩窗口内安排合法插入动作</td><td>每轮共享杀招CD选择保红路线或解放路线</td></tr>
-          <tr><td class="narrow"><strong style="color:var(--burst)">爆刺</strong></td><td>常态积累筹谋，大招集中完成超越处决</td><td>主要在开启暗影超越前决定是否投入筹谋和红阶</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--poison)">毒刃刺</strong></td><td>维持【中毒】与【剧毒侵蚀】；目标同时带有两种由自己施加的状态时，单体使用【十字斩】追加单体物理伤害，群体使用【病毒散播】追加范围物理伤害</td><td>红阶完成上述追加伤害后，决定继续维持红阶或使用【见血封喉】</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--dual)">双刀刺</strong></td><td>在【永恒之斩】追斩窗口内安排不会中断窗口的插入技能</td><td>每轮在共享CD内选择用【十字斩】维持红阶，或用【永恒之斩】将红阶转为黄阶并造成终结伤害</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--burst)">爆刺</strong></td><td>常态施加并消费【基础致命爪痕】，大招内连续施加并消费【超越爪痕】</td><td>主要在开启【暗影超越】前决定是否投入【影袭筹谋】和当前杀阶</td></tr>
         </tbody>
       </table>
     </div>
@@ -327,6 +327,20 @@ footer p{margin-bottom:4px}
       </table>
     </div>
 
+    <h3 class="bd-title shared">杀阶最小规则</h3>
+    <div class="table-wrap" style="max-height:none">
+      <table>
+        <thead><tr><th class="shared-th">项目</th><th class="shared-th">规则</th></tr></thead>
+        <tbody>
+          <tr><td class="narrow"><strong>阶段顺序</strong></td><td>白阶 → 绿阶 → 蓝阶 → 黄阶 → 红阶；红阶为上限</td></tr>
+          <tr><td class="narrow"><strong>升阶</strong></td><td>各BD通过自身技能明确写出的升阶行为提升杀阶；一次行为提升几阶以对应技能描述为准</td></tr>
+          <tr><td class="narrow"><strong>维持红阶</strong></td><td>技能写明"刷新红阶12秒"时，将红阶剩余时间重新设为12秒</td></tr>
+          <tr><td class="narrow"><strong>使用红阶</strong></td><td>技能写明"红阶降为黄阶"时，在该技能全部伤害和状态结算完成后执行红→黄</td></tr>
+          <tr><td class="narrow"><strong>其他变化</strong></td><td>本文不新增额外杀阶自然变化；项目已有的自然衰退规则仍以战斗底层规则为准</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <h3 class="bd-title shared">核心杀招映射</h3>
     <p style="font-size:13px;color:var(--muted);margin-bottom:12px">共通精通中的【杀招回流】【短刃节律】【轻巧身法】统一读取下表：</p>
     <div class="table-wrap" style="max-height:none">
@@ -334,8 +348,8 @@ footer p{margin-bottom:4px}
         <thead><tr><th class="shared-th">BD</th><th class="shared-th">核心杀招</th><th class="shared-th">成功判定</th></tr></thead>
         <tbody>
           <tr><td class="narrow"><strong style="color:var(--poison)">毒刃刺</strong></td><td>十字斩、见血封喉</td><td>直接伤害命中主目标；每次释放最多触发1次</td></tr>
-          <tr><td class="narrow"><strong style="color:var(--dual)">双刀刺</strong></td><td>完整永恒之斩、十字斩</td><td>永恒之斩至少完成基础要求的2次追斩；十字斩直接命中</td></tr>
-          <tr><td class="narrow"><strong style="color:var(--burst)">爆刺</strong></td><td>消费基础或超越爪痕的十字斩／致命影啸</td><td>必须实际消费爪痕；免费幻影杀招不算核心杀招</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--dual)">双刀刺</strong></td><td>完成2次基础追斩的永恒之斩、十字斩</td><td>永恒之斩必须完成第2次基础追斩；十字斩必须直接命中主目标</td></tr>
+          <tr><td class="narrow"><strong style="color:var(--burst)">爆刺</strong></td><td>消费【基础致命爪痕】或【超越爪痕】的十字斩／致命影啸</td><td>必须实际消费目标标记；【幻影终结】提供的免费直接伤害形态不算核心杀招</td></tr>
         </tbody>
       </table>
     </div>
@@ -379,13 +393,7 @@ footer p{margin-bottom:4px}
 
     <div class="callout poison">
       <span class="ct">一句话玩法</span>
-      维持【中毒】和【剧毒侵蚀】；单体使用【十字斩】触发【毒蚀爆发】，群体使用【病毒散播】触发范围【毒蚀爆发】；进入红阶后再次触发【毒蚀爆发】可以刷新红阶，并决定是否使用【见血封喉】将红阶换成爆发。
-    </div>
-
-    <div class="callout neutral">
-      <span class="ct">状态机制</span>
-      <strong>【中毒】</strong>：持续12秒，每2秒造成物理伤害。最多1层，重复施加刷新持续时间。周期伤害不提供升阶机会、不触发二刀追击。<br><br>
-      <strong>【剧毒侵蚀】</strong>：由【毒性感染】施加。按施放时杀阶决定初始持续时间。最多1层；重复施加覆盖旧实例。自然结束或目标死亡时触发【毒爆】范围伤害，不对主目标造成该次结束伤害。
+      维持目标身上的【中毒】和【剧毒侵蚀】；目标同时带有两种由自己施加的状态时，单体使用【十字斩】追加X单%攻击力物理伤害，群体使用【病毒散播】对命中目标追加X群%攻击力物理伤害；进入红阶后再次完成其中一次追加伤害可以刷新红阶，并决定是否使用【见血封喉】将红阶转为黄阶并造成终结伤害。
     </div>
 
     <h3 class="bd-title poison">五张技能卡<span class="badge">5张</span></h3>
@@ -393,53 +401,53 @@ footer p{margin-bottom:4px}
       <div class="sc">
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害
+          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【感染精研】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标时，使【十字斩】与【病毒散播】再次触发【毒蚀爆发】所需的剩余等待时间缩短1秒，并使【病毒散播】剩余CD缩短1秒；1秒内置冷却</div>
-          <div class="sc-ml">【凝毒追刺】使【十字斩】触发【毒蚀爆发】后的下一次暗影刺击杀意消耗降至15，并追加X追刺%攻击力派生物理伤害</div>
+          <div class="sc-ml">【感染精研】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标时，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短1秒，并使【病毒散播】剩余CD缩短1秒；1秒内置冷却。</div>
+          <div class="sc-ml">【凝毒追刺】使【十字斩】成功追加X单%攻击力物理伤害后的下一次暗影刺击杀意消耗降至15，并追加X追刺%攻击力物理伤害。</div>
         </div>
         <div class="sc-role">高频填充</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">施毒</div><div class="sc-cost"><span class="cp-con">25杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加【中毒】，持续12秒；中毒按周期造成物理伤害
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加持续12秒的【中毒】；【中毒】按周期造成物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【毒发】触发后，技能在6秒内替换为免费【毒发刺击】；命中追加X毒发%攻击力派生物理伤害，使【十字斩】与【病毒散播】再次触发【毒蚀爆发】所需的剩余等待时间缩短4秒，并使【病毒散播】剩余CD缩短4秒</div>
-          <div class="sc-ml">【毒效续接】使施毒命中带有自身施加的【剧毒侵蚀】的目标时，将该状态剩余时间延长2秒</div>
+          <div class="sc-ml">【毒发】触发后，技能在6秒内替换为免费【毒发刺击】；命中追加X毒发%攻击力物理伤害，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短4秒，并使【病毒散播】剩余CD缩短4秒。</div>
+          <div class="sc-ml">【毒效续接】使施毒命中带有自身施加的【剧毒侵蚀】的目标时，将该状态剩余时间延长2秒。</div>
         </div>
         <div class="sc-role">中毒建立与维护</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">病毒散播</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD8s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对主目标及5米内最多5名敌人造成物理伤害，传播【中毒】。主目标同时带有自身施加的【中毒】和【剧毒侵蚀】且8秒内未触发过【毒蚀爆发】时，对本次命中所有目标各追加一次【毒蚀爆发】
+          <span class="sc-label">基础效果</span>对主目标及其5米范围内最多5名敌人造成物理伤害，并将主目标的【中毒】传播给次要目标。主目标同时带有自身施加的【中毒】和【剧毒侵蚀】，且【十字斩】与【病毒散播】此前8秒内均未通过该条件造成追加伤害时，对本次命中的所有目标各追加X群%攻击力物理伤害；白～黄阶使杀阶提升1阶，红阶刷新红阶12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【疫病回响】命中≥3名敌人时1秒后追加X回响%攻击力物理伤害</div>
-          <div class="sc-ml">【毒雾蔓延】使触发【毒蚀爆发】时传播完整12秒中毒+【蔓延毒核】，3秒后爆炸造成X蔓延%攻击力伤害</div>
-          <div class="sc-ml">【毒爆回流】可重置本技能并使下一次免费</div>
+          <div class="sc-ml">【疫病回响】使技能命中至少3名敌人时，于1秒后对本次命中列表中仍存活的目标追加X回响%攻击力物理伤害，最多5名。</div>
+          <div class="sc-ml">【毒雾蔓延】使本技能成功追加X群%攻击力物理伤害时传播完整12秒的【中毒】，并为次要目标施加延迟伤害标记【蔓延毒核】；标记持续3秒，结束时对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害。</div>
+          <div class="sc-ml">【毒爆回流】可重置本技能并使下一次释放免费。</div>
+          <div class="sc-ml">【见血封喉】使本技能在红阶成功追加X群%攻击力物理伤害后，将【十字斩】按钮替换为【见血封喉】。</div>
         </div>
         <div class="sc-role">群体扩散／范围爆发</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">毒性感染</div><div class="sc-cost"><span class="cp-con">30/25杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>造成物理伤害并施加当前杀阶对应的【剧毒侵蚀】。按周期造成物理伤害，自然结束或目标死亡触发【毒爆】
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加当前杀阶对应的【剧毒侵蚀】。【剧毒侵蚀】按周期造成物理伤害，初始持续时间由施放时的杀阶决定；自然结束或目标死亡时触发范围伤害【毒爆】。同一施法者在同一目标上最多保留1个实例，再次施加时覆盖旧实例。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【侵蚀续接】重新施加时新实例继承旧实例50%剩余时间，最多+4秒</div>
-          <div class="sc-ml">【凝毒穿刺】消费【穿刺毒核】追加X穿刺%攻击力伤害并使新侵蚀+4秒</div>
-          <div class="sc-ml">【毒效续接】命中带有自身施加的【中毒】的目标时延长中毒2秒</div>
+          <div class="sc-ml">【侵蚀续接】重新施加自身的【剧毒侵蚀】时，新实例继承旧实例50%的剩余时间，最多额外增加4秒。</div>
+          <div class="sc-ml">【凝毒穿刺】使技能消费目标标记【穿刺毒核】时追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
         </div>
         <div class="sc-role">剧毒建立与维护</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD5s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对主目标造成高额物理伤害。主目标同时带有自身施加的【中毒】和【剧毒侵蚀】且8秒内未触发过【毒蚀爆发】时，追加【毒蚀爆发】。白～黄阶使杀阶+1，红阶刷新12秒并生成【见血封喉机会】
+          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。主目标同时带有自身施加的【中毒】和【剧毒侵蚀】，且【十字斩】与【病毒散播】此前8秒内均未通过该条件造成追加伤害时，追加X单%攻击力物理伤害；白～黄阶使杀阶提升1阶，红阶刷新红阶12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【凝毒追刺】触发【毒蚀爆发】后获得6秒追刺状态</div>
-          <div class="sc-ml">【凝毒穿刺】同时施加6秒【穿刺毒核】</div>
-          <div class="sc-ml">【见血封喉】红阶触发【毒蚀爆发】后获得6秒解放形态，命中造成红阶十字斩伤害+X终%攻击力毒蚀爆发，红→黄</div>
+          <div class="sc-ml">【凝毒追刺】使本技能成功追加X单%攻击力物理伤害后，为自身施加持续6秒的【凝毒追刺】；下一次暗影刺击消费该状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害。</div>
+          <div class="sc-ml">【凝毒穿刺】使本技能成功追加X单%攻击力物理伤害时，为主目标施加持续6秒的目标标记【穿刺毒核】；下一次毒性感染消费标记，追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
+          <div class="sc-ml">【见血封喉】使红阶下本技能成功追加X单%攻击力物理伤害后，将按钮替换为【见血封喉】。</div>
         </div>
         <div class="sc-role">单体爆发／红阶解放入口</div>
       </div>
@@ -447,13 +455,13 @@ footer p{margin-bottom:4px}
 
     <div class="callout neutral">五卡保持不变；【见血封喉】是十字斩的条件形态，不是第六张技能卡。</div>
 
-    <h3 class="bd-title poison">【毒蚀爆发】触发规则</h3>
+    <h3 class="bd-title poison">追加伤害触发规则</h3>
     <div class="spec-box">
       <div class="sb-title poison">触发系统</div>
-      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">主目标同时带有自身施加的【中毒】和【剧毒侵蚀】时，可以根据战斗目标选择以下技能触发【毒蚀爆发】。</p>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">主目标同时带有自身施加的【中毒】和【剧毒侵蚀】时，可以根据战斗目标选择以下技能造成追加伤害。</p>
       <div class="table-wrap" style="max-height:none;margin:0;box-shadow:none;border:none">
         <table>
-          <thead><tr><th class="poison-th">战斗意图</th><th class="poison-th">主动技能</th><th class="poison-th">【毒蚀爆发】作用目标</th><th class="poison-th">额外职责</th></tr></thead>
+          <thead><tr><th class="poison-th">战斗意图</th><th class="poison-th">主动技能</th><th class="poison-th">追加伤害作用目标</th><th class="poison-th">额外职责</th></tr></thead>
           <tbody>
             <tr><td class="narrow"><strong>单体</strong></td><td>十字斩</td><td>只命中十字斩的主目标</td><td>集中攻击主目标，不传播中毒</td></tr>
             <tr><td class="narrow"><strong>群体</strong></td><td>病毒散播</td><td>命中本次病毒散播的全部目标，最多5名</td><td>传播中毒并处理范围目标</td></tr>
@@ -462,29 +470,40 @@ footer p{margin-bottom:4px}
       </div>
       <ul style="margin-top:12px">
         <li>两个技能的主目标都必须同时带有自身施加的【中毒】和【剧毒侵蚀】</li>
-        <li>任一技能触发【毒蚀爆发】后8秒内，两个技能均不能再次通过该条件触发<em class="sim">模拟值</em></li>
-        <li>【十字斩】只对主目标追加X单%攻击力的【毒蚀爆发】物理伤害</li>
-        <li>【病毒散播】对本次已命中目标各追加X群%攻击力的【毒蚀爆发】物理伤害，最多5名；次要目标不需要带有【剧毒侵蚀】</li>
-        <li>白～黄阶触发使杀阶+1，每次释放最多提升1阶</li>
-        <li>红阶触发刷新红阶12秒，并生成1次【见血封喉机会】</li>
-        <li>8秒等待期间，两个技能仍可正常造成伤害和传播中毒，但不能再次触发【毒蚀爆发】、升阶或刷新红阶</li>
-        <li>等待结束且目标满足条件时，技能显示可触发【毒蚀爆发】的高亮</li>
-        <li><strong>毒蚀爆发</strong>不读取DoT跳伤害、不触发/重置DoT周期、不消耗/刷新DoT、不触发其他追加效果</li>
-        <li>8秒等待不是新资源，不增加第三资源条</li>
+        <li>任一技能成功追加对应物理伤害后8秒内，【十字斩】不能再次追加X单%攻击力物理伤害，【病毒散播】不能再次追加X群%攻击力物理伤害；两者也不能通过这次状态检查提升杀阶或刷新红阶<em class="sim">【模拟值】</em></li>
+        <li>【十字斩】只对主目标追加伤害</li>
+        <li>【病毒散播】对本次已经命中的目标追加伤害，最多5名；只有主目标需要同时带有两种状态，次要目标不需要带有【剧毒侵蚀】</li>
+        <li>白～黄阶成功追加伤害时使杀阶+1，每次释放最多提升1阶</li>
+        <li>红阶成功追加伤害时刷新红阶12秒</li>
+        <li>8秒等待期间，【十字斩】和【病毒散播】仍可正常造成基础伤害，【病毒散播】仍可传播【中毒】</li>
+        <li>8秒等待时间不是新资源，不增加第三资源条</li>
+        <li>8秒等待结束且当前目标满足两种状态条件时，【十字斩】和【病毒散播】显示可造成追加伤害的技能高亮</li>
+        <li>两个技能在同一逻辑时刻命中时，由服务端按实际Action结算顺序处理；只有最先结算的技能造成追加伤害，另一个技能进入8秒等待</li>
+      </ul>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin:16px 0 8px"><strong>上述两段追加物理伤害的共同结算边界：</strong></p>
+      <ul>
+        <li>伤害由当前命中的【十字斩】或【病毒散播】直接产生，不是目标获得的新状态</li>
+        <li>不读取【中毒】或【剧毒侵蚀】的单次周期伤害</li>
+        <li>不提前触发、不延后也不重置DoT下一次周期时间</li>
+        <li>不消耗、不刷新、不延长【中毒】和【剧毒侵蚀】</li>
+        <li>不能触发毒发、二刀追击、其他命中追加效果或自身递归</li>
+        <li>归类为追加物理伤害，受【短刃训练】与【连段训练】强化；不读取只强化十字斩或病毒散播基础伤害的效果</li>
+        <li>是否可以暴击，跟随项目追加伤害统一规则；当前标记为【待确认】</li>
+        <li>【毒爆】仍专指【剧毒侵蚀】自然结束或目标死亡时产生的范围伤害，不是【十字斩】的X单%或【病毒散播】的X群%追加物理伤害</li>
       </ul>
     </div>
 
     <div class="callout neutral">
       <span class="ct">玩家记忆三条</span>
-      1. 目标必须同时带有自身施加的中毒和剧毒侵蚀　2. 单体用十字斩、群体用病毒散播　3. 任一技能触发后两个技能都需等待8秒
+      目标必须同时带有自身施加的【中毒】和【剧毒侵蚀】；单体使用【十字斩】追加X单%攻击力物理伤害，群体使用【病毒散播】追加X群%攻击力物理伤害；任一技能成功追加该伤害后，两个技能都需要等待8秒才能再次追加该伤害。
     </div>
 
     <div class="table-wrap" style="max-height:none">
       <table>
         <thead><tr><th class="poison-th">技能</th><th class="poison-th">处理顺序</th></tr></thead>
         <tbody>
-          <tr><td class="narrow"><strong>十字斩</strong></td><td>直接伤害命中 → 检查主目标是否同时带有自身施加的中毒和剧毒侵蚀 → 检查8秒内是否已触发过 → 对主目标追加毒蚀爆发 → 升阶／刷新红阶 → 开始8秒等待</td></tr>
-          <tr><td class="narrow"><strong>病毒散播</strong></td><td>范围直接伤害命中 → 检查主目标是否同时带有自身施加的中毒和剧毒侵蚀 → 检查8秒内是否已触发过 → 传播中毒 → 对命中列表追加毒蚀爆发 → 升阶／刷新红阶 → 开始8秒等待</td></tr>
+          <tr><td class="narrow"><strong>十字斩</strong></td><td>基础伤害命中 → 检查主目标是否同时带有自身施加的【中毒】和【剧毒侵蚀】 → 检查两个技能是否已结束8秒等待 → 对主目标追加X单%攻击力物理伤害 → 升阶或刷新红阶 → 开始8秒等待</td></tr>
+          <tr><td class="narrow"><strong>病毒散播</strong></td><td>基础范围伤害命中 → 检查主目标是否同时带有自身施加的【中毒】和【剧毒侵蚀】 → 检查两个技能是否已结束8秒等待 → 传播【中毒】 → 对本次命中的最多5名目标各追加X群%攻击力物理伤害 → 升阶或刷新红阶 → 开始8秒等待</td></tr>
         </tbody>
       </table>
     </div>
@@ -493,45 +512,31 @@ footer p{margin-bottom:4px}
     <div class="scenario-block p">
       <div class="scenario-tag">毒刃刺 · 保证循环</div>
       <div class="sb-body">
-        <div class="branch-cond">单体路线</div>
-        <div class="skill-flow">
-          <div class="sn"><div class="sn-name">【施毒】</div><div class="sn-cost">25杀意</div><div class="sn-eff">施加中毒</div></div>
-          <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加剧毒侵蚀</div></div>
-          <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">【十字斩】触发【毒蚀爆发】</div><div class="sn-cost">25杀意</div><div class="sn-eff">毒蚀爆发+升阶</div></div>
-          <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">30杀意</div><div class="sn-eff">填充</div></div>
-        </div>
-        <div class="loop-back">↻ 补双毒 → 下一次十字斩触发【毒蚀爆发】</div>
-
-        <div class="branch-cond" style="margin-top:16px">群体路线</div>
-        <div class="skill-flow">
-          <div class="sn"><div class="sn-name">主目标【施毒】</div><div class="sn-cost">25杀意</div><div class="sn-eff">施加中毒</div></div>
-          <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加剧毒侵蚀</div></div>
-          <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">【病毒散播】触发范围【毒蚀爆发】</div><div class="sn-cost">20杀意</div><div class="sn-eff">传播+毒蚀爆发</div></div>
-        </div>
-        <div class="loop-back">↻ 中毒传播/毒爆处理 → 填充 → 下一次病毒散播触发范围【毒蚀爆发】</div>
-
-        <div class="branch-cond" style="margin-top:16px">红阶选择 — 红阶触发【毒蚀爆发】后</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">保证循环只使用本BD五张技能卡：</p>
         <div class="branch-paths">
           <div class="bp">
-            <span class="bp-label">保红</span>
+            <span class="bp-label">单体</span>
             <div class="skill-flow">
-              <span class="cn hl">继续触发</span>
-              <span class="ca">→</span>
-              <span class="cn">刷新红阶12秒</span>
+              <div class="sn"><div class="sn-name">【施毒】</div><div class="sn-cost">25杀意</div><div class="sn-eff">施加【中毒】</div></div>
+              <span class="fa">→</span>
+              <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加【剧毒侵蚀】</div></div>
+              <span class="fa">→</span>
+              <div class="sn hl"><div class="sn-name">【十字斩】追加X单%攻击力物理伤害</div><div class="sn-cost">25杀意</div><div class="sn-eff">追加伤害+升阶</div></div>
+              <span class="fa">→</span>
+              <div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">30杀意</div><div class="sn-eff">填充</div></div>
             </div>
-            <div class="bp-note">继续维持触发节奏，等待8秒后再次触发【毒蚀爆发】</div>
+            <div class="loop-back">↻ 补充【中毒】与【剧毒侵蚀】 → 等待8秒后再次用十字斩追加X单%攻击力物理伤害</div>
           </div>
           <div class="bp">
-            <span class="bp-label">解放</span>
+            <span class="bp-label">群体</span>
             <div class="skill-flow">
-              <div class="sn hl burst-skill"><div class="sn-name">【见血封喉】</div><div class="sn-cost">25杀意</div><div class="sn-eff">红→黄·爆发</div></div>
+              <div class="sn"><div class="sn-name">主目标【施毒】</div><div class="sn-cost">25杀意</div><div class="sn-eff">施加【中毒】</div></div>
+              <span class="fa">→</span>
+              <div class="sn"><div class="sn-name">【毒性感染】</div><div class="sn-cost">30杀意</div><div class="sn-eff">施加【剧毒侵蚀】</div></div>
+              <span class="fa">→</span>
+              <div class="sn hl"><div class="sn-name">【病毒散播】追加X群%攻击力物理伤害</div><div class="sn-cost">20杀意</div><div class="sn-eff">传播+追加伤害</div></div>
             </div>
-            <div class="bp-note">红阶十字斩120%档+高额毒蚀爆发</div>
+            <div class="loop-back">↻ 【毒爆】处理 → 填充 → 等待8秒后再次用病毒散播追加X群%攻击力物理伤害</div>
           </div>
         </div>
       </div>
@@ -539,40 +544,60 @@ footer p{margin-bottom:4px}
 
     <div class="callout neutral">
       <span class="ct">循环规则</span>
-      白～黄阶每次触发【毒蚀爆发】最多提升1阶。毒性感染始终可用，不再承担临时解放按钮。同一施法者重新施加剧毒侵蚀时覆盖旧实例；覆盖移除不触发毒爆。切换目标不会清除杀阶，但新目标仍需重新建立双毒。
+      白～黄阶下，【十字斩】或【病毒散播】每次成功追加对应物理伤害最多提升1阶。毒性感染始终可用，不再承担使红阶降为黄阶的临时替换按钮。同一施法者重新施加剧毒侵蚀时覆盖旧实例；覆盖移除不触发毒爆。切换目标不会清除杀阶，但新目标仍需重新施加【中毒】和【剧毒侵蚀】。单体循环不要求为了升阶主动释放范围技能；群体循环也不要求额外使用十字斩追加X单%攻击力物理伤害。
     </div>
 
     <h3 class="bd-title poison">红阶保红与见血封喉</h3>
     <div class="spec-box">
       <div class="sb-title poison">见血封喉</div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:12px">点出精通节点【见血封喉】后，红阶下由【十字斩】成功追加X单%攻击力物理伤害，或由【病毒散播】成功追加X群%攻击力物理伤害时：</p>
       <ul>
-        <li>消耗：<strong>25杀意</strong><em class="sim">模拟值</em></li>
-        <li>可用时间：<strong>6秒</strong><em class="sim">模拟值</em></li>
-        <li>CD：不读取十字斩当前CD；每次红阶触发【毒蚀爆发】最多生成1次</li>
-        <li>伤害：红阶十字斩<strong>120%档</strong>＋一次高额毒蚀爆发物理伤害<em class="sim">待数值</em></li>
-        <li>状态：红→黄；双毒保留，不刷新、不移除</li>
-        <li>精通继承：凝毒穿刺提高本次毒蚀爆发；致命涂毒期间毒蚀爆发+50%</li>
-        <li>使用或机会到期后恢复十字斩，继承十字斩后台剩余CD</li>
-        <li><strong>病毒散播</strong>按钮、后台CD、触发等待和CD缩减效果完全不受影响</li>
+        <li>刷新红阶12秒</li>
+        <li>【十字斩】按钮临时显示为【见血封喉】</li>
+        <li>【病毒散播】按钮、后台CD、8秒触发等待和CD缩减效果完全不受影响</li>
+        <li>十字斩原CD继续在后台计算</li>
       </ul>
+      <div class="table-wrap" style="max-height:none;margin:12px 0 0;box-shadow:none;border:none">
+        <table>
+          <thead><tr><th class="poison-th">项目</th><th class="poison-th">规则</th></tr></thead>
+          <tbody>
+            <tr><td class="narrow"><strong>消耗</strong></td><td>25杀意<em class="sim">【模拟值】</em></td></tr>
+            <tr><td class="narrow"><strong>可用时间</strong></td><td>6秒<em class="sim">【模拟值】</em></td></tr>
+            <tr><td class="narrow"><strong>CD</strong></td><td>不读取十字斩当前CD；红阶下每次由十字斩或病毒散播成功追加对应物理伤害，最多触发1次按钮替换</td></tr>
+            <tr><td class="narrow"><strong>伤害</strong></td><td>造成红阶十字斩120%档基础伤害，并追加X终%攻击力物理伤害【待数值】</td></tr>
+            <tr><td class="narrow"><strong>状态</strong></td><td>红→黄；目标身上的【中毒】与【剧毒侵蚀】保留，不刷新、不移除</td></tr>
+            <tr><td class="narrow"><strong>追加伤害限制</strong></td><td>不触发毒发、二刀追击和其他命中追加效果，不递归</td></tr>
+            <tr><td class="narrow"><strong>精通继承</strong></td><td>【凝毒穿刺】提高本次追加伤害；【致命涂毒】期间该追加伤害再提高50%</td></tr>
+            <tr><td class="narrow"><strong>恢复按钮</strong></td><td>使用或机会到期后恢复十字斩，并继承十字斩后台剩余CD</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.7;margin-top:12px">这样，玩家可以保留见血封喉，也可以继续等待8秒后再次使用十字斩追加X单%攻击力物理伤害；技能替换不会遮挡病毒散播，单体玩家也不需要依赖病毒散播完成下一次升阶或红阶刷新。</p>
     </div>
 
     <h3 class="bd-title poison">随机事件｜毒发</h3>
     <div class="callout poison">
       <span class="ct">毒发</span>
-      同时带有自身施加的【中毒】和【剧毒侵蚀】的目标，其任一状态的自然周期伤害生效时有<strong>12%</strong>概率触发，8秒内置冷却。施毒高亮6秒，下一次施毒变为免费<strong>【毒发刺击】</strong>。毒发刺击追加派生伤害，使【十字斩】与【病毒散播】再次触发【毒蚀爆发】所需的剩余等待时间缩短4秒、病毒散播剩余CD缩短4秒。致命涂毒期间概率提高到<strong>24%</strong>。毒发只提供额外收益，不是基础循环成立条件。
+      <ul>
+        <li>同时带有自身施加的【中毒】和【剧毒侵蚀】的目标，其任一状态的自然周期伤害生效时有<strong>12%</strong>概率触发；该效果具有8秒内置冷却。</li>
+        <li>施毒高亮6秒，下一次施毒变为免费【毒发刺击】。</li>
+        <li>毒发刺击不刷新中毒，追加X毒发%攻击力物理伤害，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短4秒，并使病毒散播剩余CD缩短4秒；该伤害不能触发十字斩或病毒散播的追加物理伤害，也不能触发其他追加攻击。</li>
+        <li>致命涂毒期间概率提高到<strong>24%</strong>。</li>
+        <li>毒发只提供额外收益，不是基础循环成立条件。</li>
+      </ul>
     </div>
 
     <h3 class="bd-title poison">固定大招替换｜致命涂毒</h3>
-    <div class="spec-box">
-      <div class="sb-title poison">致命涂毒</div>
-      <ul>
-        <li>持续<strong>8秒</strong>，CD<strong>45秒</strong></li>
-        <li>释放时清除【十字斩】与【病毒散播】触发【毒蚀爆发】后的剩余等待时间，并重置病毒散播CD</li>
-        <li>毒发概率12%→24%</li>
-        <li>毒蚀爆发伤害提高<strong>50%</strong><em class="sim">模拟值</em></li>
-        <li>每次致命涂毒期间第一次由十字斩或病毒散播触发【毒蚀爆发】时额外提升1阶</li>
-        <li>不改变见血封喉按钮规则</li>
+    <div class="callout neutral">
+      <span class="ct">致命涂毒</span>
+      精通节点【致命毒液】将固定终极武器槽中的【影刃解放】替换为【致命涂毒】：
+      <ul style="margin:8px 0 0">
+        <li>持续8秒，CD45秒。</li>
+        <li>释放时清除【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间，并重置【病毒散播】CD。</li>
+        <li>毒发概率12%→24%。</li>
+        <li>致命涂毒期间，【十字斩】与【病毒散播】满足两种状态条件后产生的追加物理伤害提高50%<em class="sim">【模拟值】</em>。</li>
+        <li>每次【致命涂毒】期间，第一次由【十字斩】成功追加X单%攻击力物理伤害，或由【病毒散播】成功追加X群%攻击力物理伤害时，杀阶可以提升2阶。</li>
+        <li>不改变见血封喉按钮规则。</li>
       </ul>
     </div>
 
@@ -584,25 +609,25 @@ footer p{margin-bottom:4px}
           <div class="bp">
             <span class="bp-label">单体</span>
             <div class="skill-flow" style="flex-direction:column;align-items:flex-start;gap:4px">
-              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">清除等待</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">建立双毒</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">十字斩触发【毒蚀爆发】</div><div class="sn-eff">获得凝毒追刺+穿刺毒核</div></div></div>
-              <div class="skill-flow"><div class="sn hl"><div class="sn-name">暗影刺击</div><div class="sn-cost">15杀意</div><div class="sn-eff">消费凝毒追刺</div></div></div>
-              <div class="skill-flow"><div class="sn hl"><div class="sn-name">毒性感染</div><div class="sn-eff">消费穿刺毒核+4秒</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">等待结束后再次触发</div></div><span class="fa">→</span><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">保红</span><span class="ca">／</span><span class="cn hl">见血封喉</span></div>
+              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">清除8秒等待</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">建立／确认【中毒】与【剧毒侵蚀】</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">【十字斩】追加X单%攻击力物理伤害</div><div class="sn-eff">获得【凝毒追刺】+【穿刺毒核】</div></div></div>
+              <div class="skill-flow"><div class="sn hl"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">15杀意</div><div class="sn-eff">消费【凝毒追刺】</div></div></div>
+              <div class="skill-flow"><div class="sn hl"><div class="sn-name">【毒性感染】</div><div class="sn-eff">消费【穿刺毒核】</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">等待8秒后再次用十字斩追加X单%攻击力物理伤害</div></div><span class="fa">→</span><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">继续刷新</span><span class="ca">／</span><span class="cn hl">【见血封喉】</span></div>
             </div>
           </div>
           <div class="bp">
             <span class="bp-label">群体</span>
             <div class="skill-flow" style="flex-direction:column;align-items:flex-start;gap:4px">
-              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">清除等待+重置散播</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">建立双毒</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">病毒散播触发范围【毒蚀爆发】</div><div class="sn-eff">疫病回响+蔓延毒核</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">暗影刺击</div><div class="sn-eff">缩短下一次触发等待</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">毒爆触发</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">免费病毒散播</div></div></div>
-              <div class="skill-flow"><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">保红</span><span class="ca">／</span><span class="cn hl">见血封喉</span></div>
+              <div class="skill-flow"><div class="sn hl burst-skill"><div class="sn-name">致命涂毒</div><div class="sn-eff">清除8秒等待+重置【病毒散播】</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">建立／确认【中毒】与【剧毒侵蚀】</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">【病毒散播】传播【中毒】并追加X群%攻击力物理伤害</div><div class="sn-eff">【疫病回响】+【蔓延毒核】</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-eff">缩短两种追加伤害共用的8秒等待</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">【毒爆】触发</div></div><span class="fa">→</span><div class="sn hl"><div class="sn-name">免费【病毒散播】</div></div></div>
+              <div class="skill-flow"><div class="sn"><div class="sn-name">红阶选择</div></div><span class="fa">→</span><span class="cn hl">继续刷新</span><span class="ca">／</span><span class="cn hl">【见血封喉】</span></div>
             </div>
           </div>
         </div>
-        <div class="loop-back">↻ 随机毒发可缩短下一次触发等待时间，但不是必要条件</div>
+        <div class="loop-back">↻ 随机毒发可以缩短十字斩与病毒散播两种追加物理伤害共用的8秒等待，但不得作为任一保证循环成立的必要条件。</div>
       </div>
     </div>
 
@@ -612,14 +637,14 @@ footer p{margin-bottom:4px}
         <span class="ps-tag">单体</span>
         <div class="ps-body">
           <div class="ps-skill">凝毒穿刺</div>
-          <div class="ps-detail">十字斩触发【毒蚀爆发】时施加6秒【穿刺毒核】；毒性感染消费毒核追加伤害并使新侵蚀+4秒</div>
+          <div class="ps-detail">【十字斩】成功追加X单%攻击力物理伤害时，为主目标施加持续6秒的目标标记【穿刺毒核】；下一次毒性感染消费标记，追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒。</div>
         </div>
       </div>
       <div class="ps-item">
         <span class="ps-tag">群体</span>
         <div class="ps-body">
           <div class="ps-skill">毒雾蔓延</div>
-          <div class="ps-detail">病毒散播触发【毒蚀爆发】时传播完整12秒中毒（最多4名）；次要目标获得3秒【蔓延毒核】，到期爆炸</div>
+          <div class="ps-detail">【病毒散播】成功追加X群%攻击力物理伤害时，传播完整12秒【中毒】，最多影响4名次要目标，并为次要目标施加持续3秒的延迟伤害标记【蔓延毒核】；标记结束时对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害。</div>
         </div>
       </div>
     </div>
@@ -629,17 +654,17 @@ footer p{margin-bottom:4px}
       <table class="mastery-table">
         <thead><tr><th class="poison-th">点位</th><th class="poison-th">节点ID</th><th class="poison-th">节点</th><th class="poison-th">节点类型</th><th class="poison-th">效果</th></tr></thead>
         <tbody>
-          <tr><td class="center narrow">21</td><td class="narrow">P21</td><td><strong>【感染精研】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>暗影刺击命中同时带有自身施加的中毒和剧毒侵蚀的主目标时，使十字斩与病毒散播再次触发毒蚀爆发所需等待-1秒、散播CD-1秒；1秒ICD</td></tr>
-          <tr><td class="center narrow">22</td><td class="narrow">P22</td><td><strong>【毒发】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>同时带有双毒目标的任一DoT周期伤害12%概率触发，8秒ICD；施毒6秒内替换为免费毒发刺击，使触发等待-4秒、散播CD-4秒</td></tr>
-          <tr><td class="center narrow">23</td><td class="narrow">P23</td><td><strong>【侵蚀续接】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>毒性感染重新施加剧毒侵蚀时，新实例继承旧实例50%剩余时间，继承部分最多4秒</td></tr>
-          <tr><td class="center narrow">24</td><td class="narrow">P24</td><td><strong>【疫病回响】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>病毒散播命中≥3名敌人时，1秒后对存活目标追加X回响%攻击力物理伤害，最多5名</td></tr>
-          <tr><td class="center narrow">25</td><td class="narrow">P25</td><td><strong>【凝毒追刺】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>十字斩触发【毒蚀爆发】后获得6秒凝毒追刺；下一次暗影刺击杀意30→15并追加X追刺%攻击力派生伤害</td></tr>
-          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26S</td><td><strong>【凝毒穿刺】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>十字斩触发【毒蚀爆发】时施加6秒穿刺毒核；毒性感染消费毒核追加X穿刺%攻击力伤害并使新侵蚀+4秒</td></tr>
-          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26G</td><td><strong>【毒雾蔓延】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>病毒散播触发【毒蚀爆发】时传播完整12秒中毒（最多4名）；次要目标获得3秒蔓延毒核，到期对目标及3米内最多5名敌人造成X蔓延%攻击力伤害</td></tr>
-          <tr><td class="center narrow">27</td><td class="narrow">P27</td><td><strong>【毒效续接】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>施毒命中带有自身施加的剧毒侵蚀的目标时延长侵蚀2秒；毒性感染命中带有自身施加的中毒的目标时延长中毒2秒；各6秒ICD</td></tr>
-          <tr><td class="center narrow">28</td><td class="narrow">P28</td><td><strong>【毒爆回流】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>毒爆命中≥1名敌人时重置病毒散播CD并使下一次6秒内免费；8秒ICD</td></tr>
-          <tr><td class="center narrow">29</td><td class="narrow">P29</td><td><strong>【致命毒液】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>影刃解放替换为致命涂毒；8秒/45秒CD，清除触发等待并重置散播，毒发12%→24%，毒蚀爆发+50%，窗口内首次触发额外+1阶</td></tr>
-          <tr><td class="center narrow">30</td><td class="narrow">P30</td><td><strong>【见血封喉】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>红阶触发【毒蚀爆发】后十字斩6秒内替换为见血封喉；红阶十字斩伤害+X终%攻击力毒蚀爆发，红→黄</td></tr>
+          <tr><td class="center narrow">21</td><td class="narrow">P21</td><td><strong>【感染精研】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>【暗影刺击】直接命中同时带有自身施加的【中毒】和【剧毒侵蚀】的主目标时，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短1秒，并使【病毒散播】剩余CD缩短1秒；该效果具有1秒内置冷却</td></tr>
+          <tr><td class="center narrow">22</td><td class="narrow">P22</td><td><strong>【毒发】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>同时带有自身施加的【中毒】和【剧毒侵蚀】的目标，其任一状态的自然周期伤害生效时有12%概率触发，具有8秒内置冷却；【施毒】在6秒内替换为免费【毒发刺击】，命中追加X毒发%攻击力物理伤害，使【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待剩余时间缩短4秒，并使【病毒散播】剩余CD缩短4秒</td></tr>
+          <tr><td class="center narrow">23</td><td class="narrow">P23</td><td><strong>【侵蚀续接】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【毒性感染】重新施加同一施法者的【剧毒侵蚀】时，新实例在当前杀阶基础持续时间上继承旧实例50%的剩余时间，继承部分最多4秒</td></tr>
+          <tr><td class="center narrow">24</td><td class="narrow">P24</td><td><strong>【疫病回响】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【病毒散播】一次释放直接命中至少3名敌人时，于1秒后对本次命中列表中仍存活的目标追加X回响%攻击力物理伤害，最多5名；每次释放最多触发1次</td></tr>
+          <tr><td class="center narrow">25</td><td class="narrow">P25</td><td><strong>【凝毒追刺】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>【十字斩】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标并成功追加X单%攻击力物理伤害后，为自身施加持续6秒的强化状态【凝毒追刺】；下一次【暗影刺击】消费该状态，杀意消耗30→15，并追加X追刺%攻击力物理伤害</td></tr>
+          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26S</td><td><strong>【凝毒穿刺】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>【十字斩】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的目标并成功追加X单%攻击力物理伤害时，为主目标施加持续6秒的目标标记【穿刺毒核】；下一次【毒性感染】消费标记，追加X穿刺%攻击力物理伤害，并使新施加的【剧毒侵蚀】持续时间增加4秒</td></tr>
+          <tr style="background:var(--poison-l)"><td class="center narrow">26</td><td class="narrow">P26G</td><td><strong>【毒雾蔓延】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>【病毒散播】命中同时带有自身施加的【中毒】和【剧毒侵蚀】的主目标并成功追加X群%攻击力物理伤害时，传播完整12秒【中毒】，最多影响4名次要目标，并为次要目标施加持续3秒的延迟伤害标记【蔓延毒核】；标记结束时对目标及其3米内最多5名敌人造成X蔓延%攻击力物理伤害</td></tr>
+          <tr><td class="center narrow">27</td><td class="narrow">P27</td><td><strong>【毒效续接】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>【施毒】命中带有自身施加的【剧毒侵蚀】的目标时，使该状态剩余时间延长2秒；【毒性感染】命中带有自身施加的【中毒】的目标时，使该状态剩余时间延长2秒；每个技能分别具有6秒内置冷却</td></tr>
+          <tr><td class="center narrow">28</td><td class="narrow">P28</td><td><strong>【毒爆回流】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>同一施法者的【毒爆】命中至少1名敌人时，重置【病毒散播】剩余CD，并使下一次病毒散播在6秒内免除杀意消耗；该效果具有8秒内置冷却</td></tr>
+          <tr><td class="center narrow">29</td><td class="narrow">P29</td><td><strong>【致命毒液】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>固定终极武器槽中的【影刃解放】替换为【致命涂毒】；释放后持续8秒、CD45秒，立即清除【十字斩】追加X单%攻击力物理伤害与【病毒散播】追加X群%攻击力物理伤害所共用的8秒等待，并重置【病毒散播】CD；毒发概率12%→24%，两种追加物理伤害提高50%，窗口内第一次成功追加其中一种伤害时额外提升1阶</td></tr>
+          <tr><td class="center narrow">30</td><td class="narrow">P30</td><td><strong>【见血封喉】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>红阶下，【十字斩】成功追加X单%攻击力物理伤害或【病毒散播】成功追加X群%攻击力物理伤害后，使【十字斩】在6秒内替换为【见血封喉】；释放造成红阶十字斩120%档基础伤害并追加X终%攻击力物理伤害，随后使红阶降为黄阶，并恢复十字斩原按钮及后台剩余CD</td></tr>
         </tbody>
       </table>
     </div>
@@ -651,7 +676,7 @@ footer p{margin-bottom:4px}
 
     <div class="callout dual">
       <span class="ct">一句话玩法</span>
-      通过【永恒之斩】完成追斩升阶，蓝阶主动插入【黑色幻影】形成高质量连斩直达红阶；红阶每轮共享杀招CD选择保红或解放。
+      通过【永恒之斩】完成追斩升阶；蓝阶在追斩窗口内插入【黑色幻影】并完成2次基础追斩后直接进入红阶；红阶时在共享CD内选择用【十字斩】刷新红阶，或用【永恒之斩】追加终结伤害并降为黄阶。
     </div>
 
     <h3 class="bd-title dual">五张技能卡<span class="badge">5张</span></h3>
@@ -659,69 +684,69 @@ footer p{margin-bottom:4px}
       <div class="sc">
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害
+          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【疾影追斩】命中后获得4秒【疾影】，永恒首击消费使第1次追斩15→5并追加X疾影%攻击力伤害</div>
-          <div class="sc-ml">【连斩不息】允许窗口内插入1次</div>
-          <div class="sc-ml">【无尽双刃】可使下一次杀意消耗降低10</div>
+          <div class="sc-ml">【疾影追斩】命中后为自身施加持续4秒的强化状态【疾影】；下一次永恒之斩首击消费该状态，使第1次追斩杀意消耗15→5，并追加X疾影%攻击力物理伤害。</div>
+          <div class="sc-ml">【连斩不息】允许本技能在永恒之斩窗口内插入1次且不会中断窗口。</div>
+          <div class="sc-ml">【无尽余势】可使下一次本技能杀意消耗降低10。</div>
         </div>
         <div class="sc-role">高频填充</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD6s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>快速接近目标并造成物理伤害。蓝阶永恒窗口内插入后完成2追斩直达红阶；红阶命中后生成6秒十字斩保红条件
+          <span class="sc-label">基础效果</span>快速接近当前目标并造成物理伤害。蓝阶下，在【永恒之斩】追斩窗口内插入本技能并随后完成2次基础追斩，使杀阶直接提升至红阶；红阶下命中后，若在6秒内使用【十字斩】命中目标，则将红阶剩余时间刷新至12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【幻影折返】命中后3秒内替换为免费【残影返身】，返回起始位置并对路径上最多5名敌人造成X返身%攻击力伤害</div>
-          <div class="sc-ml">【十字回锋】使下一次变为双段攻击</div>
-          <div class="sc-ml">【双刀追击】可重置并降低下一次消耗</div>
+          <div class="sc-ml">【幻影折返】命中后使技能在3秒内替换为免费【残影返身】，释放后返回黑色幻影起始位置，并对返回路径上的最多5名敌人造成X返身%攻击力物理伤害。</div>
+          <div class="sc-ml">【十字回锋】使下一次黑色幻影变为双段攻击。</div>
+          <div class="sc-ml">【幻影回流】可重置本技能，并使下一次释放降低杀意消耗。</div>
         </div>
-        <div class="sc-role">机动输出／技术插入</div>
+        <div class="sc-role">机动输出／追斩窗口插入</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">利刃旋舞</div><div class="sc-cost"><span class="cp-con">30杀意</span> CD12s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对自身周围敌人造成范围物理伤害，获得【旋刃环绕】；后续主动技能直接命中触发【旋刃追击】
+          <span class="sc-label">基础效果</span>对自身周围敌人造成范围物理伤害，并为自身施加1层强化状态【旋刃环绕】；基础持续X秒<em class="sim">待数值</em>。下一次主动技能直接命中主目标时消费该状态，并触发追加攻击【旋刃追击】，对主目标造成X旋刃%攻击力物理伤害<em class="sim">待数值</em>。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【旋刃列阵】改为3层8秒；消费1层对主目标及5米内最多2名次要目标造成X旋刃%攻击力伤害</div>
-          <div class="sc-ml">【一敌专攻】与【群刃回响】分别改变追击的单体和群体结算</div>
+          <div class="sc-ml">【旋刃列阵】使旋刃环绕改为3层、持续8秒；后续主动技能直接命中时消费1层，对主目标及其5米内最多2名次要目标造成X旋刃%攻击力物理伤害。</div>
+          <div class="sc-ml">【一敌专攻】与【群刃回响】分别改变追击的单体和群体结算。</div>
         </div>
         <div class="sc-role">群体附着</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">永恒之斩</div><div class="sc-cost"><span class="cp-con">首击20</span> <span class="cp-con">追斩15</span> 共享8s CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>首击开启5秒追斩窗口，最多2次追斩。完成2追斩后白／绿／黄阶升1阶；蓝阶插入黑色幻影直达红阶；红阶完成第2追斩追加【绝刃终结】
+          <span class="sc-label">基础效果</span>首击对当前主目标造成物理伤害，并开启5秒追斩窗口；窗口内最多追加2次追斩，每次造成物理伤害。完成2次基础追斩后，白／绿／黄阶提升1阶；蓝阶插入黑色幻影并完成2次基础追斩时直接提升至红阶；红阶完成第2次基础追斩时追加攻击段【绝刃终结】，造成100%攻击力物理伤害，随后使红阶降为黄阶。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【疾影追斩】强化第1次追斩</div>
-          <div class="sc-ml">【连斩不息】窗口5→6秒、追斩2→3并允许插入1次暗影刺击</div>
-          <div class="sc-ml">【无尽双刃】完成全部追斩获得10秒【无尽余势】，使下一次填充减耗并缩短共享杀招CD</div>
+          <div class="sc-ml">【疾影追斩】强化第1次追斩。</div>
+          <div class="sc-ml">【连斩不息】使追斩窗口5→6秒、最大追斩2→3，并允许插入1次暗影刺击且不会中断窗口；第3次追斩在第2次追斩完成升阶或红→黄后执行。</div>
+          <div class="sc-ml">【无尽余势】使完成全部追斩后获得10秒同名强化状态，下一次填充技能减耗并缩短共享杀招CD。</div>
         </div>
-        <div class="sc-role">升阶／红阶解放</div>
+        <div class="sc-role">升阶／红阶终结</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> 共享8s CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对主目标造成高额物理伤害。红阶下【黑色幻影】命中后6秒内以本技能命中可刷新红阶12秒
+          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。红阶状态下，【黑色幻影】命中后的6秒内以本技能命中目标，刷新红阶持续时间至12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【十字回锋】命中后获得6秒【回锋】；下一次黑色幻影消费改为2段物理攻击，整次只判定1次二刀追击</div>
+          <div class="sc-ml">【十字回锋】使本技能直接命中后为自身施加持续6秒的【回锋】；下一次黑色幻影消费该状态并改为2段物理攻击，整次释放只判定1次二刀追击。</div>
         </div>
         <div class="sc-role">短窗口兑现／红阶保红</div>
       </div>
     </div>
 
-    <h3 class="bd-title dual">永恒之斩时间窗口</h3>
+    <h3 class="bd-title dual">永恒之斩追斩窗口</h3>
     <div class="spec-box">
       <div class="sb-title dual">窗口规则</div>
       <ul>
-        <li>基础窗口：<strong>5秒</strong>（4→5秒平衡调整值）</li>
-        <li>连斩不息窗口：<strong>6秒</strong>（5→6秒平衡调整值）</li>
-        <li>基础合法序列：永恒首击 → 黑色幻影 → 追斩1 → 追斩2</li>
-        <li>精通合法序列：暗影刺击获得疾影 → 永恒首击消费疾影 → 黑色幻影 → 暗影刺击 → 追斩1 → 追斩2 → 可选追斩3</li>
-        <li>基础窗口只允许插入1次黑色幻影；插入其他技能取消窗口</li>
-        <li>连斩不息额外允许插入1次暗影刺击</li>
-        <li>第2次基础追斩完成时立即判定升阶或红阶解放</li>
-        <li>精通提供的第3次追斩在第2次判定之后执行；若第2次使红→黄，第3次按黄阶结算</li>
+        <li>基础窗口：4秒→5秒<strong>【平衡调整值】</strong></li>
+        <li>【连斩不息】窗口：5秒→6秒<strong>【平衡调整值】</strong></li>
+        <li>基础可完成序列：永恒首击 → 黑色幻影 → 追斩1 → 追斩2</li>
+        <li>精通后可完成序列：暗影刺击获得疾影 → 永恒首击消费疾影 → 黑色幻影 → 暗影刺击 → 追斩1 → 追斩2 → 可选追斩3</li>
+        <li>基础窗口内只允许使用1次【黑色幻影】而不中断窗口；使用其他技能立即关闭窗口</li>
+        <li>点出【连斩不息】后，窗口内额外允许使用1次【暗影刺击】且不会中断窗口</li>
+        <li>第2次基础追斩完成时立即判定升阶；当前为红阶时，改为追加【绝刃终结】并在伤害结算后使红阶降为黄阶</li>
+        <li>精通提供的第3次追斩在上述结算之后执行；若第2次追斩已使红→黄，第3次按黄阶结算，不能再次触发绝刃终结</li>
       </ul>
     </div>
 
@@ -732,9 +757,9 @@ footer p{margin-bottom:4px}
         <div class="skill-flow">
           <div class="sn hl"><div class="sn-name">【永恒之斩】</div><div class="sn-cost">首击20杀意</div><div class="sn-eff">开启窗口</div></div>
           <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">【追斩】×2</div><div class="sn-cost">15×2</div><div class="sn-eff">杀阶+1</div></div>
+          <div class="sn"><div class="sn-name">完成2次追斩</div><div class="sn-cost">15×2</div><div class="sn-eff">杀阶+1</div></div>
           <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">填充</div><div class="sn-eff">暗影刺击/黑色幻影/利刃旋舞</div></div>
+          <div class="sn"><div class="sn-name">填充</div><div class="sn-eff">暗影刺击／黑色幻影／利刃旋舞</div></div>
           <span class="fa">→</span>
           <div class="sn"><div class="sn-name">等待共享杀招CD</div></div>
           <span class="fa">→</span>
@@ -748,14 +773,19 @@ footer p{margin-bottom:4px}
           <span class="fa">→</span>
           <div class="sn hl"><div class="sn-name">【黑色幻影】</div><div class="sn-cost">25杀意</div><div class="sn-eff">技术插入</div></div>
           <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">【追斩】×2</div><div class="sn-cost">15×2</div><div class="sn-eff">蓝直接升红</div></div>
+          <div class="sn hl"><div class="sn-name">完成2次追斩</div><div class="sn-cost">15×2</div><div class="sn-eff">蓝直接升红</div></div>
         </div>
         <div class="bp-note" style="text-align:center">该技术跃迁由玩家操作确定完成</div>
+      </div>
+    </div>
 
-        <div class="branch-cond" style="margin-top:16px">红阶选择 — 共享8秒杀招CD</div>
+    <h3 class="bd-title dual">红阶刷新与终结</h3>
+    <div class="scenario-block d">
+      <div class="scenario-tag">双刀刺 · 红阶二择</div>
+      <div class="sb-body">
         <div class="branch-paths">
           <div class="bp">
-            <span class="bp-label">保红路线</span>
+            <span class="bp-label">刷新红阶路线</span>
             <div class="skill-flow">
               <div class="sn"><div class="sn-name">【黑色幻影】</div><div class="sn-cost">25杀意</div></div>
               <span class="fa">→</span>
@@ -764,41 +794,45 @@ footer p{margin-bottom:4px}
             <div class="bp-note">继续维持红阶窗口</div>
           </div>
           <div class="bp">
-            <span class="bp-label">解放路线</span>
+            <span class="bp-label">红阶转为黄阶路线</span>
             <div class="skill-flow">
               <div class="sn hl"><div class="sn-name">【永恒之斩】</div><div class="sn-cost">20杀意</div></div>
               <span class="fa">→</span>
-              <div class="sn hl"><div class="sn-name">完成第2追斩</div></div>
+              <div class="sn hl"><div class="sn-name">完成第2次基础追斩</div></div>
               <span class="fa">→</span>
-              <div class="sn hl burst-skill"><div class="sn-name">【绝刃终结】</div><div class="sn-eff">100%攻击力</div></div>
+              <div class="sn hl burst-skill"><div class="sn-name">追加【绝刃终结】</div><div class="sn-eff">100%攻击力</div></div>
             </div>
-            <div class="bp-note">红→黄·获得爆发</div>
+            <div class="bp-note">红→黄·造成终结伤害</div>
           </div>
         </div>
+        <div class="bp-note" style="margin-top:12px">【绝刃终结】造成100%攻击力物理伤害<em class="sim">模拟值</em>，不恢复杀意、不触发二刀追击、不递归，可驱动1次旋刃追击。因为永恒之斩和十字斩共享8秒CD，玩家每轮只能优先选择一条路线，形成真实机会成本。</div>
       </div>
     </div>
 
-    <div class="callout neutral">
-      <span class="ct">共享CD机会成本</span>
-      因为永恒之斩和十字斩共享8秒CD，玩家每轮只能优先选择一条路线，形成真实机会成本。<strong>【绝刃终结】</strong>造成100%攻击力物理伤害<em class="sim">模拟值</em>，不恢复杀意、不触发二刀追击、不递归，可驱动1次旋刃追击。
-    </div>
-
-    <h3 class="bd-title dual">随机事件｜双刀追击</h3>
+    <h3 class="bd-title dual">随机事件｜幻影回流</h3>
     <div class="callout dual">
       <span class="ct">二刀追击触发</span>
-      共通【二刀追击】触发且节点ICD可用时：重置黑色幻影CD、获得6秒双刃机会、下一次黑色幻影杀意-15。若在永恒之斩窗口内消费，当前窗口延长1秒。常态ICD8秒；烈火战车期间4秒。随机事件只提高容错，不决定蓝阶能否直达红阶。
+      共通随机追加伤害【二刀追击】触发且【幻影回流】节点内置冷却可用时：
+      <ul style="margin:8px 0 0">
+        <li>重置黑色幻影CD</li>
+        <li>使下一次【黑色幻影】在6秒内杀意消耗减少15</li>
+        <li>若在永恒之斩窗口内消费，当前窗口延长1秒</li>
+        <li>常态节点内置冷却8秒；烈火战车期间4秒</li>
+      </ul>
+      随机事件只提高容错，不决定蓝阶能否直达红阶。
     </div>
 
     <h3 class="bd-title dual">固定大招替换｜烈火战车</h3>
-    <div class="spec-box">
-      <div class="sb-title dual">烈火战车</div>
-      <ul>
-        <li>持续<strong>10秒</strong>，CD<strong>45秒</strong></li>
-        <li>提高杀意恢复速度</li>
-        <li>释放时重置黑色幻影并获得1次双刃机会</li>
-        <li>二刀追击概率20%→40%</li>
+    <div class="callout neutral">
+      <span class="ct">影刃解放 → 烈火战车</span>
+      精通节点【烈火战车】将固定终极武器槽中的【影刃解放】替换为【烈火战车】：
+      <ul style="margin:8px 0 0">
+        <li>基础持续10秒，CD45秒</li>
+        <li>杀意自然恢复速度提高X%<em class="sim">待数值</em></li>
+        <li>释放时重置【黑色幻影】CD，并使下一次【黑色幻影】在6秒内杀意消耗减少15</li>
+        <li>二刀追击20%→40%</li>
         <li>黑色幻影变为双段攻击，但整次释放仍只判定一次随机事件</li>
-        <li><strong>战车余势</strong>使持续10→12秒，双刀追击ICD8→4秒</li>
+        <li>【战车余势】使烈火战车持续10→12秒，只增加爆发容错，不改变技能次数上限</li>
       </ul>
     </div>
 
@@ -811,30 +845,30 @@ footer p{margin-bottom:4px}
           <span class="fa">→</span>
           <div class="sn"><div class="sn-name">【暗影刺击】</div><div class="sn-cost">30杀意</div><div class="sn-eff">获得疾影</div></div>
           <span class="fa">→</span>
-          <div class="sn hl burst-skill"><div class="sn-name">烈火战车</div><div class="sn-eff">重置黑色幻影+双段</div></div>
+          <div class="sn hl burst-skill"><div class="sn-name">烈火战车</div><div class="sn-eff">重置黑色幻影</div></div>
           <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">【永恒首击】</div><div class="sn-cost">20杀意</div><div class="sn-eff">消费疾影</div></div>
+          <div class="sn hl"><div class="sn-name">【永恒之斩】首击</div><div class="sn-cost">20杀意</div><div class="sn-eff">消费疾影</div></div>
           <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">【黑色幻影/暗影刺击】</div><div class="sn-eff">合法插入</div></div>
+          <div class="sn hl"><div class="sn-name">插入【黑色幻影】和【暗影刺击】</div><div class="sn-eff">不中断窗口</div></div>
           <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">完成3次追斩</div><div class="sn-eff">蓝→红</div></div>
+          <div class="sn hl"><div class="sn-name">完成3次追斩</div></div>
         </div>
         <div class="branch-paths" style="margin-top:8px">
           <div class="bp">
             <span class="bp-label">保红</span>
-            <div class="skill-flow"><div class="sn"><div class="sn-name">黑色幻影→十字斩</div></div></div>
+            <div class="skill-flow"><div class="sn"><div class="sn-name">用【十字斩】刷新红阶</div></div></div>
           </div>
           <div class="bp">
             <span class="bp-label">解放</span>
-            <div class="skill-flow"><div class="sn"><div class="sn-name">永恒之斩→绝刃终结</div></div></div>
+            <div class="skill-flow"><div class="sn"><div class="sn-name">用【永恒之斩】追加【绝刃终结】并降为黄阶</div></div></div>
           </div>
         </div>
         <div class="skill-flow" style="margin-top:8px">
-          <div class="sn hl"><div class="sn-name">【无尽余势】</div><div class="sn-eff">10秒增益</div></div>
+          <div class="sn hl"><div class="sn-name">获得【无尽余势】</div><div class="sn-eff">10秒强化状态</div></div>
           <span class="fa">→</span>
           <div class="sn"><div class="sn-name">下一次填充</div><div class="sn-eff">杀意-10</div></div>
           <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">共享杀招CD-2秒</div></div>
+          <div class="sn"><div class="sn-name">共享杀招CD</div><div class="sn-eff">缩短2秒</div></div>
         </div>
         <div class="loop-back">↻ 循环往复</div>
       </div>
@@ -846,14 +880,14 @@ footer p{margin-bottom:4px}
         <span class="ps-tag">单体</span>
         <div class="ps-body">
           <div class="ps-skill">一敌专攻</div>
-          <div class="ps-detail">旋刃追击无合法次要目标时，每层集中攻击主目标造成20%攻击力；每次直接命中最多消费1层</div>
+          <div class="ps-detail">【旋刃追击】结算时，主目标5米内不存在可被本次追击命中的次要目标，则消费1层旋刃并只攻击主目标，造成20%攻击力物理伤害；每次主动技能直接命中最多消费1层。</div>
         </div>
       </div>
       <div class="ps-item">
         <span class="ps-tag">群体</span>
         <div class="ps-body">
           <div class="ps-skill">群刃回响</div>
-          <div class="ps-detail">同一次旋刃追击命中≥2名次要目标时，追加20%攻击力范围伤害；每次直接命中最多触发1次</div>
+          <div class="ps-detail">同一次旋刃追击命中至少2名次要目标时，对本次追击目标追加一次20%攻击力范围物理伤害；每次主动技能直接命中最多触发1次。</div>
         </div>
       </div>
     </div>
@@ -863,17 +897,17 @@ footer p{margin-bottom:4px}
       <table class="mastery-table">
         <thead><tr><th class="dual-th">点位</th><th class="dual-th">节点ID</th><th class="dual-th">节点</th><th class="dual-th">节点类型</th><th class="dual-th">效果</th></tr></thead>
         <tbody>
-          <tr><td class="center narrow">21</td><td class="narrow">D21</td><td><strong>【疾影追斩】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>暗影刺击命中后获得4秒疾影；永恒首击消费使第1次追斩15→5并追加X疾影%攻击力伤害</td></tr>
-          <tr><td class="center narrow">22</td><td class="narrow">D22</td><td><strong>【幻影折返】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>黑色幻影命中后3秒内替换为免费残影返身；返回起始位置并对路径上最多5名敌人造成X返身%攻击力伤害</td></tr>
-          <tr><td class="center narrow">23</td><td class="narrow">D23</td><td><strong>【旋刃列阵】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>旋刃环绕改为3层8秒；直接命中消费1层对主目标及5米内最多2名次要目标造成X旋刃%攻击力伤害</td></tr>
-          <tr><td class="center narrow">24</td><td class="narrow">D24</td><td><strong>【连斩不息】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>永恒窗口5→6秒，最大追斩2→3，允许窗口内插入1次暗影刺击；第3次追斩在第2次结算后执行</td></tr>
-          <tr><td class="center narrow">25</td><td class="narrow">D25</td><td><strong>【十字回锋】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>十字斩命中后获得6秒回锋；下一次黑色幻影消费改为2段攻击，整次只判定1次二刀追击</td></tr>
-          <tr style="background:var(--dual-l)"><td class="center narrow">26</td><td class="narrow">D26S</td><td><strong>【一敌专攻】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>旋刃追击无合法次要目标时，每层集中攻击主目标造成20%攻击力；每次直接命中最多消费1层</td></tr>
-          <tr style="background:var(--dual-l)"><td class="center narrow">26</td><td class="narrow">D26G</td><td><strong>【群刃回响】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>同一次旋刃追击命中≥2名次要目标时追加20%攻击力范围伤害；每次直接命中最多触发1次</td></tr>
-          <tr><td class="center narrow">27</td><td class="narrow">D27</td><td><strong>【双刀追击】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>二刀追击触发时重置黑色幻影CD并获得6秒双刃机会；下一次黑色幻影杀意-15；窗口内消费延长1秒；ICD8秒</td></tr>
-          <tr><td class="center narrow">28</td><td class="narrow">D28</td><td><strong>【烈火战车】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>影刃解放替换为烈火战车；10秒/45秒CD，提高杀意恢复，重置黑色幻影+1次双刃，二刀追击20%→40%，黑色幻影改双段</td></tr>
-          <tr><td class="center narrow">29</td><td class="narrow">D29</td><td><strong>【战车余势】</strong></td><td><span class="nt nt-burst">爆发强化</span></td><td>烈火战车持续10→12秒；双刀追击ICD8→4秒</td></tr>
-          <tr><td class="center narrow">30</td><td class="narrow">D30</td><td><strong>【无尽双刃】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>完成永恒全部追斩后获得10秒无尽余势；下一次暗影刺击/黑色幻影杀意-10，共享杀招CD-2秒</td></tr>
+          <tr><td class="center narrow">21</td><td class="narrow">D21</td><td><strong>【疾影追斩】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>【暗影刺击】直接命中后，为自身施加持续4秒的【疾影】；下一次【永恒之斩】首击消费该状态，使第1次追斩杀意消耗15→5，并追加X疾影%攻击力物理伤害</td></tr>
+          <tr><td class="center narrow">22</td><td class="narrow">D22</td><td><strong>【幻影折返】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【黑色幻影】命中后，技能在3秒内替换为免费【残影返身】；释放后返回黑色幻影的起始位置，并对返回路径上的最多5名敌人造成X返身%攻击力物理伤害</td></tr>
+          <tr><td class="center narrow">23</td><td class="narrow">D23</td><td><strong>【旋刃列阵】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【利刃旋舞】施加的【旋刃环绕】改为3层、持续8秒；后续主动技能直接命中时消费1层，对主目标及其5米内最多2名次要目标造成X旋刃%攻击力物理伤害</td></tr>
+          <tr><td class="center narrow">24</td><td class="narrow">D24</td><td><strong>【连斩不息】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【永恒之斩】追斩窗口5→6秒、最大追斩2→3，并允许在窗口内额外插入1次【暗影刺击】且不会中断窗口；第3次追斩在第2次追斩完成升阶或红→黄结算后执行</td></tr>
+          <tr><td class="center narrow">25</td><td class="narrow">D25</td><td><strong>【十字回锋】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>【十字斩】直接命中后，为自身施加持续6秒的【回锋】；下一次【黑色幻影】消费该状态并改为2段物理攻击，整次释放只进行1次二刀追击触发判定</td></tr>
+          <tr style="background:var(--dual-l)"><td class="center narrow">26</td><td class="narrow">D26S</td><td><strong>【一敌专攻】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>【旋刃追击】结算时，主目标5米内不存在可被本次追击命中的次要目标，则消费1层旋刃并只攻击主目标，造成20%攻击力物理伤害；每次主动技能直接命中最多消费1层</td></tr>
+          <tr style="background:var(--dual-l)"><td class="center narrow">26</td><td class="narrow">D26G</td><td><strong>【群刃回响】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>同一次【旋刃追击】命中至少2名次要目标时，对本次追击目标追加一次20%攻击力范围物理伤害；每次主动技能直接命中最多触发1次</td></tr>
+          <tr><td class="center narrow">27</td><td class="narrow">D27</td><td><strong>【幻影回流】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>共通随机追加伤害【二刀追击】触发时，重置【黑色幻影】CD，并使下一次黑色幻影在6秒内杀意消耗减少15；若在永恒之斩窗口内释放，则使当前窗口延长1秒。节点内置冷却8秒</td></tr>
+          <tr><td class="center narrow">28</td><td class="narrow">D28</td><td><strong>【烈火战车】</strong></td><td><span class="nt nt-burst">爆发节点</span></td><td>固定终极武器槽中的【影刃解放】替换为【烈火战车】；释放后持续10秒、CD45秒，使杀意自然恢复速度提高X%【待数值】，重置黑色幻影CD，并使下一次黑色幻影在6秒内杀意消耗减少15；期间二刀追击概率20%→40%，黑色幻影改为2段攻击</td></tr>
+          <tr><td class="center narrow">29</td><td class="narrow">D29</td><td><strong>【战车余势】</strong></td><td><span class="nt nt-burst">爆发强化</span></td><td>【烈火战车】持续时间10→12秒；烈火战车期间【幻影回流】节点内置冷却8→4秒</td></tr>
+          <tr><td class="center narrow">30</td><td class="narrow">D30</td><td><strong>【无尽余势】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>完成【永恒之斩】当前上限的全部追斩后，为自身施加持续10秒的强化状态【无尽余势】；下一次【暗影刺击】或【黑色幻影】消费该状态，杀意消耗减少10，并使【永恒之斩／十字斩】共享CD剩余时间缩短2秒</td></tr>
         </tbody>
       </table>
     </div>
@@ -885,7 +919,9 @@ footer p{margin-bottom:4px}
 
     <div class="callout burst">
       <span class="ct">一句话玩法</span>
-      常态使用【致命爪痕】完成处决来升阶和积累筹谋；在合适杀阶和2层筹谋时开启【暗影超越】，集中完成两轮超越处决。爆刺的红阶选择主要发生在"是否现在开启暗影超越"，而不是每次处决时即时二择。
+      常态使用【致命爪痕】施加目标标记【基础致命爪痕】，再用【十字斩】或【致命影啸】消费标记完成升阶；点出【影袭准备】后同时积累【影袭筹谋】，在合适杀阶和2层筹谋时开启【暗影超越】，连续完成两次"暗影连袭施加超越爪痕 → 十字斩或致命影啸消费超越爪痕"。
+      <br><br>
+      爆刺的红阶选择主要发生在"是否现在开启暗影超越"，而不是每次消费爪痕时即时二择。这是本BD与毒刃刺、双刀刺的有意差异。
     </div>
 
     <h3 class="bd-title burst">五张技能卡<span class="badge">5张</span></h3>
@@ -893,58 +929,62 @@ footer p{margin-bottom:4px}
       <div class="sc">
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。命中带基础【致命爪痕】目标时使其剩余CD缩短0.5秒（1秒ICD）
+          <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。命中带有自身施加的目标标记【基础致命爪痕】时，使【致命爪痕】技能剩余CD缩短0.5秒；该缩减具有1秒内置冷却<em class="sim">模拟值</em>。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【暗影超越】期间替换为2段【暗影连袭】；存在【超越处决】时消耗降至20，消费1次并施加6秒【超越爪痕】</div>
-          <div class="sc-ml">【孤影绝杀】与【爪痕追猎】分别强化第1/2次超越处决</div>
+          <div class="sc-ml">【暗影超越】期间替换为2段攻击【暗影连袭】；拥有【超越连袭次数】时，本次杀意消耗30→20，消费1次并为目标施加持续6秒的标记【超越爪痕】</div>
+          <div class="sc-ml">【孤影绝杀】强化第一次消费超越爪痕后的下一次暗影连袭</div>
+          <div class="sc-ml">【爪痕追猎】强化第二次消费超越爪痕的十字斩或致命影啸</div>
         </div>
-        <div class="sc-role">高频填充／推进爪痕</div>
+        <div class="sc-role">高频填充／推进下一轮爪痕</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD8s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>快速接近目标并造成物理伤害。命中带基础【致命爪痕】目标时使其剩余CD缩短1.5秒
+          <span class="sc-label">基础效果</span>快速接近当前目标并造成物理伤害。命中带有自身施加的【基础致命爪痕】时，使【致命爪痕】技能剩余CD缩短1.5秒<em class="sim">模拟值</em>。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【幻影裂击】命中带基础或超越爪痕目标时0.4秒后追加X裂击%攻击力伤害</div>
-          <div class="sc-ml">【幻影终结】可生成免费幻影杀招</div>
-          <div class="sc-ml">【超越回响】红阶解放后剩余CD-4秒</div>
+          <div class="sc-ml">【幻影裂击】命中带有自身施加的【基础致命爪痕】或【超越爪痕】的目标时，于0.4秒后追加X裂击%攻击力物理伤害</div>
+          <div class="sc-ml">【幻影终结】触发后可使十字斩或致命影啸获得一次免费直接伤害形态</div>
+          <div class="sc-ml">【超越回响】在暗影超越期间消费超越爪痕且使红阶降为黄阶后，使本技能剩余CD缩短4秒</div>
         </div>
-        <div class="sc-role">中CD输出／强推进爪痕</div>
+        <div class="sc-role">中CD输出／推进爪痕CD</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">致命爪痕</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD10s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>造成物理伤害并施加基础【致命爪痕】。白阶8秒、绿以上10秒；暗影超越期间改为直接伤害
+          <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加目标标记【基础致命爪痕】。白阶施加时持续8秒，绿阶及以上施加时持续10秒；标记可被下一次【十字斩】或【致命影啸】消费。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【双痕蓄势】获得2层充能，每层独立恢复10秒；同一目标最多1个基础爪痕</div>
-          <div class="sc-ml">【处决余势】可缩短充能恢复</div>
-          <div class="sc-ml">【爪痕追猎】强化第二次超越爪痕处决</div>
+          <div class="sc-ml">【双痕蓄势】使技能获得2层充能，每层独立恢复10秒；同一目标最多存在1个自身施加的基础致命爪痕</div>
+          <div class="sc-ml">【处决余势】可缩短充能恢复时间</div>
+          <div class="sc-ml">【暗影超越】期间，本技能只造成直接物理伤害，不施加标记</div>
+          <div class="sc-ml">【爪痕追猎】强化第二次超越爪痕被消费时产生的伤害</div>
         </div>
-        <div class="sc-role">刺杀准备</div>
+        <div class="sc-role">标记建立</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD4s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对主目标造成高额物理伤害。消费优先级最高的爪痕完成单体处决；常态使白～黄阶升1阶、红阶刷新12秒，解锁【影袭准备】后获得1层【影袭筹谋】。筹谋1→2时额外升1阶；暗影超越期间消费超越爪痕且红阶时使红→黄
+          <span class="sc-label">基础效果</span>对当前主目标造成高额物理伤害。目标带有自身施加的【基础致命爪痕】时，消费该标记；白～黄阶提升1阶，红阶将剩余时间刷新至12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【影袭准备】获得1层【影袭筹谋】（最多2层/30秒）；筹谋1→2时额外升1阶</div>
-          <div class="sc-ml">【处决余势】使黑色幻影CD-2秒</div>
-          <div class="sc-ml">【孤影绝杀】强化红阶解放后下一次暗影连袭</div>
-          <div class="sc-ml">【幻影终结】可变为免费幻影杀招</div>
+          <div class="sc-ml">【影袭准备】使本技能消费基础致命爪痕时获得1层持续30秒的【影袭筹谋】，最多2层；筹谋从1层增加至2层时额外提升1阶，最高红阶</div>
+          <div class="sc-ml">【处决余势】使本技能消费任一爪痕后令【黑色幻影】剩余CD缩短2秒</div>
+          <div class="sc-ml">【暗影超越】期间，本技能可以消费【超越爪痕】，当前为红阶时在伤害结算后使红阶降为黄阶</div>
+          <div class="sc-ml">【孤影绝杀】强化下一次暗影连袭</div>
+          <div class="sc-ml">【幻影终结】可使本技能临时变为不消费杀意和爪痕的直接伤害形态</div>
         </div>
-        <div class="sc-role">单体处决</div>
+        <div class="sc-role">单体标记消费</div>
       </div>
       <div class="sc">
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">致命影啸</div><div class="sc-cost"><span class="cp-con">35杀意</span> CD12s</div></div></div>
         <div class="sc-body">
-          <span class="sc-label">基础效果</span>对主目标及5米内最多5名敌人造成物理伤害。消费优先级最高的爪痕完成群体处决；常态使白～黄阶升1阶、红阶刷新12秒，解锁【影袭准备】后获得1层【影袭筹谋】。筹谋1→2时额外升1阶；暗影超越期间消费超越爪痕且红阶时使红→黄
+          <span class="sc-label">基础效果</span>对当前主目标及其周围5米内最多5名敌人造成物理伤害。主目标带有自身施加的【基础致命爪痕】时，消费该标记；白～黄阶提升1阶，红阶将剩余时间刷新至12秒。
           <span class="sc-label">精通变化</span>
-          <div class="sc-ml">【影袭准备】获得1层【影袭筹谋】</div>
-          <div class="sc-ml">【处决余势】使致命爪痕充能-2秒</div>
-          <div class="sc-ml">【群影收割】可在群体红阶解放后重置CD</div>
-          <div class="sc-ml">【幻影终结】可变为免费幻影杀招</div>
+          <div class="sc-ml">【影袭准备】使本技能消费基础致命爪痕时获得1层持续30秒的【影袭筹谋】，最多2层；筹谋从1层增加至2层时额外提升1阶，最高红阶</div>
+          <div class="sc-ml">【处决余势】使本技能消费任一爪痕后令【致命爪痕】当前充能恢复时间缩短2秒</div>
+          <div class="sc-ml">【暗影超越】期间，本技能可以消费【超越爪痕】，当前为红阶时在伤害结算后使红阶降为黄阶</div>
+          <div class="sc-ml">【群影收割】满足群体条件时重置本技能CD</div>
+          <div class="sc-ml">【幻影终结】可使本技能临时变为不消费杀意和爪痕的直接伤害形态</div>
         </div>
-        <div class="sc-role">群体处决</div>
+        <div class="sc-role">群体标记消费</div>
       </div>
     </div>
 
@@ -953,62 +993,65 @@ footer p{margin-bottom:4px}
       <div class="scenario-tag">爆刺 · 基础循环</div>
       <div class="sb-body">
         <div class="skill-flow">
-          <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">20杀意</div><div class="sn-eff">施加爪痕</div></div>
+          <div class="sn hl"><div class="sn-name">【致命爪痕】</div><div class="sn-cost">20杀意</div><div class="sn-eff">施加【基础致命爪痕】</div></div>
           <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">【暗影刺击】/【黑色幻影】</div><div class="sn-eff">推进爪痕CD</div></div>
+          <div class="sn"><div class="sn-name">【暗影刺击】／【黑色幻影】</div><div class="sn-eff">缩短致命爪痕CD</div></div>
           <span class="fa">→</span>
           <div class="branch-cond" style="margin:0">检查目标数量</div>
         </div>
         <div class="branch-paths" style="margin-top:8px">
           <div class="bp">
-            <span class="bp-label">单体处决</span>
+            <span class="bp-label">单体</span>
             <div class="skill-flow">
-              <div class="sn hl"><div class="sn-name">【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">消费爪痕·杀阶+1</div></div>
+              <div class="sn hl"><div class="sn-name">【十字斩】</div><div class="sn-cost">25杀意</div><div class="sn-eff">消费标记·杀阶+1</div></div>
             </div>
-            <div class="bp-note">获得1层影袭筹谋</div>
+            <div class="bp-note">获得1层【影袭筹谋】</div>
           </div>
           <div class="bp">
-            <span class="bp-label">群体处决</span>
+            <span class="bp-label">群体</span>
             <div class="skill-flow">
-              <div class="sn hl"><div class="sn-name">【致命影啸】</div><div class="sn-cost">35杀意</div><div class="sn-eff">消费爪痕·杀阶+1</div></div>
+              <div class="sn hl"><div class="sn-name">【致命影啸】</div><div class="sn-cost">35杀意</div><div class="sn-eff">消费标记·杀阶+1</div></div>
             </div>
-            <div class="bp-note">获得1层影袭筹谋</div>
+            <div class="bp-note">获得1层【影袭筹谋】</div>
           </div>
         </div>
-        <div class="branch-cond" style="margin-top:12px">筹谋达到2层时额外再提升1阶（最高红阶）</div>
+        <div class="branch-cond" style="margin-top:12px">筹谋从1层达到2层时额外再提升1阶（最高红阶）</div>
         <div class="loop-back">↻ 下一轮致命爪痕</div>
       </div>
     </div>
 
     <div class="callout neutral">
       <span class="ct">循环规则</span>
-      暗影超越外，白～黄阶完整处决使杀阶+1。本次处决使筹谋从1层达到2层时，额外再提升1阶，最高红阶。红阶常态完整处决刷新红阶12秒。影袭筹谋最多2层，共享30秒。
+      暗影超越外，【十字斩】或【致命影啸】实际消费【基础致命爪痕】时，白～黄阶使杀阶+1。点出【影袭准备】后，上述标记被消费时获得1层【影袭筹谋】；本次获得使筹谋从1层达到2层时，额外再提升1阶，最高红阶。红阶下实际消费【基础致命爪痕】时，将红阶剩余时间刷新至12秒。【影袭筹谋】最多2层、持续30秒；未点出【影袭准备】时，基础五卡循环仍通过消费【基础致命爪痕】升阶。
     </div>
 
     <h3 class="bd-title burst">暗影超越</h3>
     <div class="spec-box">
       <div class="sb-title burst">暗影超越 · 爆刺大招</div>
       <ul>
-        <li>持续<strong>10秒</strong>，CD<strong>30秒</strong></li>
+        <li>基础持续<strong>10秒</strong>，CD<strong>30秒</strong></li>
         <li>杀意上限<strong>+30</strong>，杀意恢复速度<strong>+50%</strong></li>
-        <li>只重置黑色幻影CD</li>
-        <li>致命爪痕只造成直接伤害，不施加基础标记</li>
-        <li>暗影刺击替换为<strong>暗影连袭</strong></li>
-        <li>每层影袭筹谋转化为1次超越处决</li>
+        <li>只重置【黑色幻影】CD</li>
+        <li>【致命爪痕】只造成直接伤害，不施加【基础致命爪痕】</li>
+        <li>【暗影刺击】替换为【暗影连袭】</li>
+        <li>每层【影袭筹谋】转化为1次【超越连袭次数】</li>
         <li>大招期间暂停杀阶自然衰退</li>
-        <li><strong>超越蓄势</strong>：以2层筹谋开启时持续10→12秒；只有0或1层时仍为10秒</li>
+        <li><strong>【超越蓄势】</strong>：开启暗影超越时若拥有2层筹谋，本次持续时间10→12秒；只有0或1层时仍为10秒</li>
       </ul>
     </div>
 
     <div class="spec-box">
       <div class="sb-title burst">暗影连袭 与 超越爪痕</div>
       <ul>
-        <li><strong>暗影连袭</strong>：基础消耗30杀意，造成2段攻击。存在超越处决时消耗降至20</li>
-        <li>消耗1次超越处决；当前杀阶低于红阶时本轮唯一一次杀阶+1</li>
-        <li>施加6秒<strong>超越爪痕</strong>：与基础致命爪痕硬互斥</li>
-        <li>下一次十字斩/致命影啸优先且只消费超越爪痕</li>
-        <li>消费视为完整处决，但不生成筹谋、不再次升阶</li>
-        <li>消费时若为红阶，执行红阶解放并使红→黄</li>
+        <li><strong>【暗影连袭】</strong>：基础消耗30杀意，造成2段攻击</li>
+        <li>拥有至少1次【超越连袭次数】时，杀意消耗30→20</li>
+        <li>释放时消费1次【超越连袭次数】</li>
+        <li>当前杀阶低于红阶时，本轮唯一一次杀阶+1</li>
+        <li>为目标施加持续6秒的标记【超越爪痕】</li>
+        <li><strong>【超越爪痕】</strong>：与【基础致命爪痕】硬互斥；同一目标不能同时拥有两种爪痕</li>
+        <li>下一次【十字斩】／【致命影啸】命中时消费该标记</li>
+        <li>消费该标记不生成筹谋，也不再次提升杀阶</li>
+        <li>消费时若为红阶，在技能伤害结算完成后使红阶降为黄阶</li>
       </ul>
     </div>
 
@@ -1019,28 +1062,33 @@ footer p{margin-bottom:4px}
         <div class="branch-cond">推荐前提：黄阶以上 + 2层筹谋</div>
         <div class="branch-cond">第1轮</div>
         <div class="skill-flow">
-          <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】×1</div><div class="sn-cost">20杀意</div><div class="sn-eff">消耗第1层筹谋·黄→红</div></div>
+          <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】</div><div class="sn-cost">20杀意</div><div class="sn-eff">黄→红·施加【超越爪痕】</div></div>
           <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">超越爪痕</div><div class="sn-eff">6秒</div></div>
-          <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">红阶解放</div><div class="sn-eff">消费爪痕·红→黄</div></div>
+          <div class="sn hl"><div class="sn-name">【十字斩】／【致命影啸】</div><div class="sn-eff">消费【超越爪痕】·红→黄</div></div>
         </div>
         <div class="branch-cond" style="margin-top:12px">第2轮</div>
         <div class="skill-flow">
-          <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】×2</div><div class="sn-cost">20杀意</div><div class="sn-eff">消耗第2层筹谋·黄→红</div></div>
+          <div class="sn hl burst-skill"><div class="sn-name">【暗影连袭】</div><div class="sn-cost">20杀意</div><div class="sn-eff">黄→红·施加【超越爪痕】</div></div>
           <span class="fa">→</span>
-          <div class="sn"><div class="sn-name">超越爪痕</div><div class="sn-eff">6秒</div></div>
-          <span class="fa">→</span>
-          <div class="sn hl"><div class="sn-name">第二轮红阶解放</div><div class="sn-eff">消费爪痕·红→黄</div></div>
+          <div class="sn hl"><div class="sn-name">【十字斩】／【致命影啸】</div><div class="sn-eff">消费【超越爪痕】·红→黄</div></div>
         </div>
-        <div class="loop-back">↻ 完成30点路径后，2层筹谋使窗口延长到12秒，为两轮处决保留容错</div>
+        <div class="loop-back">↻ 完成30点路径后，2层筹谋会使窗口延长到12秒，为两轮处决保留目标切换、移动和网络容错</div>
       </div>
     </div>
 
     <h3 class="bd-title burst">随机事件｜幻影终结</h3>
     <div class="callout burst">
       <span class="ct">幻影终结</span>
-      黑色幻影命中时<strong>25%</strong>概率触发，ICD8秒，储存8秒。结算优先级：①目标有爪痕时正常处决，幻影终结不消耗；②无爪痕时显示幻影高亮，可释放免费幻影杀招；③免费杀招不消耗杀意、不消费爪痕、不升阶、不生成筹谋、不触发红阶解放；④不能绕过原技能CD；⑤释放其中一个后消耗事件，另一个恢复正常。
+      【黑色幻影】命中时<strong>25%</strong>概率触发，ICD8秒，储存8秒。
+      <br><br>
+      <strong>结算优先级：</strong>
+      <br>1. 如果目标拥有自身施加的【基础致命爪痕】或【超越爪痕】，【十字斩】／【致命影啸】保持正常效果并消费标记；【幻影终结】不消耗。
+      <br>2. 只有当前目标没有可消费标记时，【十字斩】／【致命影啸】才显示幻影高亮，并可释放一次免费直接伤害形态。
+      <br>3. 免费直接伤害形态不消耗杀意，不消费爪痕，不升阶，不生成筹谋，也不会使红阶降为黄阶。
+      <br>4. 免费直接伤害形态不能绕过原技能CD；技能在CD时只显示储存提示，不显示为可立即释放。
+      <br>5. 释放其中一个技能的免费直接伤害形态后消耗【幻影终结】；另一个技能恢复正常。
+      <br><br>
+      这样，同一个按钮不会在玩家准备处决时突然变成不消费标记的攻击。
     </div>
 
     <h3 class="bd-title burst">单体／群体二择</h3>
@@ -1049,14 +1097,14 @@ footer p{margin-bottom:4px}
         <span class="ps-tag">单体</span>
         <div class="ps-body">
           <div class="ps-skill">孤影绝杀</div>
-          <div class="ps-detail">红阶十字斩解放仅命中1名敌人时，下一次暗影连袭对该目标伤害+20%，持续6秒</div>
+          <div class="ps-detail">暗影超越期间，【十字斩】消费【超越爪痕】、仅命中1名敌人并使红阶降为黄阶时，为目标施加持续6秒的强化标记；下一次【暗影连袭】命中该目标时伤害提高20%并消费标记</div>
         </div>
       </div>
       <div class="ps-item">
         <span class="ps-tag">群体</span>
         <div class="ps-body">
           <div class="ps-skill">群影收割</div>
-          <div class="ps-detail">暗影超越期间第一次致命影啸红阶解放命中≥3名敌人时，重置致命影啸CD；每次大招最多1次</div>
+          <div class="ps-detail">暗影超越期间，第一次【致命影啸】消费【超越爪痕】、命中至少3名敌人并使红阶降为黄阶时，重置致命影啸CD；每次大招最多1次</div>
         </div>
       </div>
     </div>
@@ -1066,17 +1114,17 @@ footer p{margin-bottom:4px}
       <table class="mastery-table">
         <thead><tr><th class="burst-th">点位</th><th class="burst-th">节点ID</th><th class="burst-th">节点</th><th class="burst-th">节点类型</th><th class="burst-th">效果</th></tr></thead>
         <tbody>
-          <tr><td class="center narrow">21</td><td class="narrow">B21</td><td><strong>【暗影超越】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>影刃解放替换为暗影超越；10秒/30秒CD，杀意上限+30、恢复+50%，重置黑色幻影，每层筹谋转化为1次超越处决</td></tr>
-          <tr><td class="center narrow">22</td><td class="narrow">B22</td><td><strong>【幻影裂击】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>黑色幻影命中带爪痕目标时0.4秒后追加X裂击%攻击力伤害；整次只判定1次幻影终结</td></tr>
-          <tr><td class="center narrow">23</td><td class="narrow">B23</td><td><strong>【双痕蓄势】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>致命爪痕获得2层充能，每层独立恢复10秒；同一目标最多1个同一施法者基础爪痕</td></tr>
-          <tr><td class="center narrow">24</td><td class="narrow">B24</td><td><strong>【影袭准备】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>暗影超越外完整处决获得1层影袭筹谋，最多2层/30秒；筹谋1→2时额外+1阶</td></tr>
-          <tr><td class="center narrow">25</td><td class="narrow">B25</td><td><strong>【处决余势】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>十字斩消费爪痕时黑色幻影CD-2秒；致命影啸消费爪痕时致命爪痕充能恢复-2秒；每次释放最多1次</td></tr>
-          <tr style="background:var(--burst-l)"><td class="center narrow">26</td><td class="narrow">B26S</td><td><strong>【孤影绝杀】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>暗影超越期间十字斩红阶解放仅命中1名敌人时施加6秒孤影绝杀；下一次暗影连袭+20%</td></tr>
-          <tr style="background:var(--burst-l)"><td class="center narrow">26</td><td class="narrow">B26G</td><td><strong>【群影收割】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>暗影超越期间第一次致命影啸红阶解放命中≥3名敌人时重置致命影啸CD；每次大招最多1次</td></tr>
-          <tr><td class="center narrow">27</td><td class="narrow">B27</td><td><strong>【幻影终结】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>黑色幻影命中25%概率获得8秒幻影终结，8秒ICD；无爪痕目标时十字斩/致命影啸显示免费幻影形态</td></tr>
-          <tr><td class="center narrow">28</td><td class="narrow">B28</td><td><strong>【超越回响】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>暗影超越期间红阶解放时黑色幻影CD-4秒；4秒ICD</td></tr>
-          <tr><td class="center narrow">29</td><td class="narrow">B29</td><td><strong>【超越蓄势】</strong></td><td><span class="nt nt-burst">爆发容错</span></td><td>以2层筹谋开启暗影超越时持续10→12秒</td></tr>
-          <tr><td class="center narrow">30</td><td class="narrow">B30</td><td><strong>【爪痕追猎】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>第一次超越爪痕处决后获得爪痕追猎；第二次超越爪痕处决时消费，追加30%物理伤害</td></tr>
+          <tr><td class="center narrow">21</td><td class="narrow">B21</td><td><strong>【暗影超越】</strong></td><td><span class="nt nt-entry">BD入口</span></td><td>【影刃解放】替换为【暗影超越】；持续10秒/CD30秒，杀意上限+30、恢复速度+50%，重置【黑色幻影】CD，每层【影袭筹谋】转化为1次【超越连袭次数】；期间【暗影刺击】替换为2段【暗影连袭】，拥有次数时消耗30→20，消费1次并施加6秒【超越爪痕】</td></tr>
+          <tr><td class="center narrow">22</td><td class="narrow">B22</td><td><strong>【幻影裂击】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【黑色幻影】命中带有自身施加的【基础致命爪痕】或【超越爪痕】的目标时，0.4秒后追加X裂击%攻击力物理伤害；整次只进行1次【幻影终结】触发判定</td></tr>
+          <tr><td class="center narrow">23</td><td class="narrow">B23</td><td><strong>【双痕蓄势】</strong></td><td><span class="nt nt-trans">技能质变</span></td><td>【致命爪痕】获得2层充能，每层独立恢复10秒；同一目标最多存在1个自身施加的【基础致命爪痕】，不同目标上的标记分别记录持续时间</td></tr>
+          <tr><td class="center narrow">24</td><td class="narrow">B24</td><td><strong>【影袭准备】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>暗影超越外，【十字斩】或【致命影啸】实际消费【基础致命爪痕】时获得1层持续30秒的【影袭筹谋】，最多2层；筹谋1→2时额外提升1阶，最高红阶</td></tr>
+          <tr><td class="center narrow">25</td><td class="narrow">B25</td><td><strong>【处决余势】</strong></td><td><span class="nt nt-link">技能联动</span></td><td>【十字斩】实际消费【基础致命爪痕】或【超越爪痕】时使【黑色幻影】剩余CD缩短2秒；【致命影啸】实际消费任一标记时使【致命爪痕】充能恢复时间缩短2秒；每次释放最多触发1次</td></tr>
+          <tr style="background:var(--burst-l)"><td class="center narrow">26</td><td class="narrow">B26S</td><td><strong>【孤影绝杀】</strong></td><td><span class="nt nt-single">单体二择</span></td><td>暗影超越期间，【十字斩】消费【超越爪痕】、仅命中1名敌人并使红阶降为黄阶时，施加6秒强化标记【孤影绝杀】；下一次【暗影连袭】命中该目标时消费标记，伤害提高20%</td></tr>
+          <tr style="background:var(--burst-l)"><td class="center narrow">26</td><td class="narrow">B26G</td><td><strong>【群影收割】</strong></td><td><span class="nt nt-group">群体二择</span></td><td>暗影超越期间，第一次【致命影啸】消费【超越爪痕】、命中≥3名敌人并使红阶降为黄阶时，重置【致命影啸】CD；每次暗影超越最多1次</td></tr>
+          <tr><td class="center narrow">27</td><td class="narrow">B27</td><td><strong>【幻影终结】</strong></td><td><span class="nt nt-rand">随机事件</span></td><td>【黑色幻影】命中时25%概率获得8秒【幻影终结】，8秒ICD；当前目标没有【基础致命爪痕】或【超越爪痕】时，【十字斩】与【致命影啸】显示免费直接伤害形态，释放其中一个后消耗；该次不消耗杀意和爪痕，不改变杀阶，不生成筹谋</td></tr>
+          <tr><td class="center narrow">28</td><td class="narrow">B28</td><td><strong>【超越回响】</strong></td><td><span class="nt nt-cycle">循环节点</span></td><td>暗影超越期间，【十字斩】或【致命影啸】消费【超越爪痕】并使红阶降为黄阶时，使【黑色幻影】剩余CD缩短4秒；4秒ICD</td></tr>
+          <tr><td class="center narrow">29</td><td class="narrow">B29</td><td><strong>【超越蓄势】</strong></td><td><span class="nt nt-burst">爆发容错</span></td><td>释放【暗影超越】时拥有2层【影袭筹谋】，则持续时间10→12秒；0或1层时保持10秒</td></tr>
+          <tr><td class="center narrow">30</td><td class="narrow">B30</td><td><strong>【爪痕追猎】</strong></td><td><span class="nt nt-ult">终极节点</span></td><td>每次【暗影超越】中第一次【超越爪痕】被【十字斩】或【致命影啸】消费后，获得持续至大招结束的【爪痕追猎】；第二次【超越爪痕】被消费时消耗该状态，使本次十字斩或致命影啸追加30%物理伤害</td></tr>
         </tbody>
       </table>
     </div>
@@ -1129,9 +1177,9 @@ footer p{margin-bottom:4px}
           <tr><td class="center narrow">14</td><td class="narrow">C14</td><td><strong>【杀意调息II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>杀意自然恢复速度再+3%</td></tr>
           <tr><td class="center narrow">15</td><td class="narrow">C15</td><td><strong>【短刃节律】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>使用核心杀招后获得6秒短刃节律；下一次暗影刺击/黑色幻影延迟缩短10%</td></tr>
           <tr><td class="center narrow">16</td><td class="narrow">C16</td><td><strong>【致命训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首技能暴击伤害+3%</td></tr>
-          <tr><td class="center narrow">17</td><td class="narrow">C17</td><td><strong>【连段训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>二刀追击、额外攻击段和派生追击伤害+4%</td></tr>
+          <tr><td class="center narrow">17</td><td class="narrow">C17</td><td><strong>【连段训练I】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【二刀追击】、额外攻击段及精通节点生成的追加攻击伤害+4%</td></tr>
           <tr><td class="center narrow">18</td><td class="narrow">C18</td><td><strong>【致命训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>匕首技能暴击伤害再+3%（累计6%）</td></tr>
-          <tr><td class="center narrow">19</td><td class="narrow">C19</td><td><strong>【连段训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>派生追击伤害再+4%（累计8%）</td></tr>
+          <tr><td class="center narrow">19</td><td class="narrow">C19</td><td><strong>【连段训练II】</strong></td><td><span class="nt nt-basic">基础强化</span></td><td>【二刀追击】、额外攻击段及精通节点生成的追加攻击伤害再+4%（累计8%）</td></tr>
           <tr><td class="center narrow">20</td><td class="narrow">C20</td><td><strong>【轻巧身法】</strong></td><td><span class="nt nt-feel">武器手感</span></td><td>使用核心杀招后获得2秒轻巧身法，移动速度+15%</td></tr>
         </tbody>
       </table>
@@ -1170,20 +1218,20 @@ footer p{margin-bottom:4px}
       <table>
         <thead><tr><th class="shared-th">项目</th><th class="poison-th">毒刃刺</th><th class="dual-th">双刀刺</th><th class="burst-th">爆刺</th></tr></thead>
         <tbody>
-          <tr><td class="narrow"><strong>建立阶段</strong></td><td>双毒建立</td><td>等待永恒之斩窗口</td><td>爪痕与筹谋建立</td></tr>
-          <tr><td class="narrow"><strong>升阶行为</strong></td><td>单体十字斩触发【毒蚀爆发】／群体病毒散播触发范围【毒蚀爆发】</td><td>完整永恒之斩</td><td>完整爪痕处决</td></tr>
-          <tr><td class="narrow"><strong>技术跃阶</strong></td><td>大招内首次触发【毒蚀爆发】额外+1阶</td><td>蓝阶插入黑色幻影</td><td>筹谋达到2层时额外升阶</td></tr>
-          <tr><td class="narrow"><strong>红阶保留</strong></td><td>再次触发【毒蚀爆发】</td><td>黑色幻影→十字斩</td><td>大招外完整爪痕处决</td></tr>
-          <tr><td class="narrow"><strong>红阶解放</strong></td><td>见血封喉</td><td>永恒之斩→绝刃终结</td><td>暗影超越内超越爪痕处决</td></tr>
+          <tr><td class="narrow"><strong>建立阶段</strong></td><td>为目标施加【中毒】与【剧毒侵蚀】</td><td>等待永恒之斩窗口</td><td>爪痕与筹谋建立</td></tr>
+          <tr><td class="narrow"><strong>升阶行为</strong></td><td>单体由【十字斩】追加单体伤害／群体由【病毒散播】追加范围伤害</td><td>永恒之斩完成2次基础追斩</td><td>十字斩或致命影啸消费【基础致命爪痕】</td></tr>
+          <tr><td class="narrow"><strong>技术跃阶</strong></td><td>【致命涂毒】期间第一次满足两种状态条件时额外提升1阶</td><td>蓝阶插入黑色幻影并完成2次基础追斩</td><td>【影袭筹谋】达到2层时额外升阶</td></tr>
+          <tr><td class="narrow"><strong>红阶保留</strong></td><td>满足两种状态条件后再次使用十字斩或病毒散播</td><td>黑色幻影→6秒内十字斩</td><td>大招外消费【基础致命爪痕】</td></tr>
+          <tr><td class="narrow"><strong>红阶转黄</strong></td><td>见血封喉</td><td>永恒之斩第2次追斩→绝刃终结</td><td>暗影超越内消费【超越爪痕】</td></tr>
           <tr><td class="narrow"><strong>决策类型</strong></td><td>状态和CD判断</td><td>连段路线判断</td><td>爆发时机规划</td></tr>
-          <tr><td class="narrow"><strong>失败压力</strong></td><td>中毒或剧毒侵蚀中断，或错过触发时机</td><td>窗口中断或共享CD选错</td><td>筹谋不足或大招窗口未完成</td></tr>
+          <tr><td class="narrow"><strong>失败压力</strong></td><td>【中毒】或【剧毒侵蚀】中断，或错过8秒后的追加伤害时机</td><td>窗口中断或共享CD选错</td><td>筹谋不足或大招窗口未完成</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="callout neutral">
       <span class="ct">目标体验</span>
-      <strong>毒刃刺</strong>：观察目标身上的中毒和剧毒侵蚀以及8秒触发等待；单体使用十字斩、群体使用病毒散播触发毒蚀爆发，并在红阶选择维持还是兑现。<br>
+      <strong>毒刃刺</strong>：观察目标身上的【中毒】与【剧毒侵蚀】以及8秒等待；单体使用【十字斩】追加单体伤害，群体使用【病毒散播】追加范围伤害，并在红阶选择继续刷新还是使用见血封喉。<br>
       <strong>双刀刺</strong>：读懂短窗口，在固定规则内安排插入动作，并承担共享CD选择成本。<br>
       <strong>爆刺</strong>：提前筹备，在合适杀阶和战斗阶段一次完成两轮处决。
     </div>
@@ -1273,25 +1321,24 @@ var tips={
   '杀阶':'匕首第二资源。白→绿→蓝→黄→红五阶。初始白阶，完成BD升阶行为后提升。红阶进入12秒维持窗口。',
   '保红':'红阶12秒窗口内完成本BD保红动作，重新获得完整12秒。',
   '解放':'使用本BD解放杀招，获得爆发并使红→黄。',
-  '催化':'目标同时带有自身施加的中毒和剧毒侵蚀时，使用十字斩或病毒散播触发【毒蚀爆发】。',
-  '触发等待':'8秒共享冷却。任一技能触发【毒蚀爆发】后进入，期间两个技能均不能再次触发、升阶或刷新红阶。',
-  '触发【毒蚀爆发】':'十字斩命中双毒主目标且8秒内未触发过时，对主目标追加毒蚀爆发派生伤害。',
-  '触发范围【毒蚀爆发】':'病毒散播命中双毒主目标且8秒内未触发过时，对本次命中列表追加毒蚀爆发。',
-  '毒蚀爆发':'由十字斩或病毒散播满足条件后追加的派生物理伤害。不读取DoT跳伤害，不触发其他追加效果。',
-  '毒爆':'剧毒侵蚀自然结束或目标死亡时产生的范围爆炸，与毒蚀爆发不是同一事件。',
+  '催化':'目标同时带有自身施加的中毒和剧毒侵蚀时，使用十字斩追加X单%攻击力物理伤害，使用病毒散播追加X群%攻击力物理伤害。',
+  '触发等待':'8秒共享等待。任一技能成功追加对应物理伤害后进入，期间两个技能均不能再次追加、升阶或刷新红阶。',
+  '追加X单%攻击力物理伤害':'十字斩命中同时带有自身施加的中毒和剧毒侵蚀的主目标且8秒等待结束时，对主目标追加的物理伤害。',
+  '追加X群%攻击力物理伤害':'病毒散播命中同时带有自身施加的中毒和剧毒侵蚀的主目标且8秒等待结束时，对本次命中列表追加的物理伤害。',
+  '毒爆':'剧毒侵蚀自然结束或目标死亡时产生的范围爆炸，不是十字斩或病毒散播的追加物理伤害。',
   '中毒':'持续12秒，每2秒造成物理伤害。最多1层，重复施加刷新持续时间。周期伤害不提供升阶机会。',
   '剧毒侵蚀':'由毒性感染施加。按施放时杀阶决定初始持续时间。最多1层；重复施加覆盖旧实例。',
   '侵蚀续接':'毒性感染重新施加剧毒侵蚀时，新实例继承旧实例50%剩余时间，继承部分最多4秒。',
   '疫病回响':'病毒散播命中≥3名敌人时，1秒后对存活目标追加X回响%攻击力物理伤害，最多5名。',
-  '蔓延毒核':'毒雾蔓延使病毒散播触发【毒蚀爆发】时为次要目标施加3秒毒核，到期爆炸。',
-  '穿刺毒核':'凝毒穿刺使十字斩触发【毒蚀爆发】时为目標施加6秒毒核；毒性感染消费毒核追加伤害并+4秒。',
-  '凝毒追刺':'十字斩触发【毒蚀爆发】后获得6秒状态；下一次暗影刺击杀意30→15并追加X追刺%攻击力派生伤害。',
+  '蔓延毒核':'毒雾蔓延使病毒散播成功追加X群%攻击力物理伤害时为次要目标施加3秒毒核，到期爆炸。',
+  '穿刺毒核':'凝毒穿刺使十字斩成功追加X单%攻击力物理伤害时为目标施加6秒毒核；毒性感染消费毒核追加伤害并+4秒。',
+  '凝毒追刺':'十字斩成功追加X单%攻击力物理伤害后获得6秒状态；下一次暗影刺击杀意30→15并追加X追刺%攻击力物理伤害。',
   '毒效续接':'施毒命中带有自身施加的剧毒侵蚀的目标延长侵蚀2秒；毒性感染命中带有自身施加的中毒的目标延长中毒2秒。各6秒ICD。',
   '毒爆回流':'毒爆命中≥1名敌人时重置病毒散播CD并使下一次6秒内免费。8秒ICD。',
   '致命爪痕':'由技能致命爪痕施加。暗影超越期间不施加基础爪痕。被十字斩/致命影啸消费完成处决。',
   '超越爪痕':'暗影连袭施加的6秒特殊爪痕。与基础爪痕硬互斥。消费视为完整处决但不生成筹谋。',
   '影袭筹谋':'爆刺完整处决获得的筹备资源。最多2层，共享30秒。2层时额外升1阶。',
-  '超越处决':'暗影超越期间由影袭筹谋转化的处决机会。每层筹谋转化为1次。',
+  '超越连袭次数':'暗影超越期间由影袭筹谋转化的暗影连袭次数。每层筹谋转化为1次。',
   '疾影':'暗影刺击命中后获得的4秒状态。永恒之斩首击消费使第1次追斩15→5并追加伤害。',
   '残影返身':'黑色幻影命中后3秒内替换的免费技能。返回起始位置并对路径上敌人造成伤害。',
   '旋刃环绕':'利刃旋舞获得的持续伤害状态。精通后改为3层8秒。',
@@ -1302,19 +1349,19 @@ var tips={
   '幻影裂击':'黑色幻影命中带基础或超越爪痕目标时0.4秒后追加X裂击%攻击力物理伤害。',
   '影刃解放':'匕首固定终极武器技能。持续10秒提高杀意恢复速度，CD45秒。BD爆发节点替换此槽位。',
   '幻影终结':'爆刺随机事件。黑色幻影命中25%概率触发，提供免费幻影杀招。有处决优先级。',
-  '见血封喉':'毒刃刺红阶解放杀招。红阶十字斩120%档+高额毒蚀爆发。红→黄。',
+  '见血封喉':'毒刃刺红阶解放杀招。红阶十字斩120%档基础伤害并追加X终%攻击力物理伤害。红→黄。',
   '绝刃终结':'双刀刺红阶解放追加。100%攻击力物理伤害。红→黄。',
   '暗影刺击':'高频单体刺击。30杀意，无独立CD。',
   '施毒':'造成物理伤害并施加12秒中毒。25杀意，无独立CD。',
-  '病毒散播':'范围伤害、传播中毒。双毒主目标触发范围【毒蚀爆发】。20杀意，CD8秒。',
+  '病毒散播':'范围伤害、传播中毒。双毒主目标追加X群%攻击力物理伤害。20杀意，CD8秒。',
   '毒性感染':'造成物理伤害并施加当前杀阶的剧毒侵蚀。白~蓝30杀意，黄/红25杀意。',
-  '十字斩':'高额单体杀招。命中双毒主目标时触发【毒蚀爆发】。25杀意。',
+  '十字斩':'高额单体杀招。命中双毒主目标时追加X单%攻击力物理伤害。25杀意。',
   '黑色幻影':'快速接近并攻击目标。25杀意，CD6秒。蓝阶永恒窗口内插入直达红阶。',
   '利刃旋舞':'范围伤害并获得旋刃环绕。30杀意，CD12秒。不负责升阶。',
   '永恒之斩':'首击后开启追斩窗口。首击20杀意，追斩每次15。与十字斩共享8秒CD。',
   '追斩':'永恒之斩窗口内的连续攻击。每次15杀意。',
   '致命影啸':'主目标及周围群体伤害。35杀意，CD12秒。消费爪痕完成群体处决。',
-  '暗影连袭':'暗影超越期间替换暗影刺击。30杀意，消耗超越处决时降至20。2段攻击。',
+  '暗影连袭':'暗影超越期间替换暗影刺击。30杀意，拥有超越连袭次数时降至20。2段攻击。',
   '暗影超越':'爆刺大招。替换影刃解放。持续10秒，CD30秒。杀意上限+30，恢复+50%。',
   '致命涂毒':'毒刃刺大招。替换影刃解放。持续8秒，CD45秒。清除触发等待并重置病毒散播CD。',
   '烈火战车':'双刀刺大招。替换影刃解放。持续10秒，CD45秒。提高杀意恢复，重置黑色幻影。',
@@ -1324,10 +1371,10 @@ var tips={
   '杀招回流':'共通精通节点。成功使用核心杀招后恢复5杀意。',
   '短刃节律':'共通精通节点。使用核心杀招后下一次暗影刺击/黑色幻影延迟缩短10%。',
   '轻巧身法':'共通精通节点。使用核心杀招后移动速度+15%，持续2秒。',
-  '感染精研':'毒刃刺精通。暗影刺击命中同时带有自身施加的中毒和剧毒侵蚀的主目标时，使触发等待与病毒散播CD各-1秒；1秒内置冷却。',
-  '致命毒液':'毒刃刺爆发节点。影刃解放替换为致命涂毒。持续8秒/CD45秒，清除触发等待并重置散播，毒发12%→24%，毒蚀爆发+50%，窗口内首次触发额外+1阶。',
-  '凝毒穿刺':'毒刃刺单体二择。十字斩触发【毒蚀爆发】时施加6秒穿刺毒核；毒性感染消费追加X穿刺%攻击力伤害并使新侵蚀+4秒。',
-  '毒雾蔓延':'毒刃刺群体二择。病毒散播触发【毒蚀爆发】时传播完整12秒中毒（最多4名次要目标）+3秒蔓延毒核，到期爆炸。',
+  '感染精研':'毒刃刺精通。暗影刺击命中同时带有自身施加的中毒和剧毒侵蚀的主目标时，使8秒等待与病毒散播CD各-1秒；1秒内置冷却。',
+  '致命毒液':'毒刃刺爆发节点。影刃解放替换为致命涂毒。持续8秒/CD45秒，清除8秒等待并重置散播，毒发12%→24%，追加物理伤害+50%，窗口内首次成功追加额外+1阶。',
+  '凝毒穿刺':'毒刃刺单体二择。十字斩成功追加X单%攻击力物理伤害时施加6秒穿刺毒核；毒性感染消费追加X穿刺%攻击力伤害并使新侵蚀+4秒。',
+  '毒雾蔓延':'毒刃刺群体二择。病毒散播成功追加X群%攻击力物理伤害时传播完整12秒中毒（最多4名次要目标）+3秒蔓延毒核，到期爆炸。',
   '双痕蓄势':'爆刺精通。致命爪痕获得2层充能，每层独立恢复10秒。',
   '处决余势':'爆刺精通。十字斩消费爪痕时黑色幻影CD-2秒；致命影啸消费时致命爪痕充能-2秒。',
   '孤影绝杀':'爆刺单体二择。红阶十字斩解放仅命中1名敌人时下一次暗影连袭+20%。',
@@ -1340,7 +1387,7 @@ var tips={
   '旋刃列阵':'双刀刺精通。旋刃环绕改为3层8秒；消费1层对主目标及5米内最多2名次要目标造成伤害。',
   '连斩不息':'双刀刺精通。永恒窗口5→6秒，最大追斩2→3，允许插入1次暗影刺击。',
   '十字回锋':'双刀刺精通。十字斩命中后获得6秒回锋；下一次黑色幻影改为2段攻击。',
-  '战车余势':'双刀刺精通。烈火战车持续10→12秒，双刀追击ICD8→4秒。',
+  '战车余势':'双刀刺精通。烈火战车持续10→12秒，幻影回流ICD8→4秒。',
   '一敌专攻':'双刀刺单体二择。无合法次要目标时每层集中攻击主目标20%攻击力。',
   '群刃回响':'双刀刺群体二择。命中≥2名次要目标时追加20%攻击力范围伤害。',
   '致命训练I':'共通精通。匕首技能暴击伤害+3%。',
@@ -1368,19 +1415,19 @@ var tips={
   '解毒':'随机战术武器技能。解除中毒类异常。',
   '武器抵御':'随机战术武器技能。抵御一次近战攻击并获得反击机会。',
   '幻影步':'随机战术武器技能。短时间提高回避+魔法伤害规避。',
-  '双刀追击':'双刀刺精通。二刀追击触发时重置黑色幻影CD并获得6秒双刃机会；下一次黑色幻影杀意-15。ICD8秒。',
-  '无尽双刃':'双刀刺终局节点。完成永恒之斩全部追斩后获得10秒无尽余势；下一次填充杀意-10，共享杀招CD-2秒。',
+  '幻影回流':'双刀刺精通。二刀追击触发时重置黑色幻影CD并使下一次黑色幻影6秒内杀意-15。ICD8秒。',
+  '无尽余势':'双刀刺终局节点。完成永恒之斩全部追斩后获得10秒无尽余势；下一次填充杀意-10，共享杀招CD-2秒。',
   '影袭准备':'爆刺精通。暗影超越外完整处决获得1层影袭筹谋，最多2层/30秒。筹谋1→2时额外升1阶。',
-  '见血封喉机会':'红阶触发【毒蚀爆发】后生成的6秒解放机会。使十字斩按钮变为见血封喉。'
+  '见血封喉机会':'红阶成功追加对应物理伤害后生成的6秒解放机会。使十字斩按钮变为见血封喉。'
 };
 var tipCats={
   '杀意':'mech','杀阶':'mech','保红':'mech','解放':'mech','催化':'mech','触发等待':'mech',
-  '触发【毒蚀爆发】':'mech','触发范围【毒蚀爆发】':'mech','毒蚀爆发':'mech','毒爆':'mech',
+  '追加X单%攻击力物理伤害':'mech','追加X群%攻击力物理伤害':'mech','毒爆':'mech',
   '中毒':'mech','剧毒侵蚀':'mech','侵蚀续接':'mech','疫病回响':'mech','蔓延毒核':'mech','穿刺毒核':'mech',
   '凝毒追刺':'mech','毒效续接':'mech','毒爆回流':'mech',
-  '致命爪痕':'mech','超越爪痕':'mech','影袭筹谋':'mech','超越处决':'mech',
+  '致命爪痕':'mech','超越爪痕':'mech','影袭筹谋':'mech','超越连袭次数':'mech',
   '疾影':'mech','残影返身':'mech','旋刃环绕':'mech','旋刃追击':'mech','回锋':'mech',
-  '双刃机会':'mech','无尽余势':'mech','幻影裂击':'mech','幻影终结':'mech',
+  '双刃机会':'mech','无尽余势':'mech','幻影裂击':'mech','幻影终结':'mech','幻影回流':'mech',
   '影刃解放':'weapon','见血封喉':'skill','绝刃终结':'skill',
   '暗影刺击':'skill','施毒':'skill','病毒散播':'skill','毒性感染':'skill',
   '十字斩':'skill','黑色幻影':'skill','利刃旋舞':'skill','永恒之斩':'skill','追斩':'skill',
@@ -1399,7 +1446,7 @@ var tipCats={
   '影刃专注I':'mastery','影刃专注II':'mastery','迅击调息I':'mastery','迅击调息II':'mastery',
   '杀招训练I':'mastery','杀招训练II':'mastery','杀意调息I':'mastery','杀意调息II':'mastery',
   '伪装':'weapon','后退回避':'weapon','喷沙':'weapon','解毒':'weapon','武器抵御':'weapon','幻影步':'weapon',
-  '双刀追击':'mastery','无尽双刃':'mastery','影袭准备':'mastery','见血封喉机会':'mech'
+  '幻影回流':'mastery','无尽余势':'mastery','影袭准备':'mastery','见血封喉机会':'mech'
 };
 var catLabels={'mastery':'精通盘','mech':'机制','skill':'技能卡','weapon':'武器技能'};
 function shouldExclude(node){var p=node.parentNode;while(p&&p!==document.body){if(!p.classList){p=p.parentNode;continue}if(p.tagName==='STRONG'&&p.parentNode&&p.parentNode.tagName==='TD')return true;p=p.parentNode}return false}
