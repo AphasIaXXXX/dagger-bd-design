@@ -81,6 +81,8 @@ em{font-style:normal}
 .sc-body{padding:10px 14px;font-size:13px;line-height:1.65;color:var(--ink2);flex:1}
 .sc-body .sc-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted2);display:block;margin-bottom:2px;margin-top:8px}
 .sc-body .sc-label:first-child{margin-top:0}
+.sc-ml{display:block;margin-top:4px;padding-left:7px;border-left:2px solid var(--rule2);line-height:1.55;font-size:12.5px}
+.sc-ml:first-of-type{margin-top:3px}
 .sc-role{padding:6px 14px;border-top:1px solid var(--rule);font-size:11px;font-weight:600;text-align:center;letter-spacing:.02em}
 .skill-grid.p .sc-h{background:var(--poison-l)}.skill-grid.p .sc-num{background:var(--poison)}.skill-grid.p .sc-role{background:var(--poison-l);color:var(--poison)}.skill-grid.p .sc-name{color:var(--poison)}
 .skill-grid.d .sc-h{background:var(--dual-l)}.skill-grid.d .sc-num{background:var(--dual)}.skill-grid.d .sc-role{background:var(--dual-l);color:var(--dual)}.skill-grid.d .sc-name{color:var(--dual)}
@@ -392,7 +394,9 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害
-          <span class="sc-label">精通变化</span>【感染精研】命中同一施法者的双毒目标时，使共享催化锁与【病毒散播】剩余CD各缩短1秒；1秒内置冷却。【凝毒追刺】使凝毒催化后的下一次暗影刺击杀意消耗降至15，并追加X追刺%攻击力派生物理伤害
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【感染精研】命中同一施法者的双毒目标时，使共享催化锁与【病毒散播】剩余CD各缩短1秒；1秒内置冷却</div>
+          <div class="sc-ml">【凝毒追刺】使凝毒催化后的下一次暗影刺击杀意消耗降至15，并追加X追刺%攻击力派生物理伤害</div>
         </div>
         <div class="sc-role">高频填充</div>
       </div>
@@ -400,7 +404,9 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">施毒</div><div class="sc-cost"><span class="cp-con">25杀意</span> 无CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对当前主目标造成物理伤害，并施加【中毒】，持续12秒；中毒按周期造成物理伤害
-          <span class="sc-label">精通变化</span>【毒发】触发后，技能在6秒内替换为免费【毒发刺击】；命中追加X毒发%攻击力派生物理伤害，使共享催化锁与【病毒散播】剩余CD各缩短4秒。【双毒共鸣】使施毒命中同一施法者的【剧毒侵蚀】目标时，将该侵蚀剩余时间延长2秒
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【毒发】触发后，技能在6秒内替换为免费【毒发刺击】；命中追加X毒发%攻击力派生物理伤害，使共享催化锁与【病毒散播】剩余CD各缩短4秒</div>
+          <div class="sc-ml">【双毒共鸣】使施毒命中同一施法者的【剧毒侵蚀】目标时，将该侵蚀剩余时间延长2秒</div>
         </div>
         <div class="sc-role">中毒建立与维护</div>
       </div>
@@ -408,7 +414,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">病毒散播</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD8s</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对主目标及5米内最多5名敌人造成物理伤害，传播【中毒】；双毒主目标触发【扩散催化】，追加【毒蚀爆发】物理伤害
-          <span class="sc-label">精通变化</span>【疫病回响】命中≥3名敌人时1秒后追加X回响%攻击力物理伤害；【毒雾蔓延】使传播获得完整12秒中毒+【蔓延毒核】，3秒后爆炸造成X蔓延%攻击力伤害；【毒爆回流】可重置本技能并使下一次免费
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【疫病回响】命中≥3名敌人时1秒后追加X回响%攻击力物理伤害</div>
+          <div class="sc-ml">【毒雾蔓延】使传播获得完整12秒中毒+【蔓延毒核】，3秒后爆炸造成X蔓延%攻击力伤害</div>
+          <div class="sc-ml">【毒爆回流】可重置本技能并使下一次免费</div>
         </div>
         <div class="sc-role">群体扩散／群体催化</div>
       </div>
@@ -416,7 +425,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">毒性感染</div><div class="sc-cost"><span class="cp-con">30/25杀意</span> 无CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>造成物理伤害并施加当前杀阶对应的【剧毒侵蚀】。按周期造成物理伤害，自然结束或目标死亡触发【毒爆】
-          <span class="sc-label">精通变化</span>【侵蚀续接】重新施加时新实例继承旧实例50%剩余时间，最多+4秒；【凝毒穿刺】消费【穿刺毒核】追加X穿刺%攻击力伤害并使新侵蚀+4秒；【双毒共鸣】命中中毒目标延长中毒2秒
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【侵蚀续接】重新施加时新实例继承旧实例50%剩余时间，最多+4秒</div>
+          <div class="sc-ml">【凝毒穿刺】消费【穿刺毒核】追加X穿刺%攻击力伤害并使新侵蚀+4秒</div>
+          <div class="sc-ml">【双毒共鸣】命中中毒目标延长中毒2秒</div>
         </div>
         <div class="sc-role">剧毒建立与维护</div>
       </div>
@@ -424,7 +436,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD5s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对主目标造成高额物理伤害；命中双毒主目标时触发【凝毒催化】，追加【毒蚀爆发】。白～黄阶催化升1阶，红阶催化刷新12秒并生成【见血封喉机会】
-          <span class="sc-label">精通变化</span>【凝毒追刺】催化后获得6秒追刺状态；【凝毒穿刺】同时施加6秒【穿刺毒核】；【见血封喉】红阶催化后获得6秒解放形态，命中造成红阶十字斩伤害+X终%攻击力毒蚀爆发，红→黄
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【凝毒追刺】催化后获得6秒追刺状态</div>
+          <div class="sc-ml">【凝毒穿刺】同时施加6秒【穿刺毒核】</div>
+          <div class="sc-ml">【见血封喉】红阶催化后获得6秒解放形态，命中造成红阶十字斩伤害+X终%攻击力毒蚀爆发，红→黄</div>
         </div>
         <div class="sc-role">单体催化／红阶解放入口</div>
       </div>
@@ -642,7 +657,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害
-          <span class="sc-label">精通变化</span>【疾影追斩】命中后获得4秒【疾影】，永恒首击消费使第1次追斩15→5并追加X疾影%攻击力伤害；【连斩不息】允许窗口内插入1次；【无尽双刃】可使下一次杀意消耗降低10
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【疾影追斩】命中后获得4秒【疾影】，永恒首击消费使第1次追斩15→5并追加X疾影%攻击力伤害</div>
+          <div class="sc-ml">【连斩不息】允许窗口内插入1次</div>
+          <div class="sc-ml">【无尽双刃】可使下一次杀意消耗降低10</div>
         </div>
         <div class="sc-role">高频填充</div>
       </div>
@@ -650,7 +668,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD6s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>快速接近目标并造成物理伤害。蓝阶永恒窗口内插入后完成2追斩直达红阶；红阶命中后生成6秒十字斩保红条件
-          <span class="sc-label">精通变化</span>【幻影折返】命中后3秒内替换为免费【残影返身】，返回起始位置并对路径上最多5名敌人造成X返身%攻击力伤害；【十字回锋】使下一次变为双段攻击；【双刀追击】可重置并降低下一次消耗
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【幻影折返】命中后3秒内替换为免费【残影返身】，返回起始位置并对路径上最多5名敌人造成X返身%攻击力伤害</div>
+          <div class="sc-ml">【十字回锋】使下一次变为双段攻击</div>
+          <div class="sc-ml">【双刀追击】可重置并降低下一次消耗</div>
         </div>
         <div class="sc-role">机动输出／技术插入</div>
       </div>
@@ -658,7 +679,9 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">利刃旋舞</div><div class="sc-cost"><span class="cp-con">30杀意</span> CD12s</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对自身周围敌人造成范围物理伤害，获得【旋刃环绕】；后续主动技能直接命中触发【旋刃追击】
-          <span class="sc-label">精通变化</span>【旋刃列阵】改为3层8秒；消费1层对主目标及5米内最多2名次要目标造成X旋刃%攻击力伤害。【一敌专攻】与【群刃回响】分别改变追击的单体和群体结算
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【旋刃列阵】改为3层8秒；消费1层对主目标及5米内最多2名次要目标造成X旋刃%攻击力伤害</div>
+          <div class="sc-ml">【一敌专攻】与【群刃回响】分别改变追击的单体和群体结算</div>
         </div>
         <div class="sc-role">群体附着</div>
       </div>
@@ -666,7 +689,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">永恒之斩</div><div class="sc-cost"><span class="cp-con">首击20</span> <span class="cp-con">追斩15</span> 共享8s CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>首击开启5秒追斩窗口，最多2次追斩。完成2追斩后白／绿／黄阶升1阶；蓝阶插入黑色幻影直达红阶；红阶完成第2追斩追加【绝刃终结】
-          <span class="sc-label">精通变化</span>【疾影追斩】强化第1次追斩；【连斩不息】窗口5→6秒、追斩2→3并允许插入1次暗影刺击；【无尽双刃】完成全部追斩获得10秒【无尽余势】，使下一次填充减耗并缩短共享杀招CD
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【疾影追斩】强化第1次追斩</div>
+          <div class="sc-ml">【连斩不息】窗口5→6秒、追斩2→3并允许插入1次暗影刺击</div>
+          <div class="sc-ml">【无尽双刃】完成全部追斩获得10秒【无尽余势】，使下一次填充减耗并缩短共享杀招CD</div>
         </div>
         <div class="sc-role">升阶／红阶解放</div>
       </div>
@@ -674,7 +700,8 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> 共享8s CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对主目标造成高额物理伤害。红阶下【黑色幻影】命中后6秒内以本技能命中可刷新红阶12秒
-          <span class="sc-label">精通变化</span>【十字回锋】命中后获得6秒【回锋】；下一次黑色幻影消费改为2段物理攻击，整次只判定1次二刀追击
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【十字回锋】命中后获得6秒【回锋】；下一次黑色幻影消费改为2段物理攻击，整次只判定1次二刀追击</div>
         </div>
         <div class="sc-role">短窗口兑现／红阶保红</div>
       </div>
@@ -864,7 +891,9 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">1</span><div class="sc-h-text"><div class="sc-name">暗影刺击</div><div class="sc-cost"><span class="cp-con">30杀意</span> 无CD</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对当前主目标快速刺击1次，造成物理伤害。命中带基础【致命爪痕】目标时使其剩余CD缩短0.5秒（1秒ICD）
-          <span class="sc-label">精通变化</span>【暗影超越】期间替换为2段【暗影连袭】；存在【超越处决】时消耗降至20，消费1次并施加6秒【超越爪痕】。【孤影绝杀】与【爪痕追猎】分别强化第1/2次超越处决
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【暗影超越】期间替换为2段【暗影连袭】；存在【超越处决】时消耗降至20，消费1次并施加6秒【超越爪痕】</div>
+          <div class="sc-ml">【孤影绝杀】与【爪痕追猎】分别强化第1/2次超越处决</div>
         </div>
         <div class="sc-role">高频填充／推进爪痕</div>
       </div>
@@ -872,7 +901,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">2</span><div class="sc-h-text"><div class="sc-name">黑色幻影</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD8s</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>快速接近目标并造成物理伤害。命中带基础【致命爪痕】目标时使其剩余CD缩短1.5秒
-          <span class="sc-label">精通变化</span>【幻影裂击】命中带基础或超越爪痕目标时0.4秒后追加X裂击%攻击力伤害；【幻影终结】可生成免费幻影杀招；【超越回响】红阶解放后剩余CD-4秒
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【幻影裂击】命中带基础或超越爪痕目标时0.4秒后追加X裂击%攻击力伤害</div>
+          <div class="sc-ml">【幻影终结】可生成免费幻影杀招</div>
+          <div class="sc-ml">【超越回响】红阶解放后剩余CD-4秒</div>
         </div>
         <div class="sc-role">中CD输出／强推进爪痕</div>
       </div>
@@ -880,7 +912,10 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">3</span><div class="sc-h-text"><div class="sc-name">致命爪痕</div><div class="sc-cost"><span class="cp-con">20杀意</span> CD10s</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>造成物理伤害并施加基础【致命爪痕】。白阶8秒、绿以上10秒；暗影超越期间改为直接伤害
-          <span class="sc-label">精通变化</span>【双痕蓄势】获得2层充能，每层独立恢复10秒；同一目标最多1个基础爪痕。【处决余势】可缩短充能恢复；【爪痕追猎】强化第二次超越爪痕处决
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【双痕蓄势】获得2层充能，每层独立恢复10秒；同一目标最多1个基础爪痕</div>
+          <div class="sc-ml">【处决余势】可缩短充能恢复</div>
+          <div class="sc-ml">【爪痕追猎】强化第二次超越爪痕处决</div>
         </div>
         <div class="sc-role">刺杀准备</div>
       </div>
@@ -888,7 +923,11 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">4</span><div class="sc-h-text"><div class="sc-name">十字斩</div><div class="sc-cost"><span class="cp-con">25杀意</span> CD4s<em class="sim">模拟值</em></div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对主目标造成高额物理伤害。消费优先级最高的爪痕完成单体处决；常态使白～黄阶升1阶、红阶刷新12秒
-          <span class="sc-label">精通变化</span>【影袭准备】获得1层【影袭筹谋】（最多2层/30秒）；筹谋1→2时额外升1阶。【处决余势】使黑色幻影CD-2秒。【孤影绝杀】强化红阶解放后下一次暗影连袭。【幻影终结】可变为免费幻影杀招
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【影袭准备】获得1层【影袭筹谋】（最多2层/30秒）；筹谋1→2时额外升1阶</div>
+          <div class="sc-ml">【处决余势】使黑色幻影CD-2秒</div>
+          <div class="sc-ml">【孤影绝杀】强化红阶解放后下一次暗影连袭</div>
+          <div class="sc-ml">【幻影终结】可变为免费幻影杀招</div>
         </div>
         <div class="sc-role">单体处决</div>
       </div>
@@ -896,7 +935,11 @@ footer p{margin-bottom:4px}
         <div class="sc-h"><span class="sc-num">5</span><div class="sc-h-text"><div class="sc-name">致命影啸</div><div class="sc-cost"><span class="cp-con">35杀意</span> CD12s</div></div></div>
         <div class="sc-body">
           <span class="sc-label">基础效果</span>对主目标及5米内最多5名敌人造成物理伤害。消费优先级最高的爪痕完成群体处决；常态使白～黄阶升1阶、红阶刷新12秒
-          <span class="sc-label">精通变化</span>【影袭准备】获得1层【影袭筹谋】；【处决余势】使致命爪痕充能-2秒。【群影收割】可在群体红阶解放后重置CD。【幻影终结】可变为免费幻影杀招
+          <span class="sc-label">精通变化</span>
+          <div class="sc-ml">【影袭准备】获得1层【影袭筹谋】</div>
+          <div class="sc-ml">【处决余势】使致命爪痕充能-2秒</div>
+          <div class="sc-ml">【群影收割】可在群体红阶解放后重置CD</div>
+          <div class="sc-ml">【幻影终结】可变为免费幻影杀招</div>
         </div>
         <div class="sc-role">群体处决</div>
       </div>
